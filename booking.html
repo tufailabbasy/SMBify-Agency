@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" type="image/png" href="/assets/favicon.png">
-    <link rel="canonical" href="https://www.smbify.agency/booking">
 </head>
 
 <body>
@@ -29,7 +28,6 @@
         <div class="container header__inner">
             <a href="/" class="header__logo">
                 <img src="/assets/logo-light.png" alt="SMBify Logo" class="logo-light">
-                <img src="/assets/logo-dark.png" alt="SMBify Logo" class="logo-dark">
             </a>
 
             <nav class="nav">
@@ -67,17 +65,49 @@
 
     
 
-    
-
-    
-
-    
-
+  <!-- Header include -->
   
 
-    
+  <main>
+    <section class="service-hero">
+      <div class="container">
+        <h1>Book a Strategy Call</h1>
+        <p style="max-width:760px;margin:0 auto;color:var(--text-secondary);">Pick a convenient time on our calendar to discuss your agency needs, white-label fulfillment, or a custom Local SEO plan.</p>
+      </div>
+    </section>
 
-    
+    <section class="section">
+      <div class="container" style="max-width:1100px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:start;">
+          <div>
+            <h2 style="margin-top:0;font-family:'Outfit',sans-serif;">Choose Your Slot</h2>
+            <p style="color:var(--text-secondary);">Use the inline calendar to select a date and time. You will receive a confirmation email with meeting details after booking.</p>
+
+            <!-- Calendly inline widget -->
+            <div class="calendly-embed" style="margin-top:1.25rem;">
+              <div class="calendly-inline-widget" data-url="https://calendly.com/muhammadtufailabbasy/30min" style="min-width:320px;height:900px;"></div>
+              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+
+            <p style="color:var(--text-tertiary);margin-top:1rem;font-size:0.95rem;">Prefer email or WhatsApp? <a href="mailto:contact@smbify.agency">contact@smbify.agency</a> or <a href="https://wa.me/923437967815" target="_blank">WhatsApp us</a>.</p>
+          </div>
+
+          <aside style="position:relative;">
+            <div style="background:var(--bg-card);padding:1.25rem;border-radius:12px;border:1px solid var(--border-color);">
+              <h4 style="margin-top:0;">Need help choosing?</h4>
+              <p style="color:var(--text-secondary);">If you're unsure which meeting to pick, select <strong>General Strategy</strong> and we'll recommend the right service during the call.</p>
+              <a href="/contacts" class="btn btn--secondary" style="display:inline-block;margin-top:1rem;">Contact Form</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer include -->
+  
+
+  <script src="js/main.js"></script>
 
     
 
@@ -87,7 +117,6 @@
         <div class="footer__grid">
             <div class="footer__brand">
                 <img src="/assets/logo-light.png" alt="SMBify Logo" class="footer__logo footer__logo-light">
-                <img src="/assets/logo-dark.png" alt="SMBify Logo" class="footer__logo footer__logo-dark">
                 <p class="footer__description">We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales.</p>
                 <div class="footer__social">
                     <a href="https://www.linkedin.com/company/smbifyagency" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
