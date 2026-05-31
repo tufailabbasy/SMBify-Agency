@@ -1,5 +1,5 @@
 # SMBify Agency Robots.txt
-# https://smbify.agency
+# https://www.smbify.agency/
 
 User-agent: *
 Allow: /
@@ -7,20 +7,20 @@ Allow: /
 # Sitemap
 Sitemap: https://www.smbify.agency/sitemap.xml
 
-# Disallow admin areas
-Disallow: /admin-login.html
-Disallow: /admin-blog.html
-Disallow: /marketplace/admin/
+# Disallow Cloudflare obfuscation path and admin areas
 Disallow: /cdn-cgi/
+Disallow: /admin-login
+Disallow: /admin-blog
+Disallow: /marketplace/admin/
 
-# Allow search engines to crawl all public content
-Allow: /services/
-Allow: /blog.html
-Allow: /about.html
-Allow: /team.html
-Allow: /portfolio.html
-Allow: /contacts.html
+# Allow crawling of clean URL pages
+Allow: /services
+Allow: /blog
+Allow: /about
+Allow: /team
+Allow: /portfolio
+Allow: /contacts
 
-# Block commonly unnecessary files
+# Block unnecessary files
 Disallow: /*.json$
 Disallow: /marketplace/js/config.js

@@ -13,6 +13,11 @@
       "permanent": true
     },
     {
+      "source": "/services/local-seo-intake",
+      "destination": "/contacts?plan=map-pack-growth",
+      "permanent": true
+    },
+    {
       "source": "/resources",
       "destination": "/",
       "permanent": true
@@ -43,11 +48,6 @@
       "permanent": true
     },
     {
-      "source": "/:slug-guide",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
       "source": "/:path*.html",
       "destination": "/:path*",
       "permanent": true
@@ -72,6 +72,10 @@
     {
       "source": "/blog/:slug",
       "destination": "/blog-post.html"
+    },
+    {
+      "source": "/:slug-guide",
+      "destination": "/guides/:slug-guide.html"
     }
   ],
   "headers": [

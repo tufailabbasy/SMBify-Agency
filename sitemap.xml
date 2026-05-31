@@ -1,260 +1,327 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Static Pages -->
   <url>
-    <loc>https://www.smbify.agency/</loc>
+    <loc>https://www.smbify.agency</loc>
     <lastmod>2026-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/about</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/team</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://www.smbify.agency/services</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/portfolio</loc>
     <lastmod>2026-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.smbify.agency/booking</loc>
+    <loc>https://www.smbify.agency/services</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/contacts</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.smbify.agency/services/local-seo-intake</loc>
+    <loc>https://www.smbify.agency/booking</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Legal & Sitemap Pages -->
   <url>
     <loc>https://www.smbify.agency/privacy-policy</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.40</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/terms</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.40</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/sitemap-html</loc>
     <lastmod>2026-05-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.50</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-
-
-  <!-- Blog Page -->
   <url>
     <loc>https://www.smbify.agency/blog</loc>
     <lastmod>2026-05-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Portfolio Detail Case Studies -->
+  <url>
+    <loc>https://www.smbify.agency/brand-mentions-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/cloud-stack-backlinks-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/forum-backlinks-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/foundational-backlinks-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/google-entity-stack-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/guest-posting-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/local-citations-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/local-seo-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/press-release-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/social-signals-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/web2-map-embeds-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/website-design-guide</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.smbify.agency/portfolio/cleaning-caddy</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/portfolio/hometown-ductcleaning</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/portfolio/prime-plumbing</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/portfolio/raleigh-roofpro</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.smbify.agency/services/local-seo-intake</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.smbify.agency/services/local-seo-service</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.smbify.agency/blog/google-business-profile-optimization-guide</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/local-citation-building-for-agencies</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/water-damage-restoration-local-seo</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/map-pack-ranking-factors</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/white-label-seo-for-agencies</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/local-seo-guide-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/ultimate-guide-to-seo-plugins-boost-your-website-s-search-rankings-in-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/the-ultimate-guide-to-seo-ranking-factors-everything-you-need-to-know-for-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/seo-services-for-small-business-the-complete-2025-guide</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/ultimate-guide-to-seo-tools-best-software-solutions-for-2024-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/the-complete-seo-guide-for-2025-mastering-search-engine-optimization-in-the-ai-era</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/technical-seo-the-complete-guide-to-website-performance-and-search-success-in-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/website-ranking-the-complete-guide-to-google-ranking-factors-in-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/what-is-local-seo-a-comprehensive-guide-for-2025-definitions-strategies-tools-and-future-trends</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/meta-title-wordpress-seo-guide-2025-complete-strategy-plugins-best-practices-for-top-rankings</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/best-seo-agencies-2025-top-15-companies-ranked-with-smbify-review</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/best-seo-companies-2025-the-ultimate-guide</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/master-search-engine-marketing-in-2025-the-complete-guide-to-sem-success</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/google-ranking-explained-the-ultimate-2025-guide-to-mastering-search-visibility</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/complete-guide-to-local-seo-services-boost-your-business-visibility-in-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/the-ultimate-guide-to-local-seo-a-comprehensive-playbook-for-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/muhammad-tufail-abbas-pakistan-s-leading-local-seo-expert-changing-the-game-in-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/off-page-seo-the-complete-guide-to-building-authority-and-rankings-in-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/on-page-seo-the-complete-guide-to-ranking-higher-in-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.smbify.agency/blog/seo-company-services-complete-guide-to-search-engine-optimization-in-2025</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>
