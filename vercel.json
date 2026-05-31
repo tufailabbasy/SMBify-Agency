@@ -1,0 +1,109 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/pricing",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/local-seo-service",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/resources",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services/cloud-stack-backlinks",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/social-signals",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/:country-local-citations",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/:category-category-citations",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/:slug-guide",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/:path*.html",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/index",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog-post.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/pricing",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}

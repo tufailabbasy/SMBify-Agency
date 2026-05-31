@@ -1,0 +1,47 @@
+<!-- 
+    STANDARD HEADER TEMPLATE FOR SMBIFY WEBSITE
+    Copy this header to all pages. 
+    
+    IMPORTANT: Update the following for each page:
+    1. Change 'active' class to the appropriate nav link for the current page
+    2. For service pages, adjust image/link paths with '../' prefix
+-->
+<header class="header" id="header">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/assets/logo-light.png" alt="SMBify Logo" class="logo-light">
+                <img src="/assets/logo-dark.png" alt="SMBify Logo" class="logo-dark">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/about" class="nav__link">About</a></li>
+                    <li><a href="/team" class="nav__link">Team</a></li>
+                    <li><a href="/portfolio" class="nav__link">Portfolio</a></li>
+                    <li><a href="/services" class="nav__link">Services</a></li>
+                    <li><a href="/contacts" class="nav__link">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button class="theme-toggle-single" id="theme-toggle-btn" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+
+                <a href="/services" class="btn btn--primary hide-mobile">Local SEO Service</a>
+
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>

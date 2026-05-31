@@ -1,0 +1,26 @@
+# SMBify Agency Robots.txt
+# https://smbify.agency
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.smbify.agency/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin-login.html
+Disallow: /admin-blog.html
+Disallow: /marketplace/admin/
+Disallow: /cdn-cgi/
+
+# Allow search engines to crawl all public content
+Allow: /services/
+Allow: /blog.html
+Allow: /about.html
+Allow: /team.html
+Allow: /portfolio.html
+Allow: /contacts.html
+
+# Block commonly unnecessary files
+Disallow: /*.json$
+Disallow: /marketplace/js/config.js

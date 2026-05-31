@@ -1,0 +1,4 @@
+https://smbify.netlify.app/* https://smbify.agency/:splat 301!
+http://smbify.netlify.app/* https://smbify.agency/:splat 301!
+/resources / 301
+/resources/* / 301
