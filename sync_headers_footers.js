@@ -53,10 +53,10 @@ walk(baseDir, (filePath, file) => {
     const originalContent = content;
 
     // 1. REMOVE EXISTING HEADER AND FOOTER (Clean slate)
-    content = content.replace(/<!--[\s\S]*?STANDARD HEADER TEMPLATE[\s\S]*?-->\s*<header[\s\S]*?<\/header>/g, '');
+    content = content.replace(/<!--\s*STANDARD HEADER TEMPLATE[\s\S]*?-->\s*<header[\s\S]*?<\/header>/g, '');
     content = content.replace(/<header class="header" id="header"[\s\S]*?<\/header>/g, '');
 
-    content = content.replace(/<!--[\s\S]*?STANDARD FOOTER TEMPLATE[\s\S]*?-->\s*<footer[\s\S]*?<\/footer>/g, '');
+    content = content.replace(/<!--\s*STANDARD FOOTER TEMPLATE[\s\S]*?-->\s*<footer[\s\S]*?<\/footer>/g, '');
     content = content.replace(/<footer class="footer"[\s\S]*?<\/footer>/g, '');
 
     // 2. FIX STRUCTURAL TAGS (Ensure </head> and <body> exist)
