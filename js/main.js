@@ -30,6 +30,7 @@ const HeaderFooterManager = {
     { label: 'Team',      href: '/team' },
     { label: 'Portfolio', href: '/portfolio' },
     { label: 'Services',  href: '/services' },
+    { label: 'Citations', href: '/local-citations' },
     { label: 'Contacts',  href: '/contacts' }
   ],
 
