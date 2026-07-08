@@ -31,6 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.smbify.agency/local-citations</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.smbify.agency/contacts</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
