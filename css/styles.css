@@ -3996,6 +3996,9 @@ p {
   border-radius: var(--radius-lg);
   padding: var(--spacing-xl);
   transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .team-card:hover {
@@ -4028,6 +4031,7 @@ p {
   display: flex;
   justify-content: center;
   gap: var(--spacing-sm);
+  margin-top: auto;
 }
 
 .team-card__social a {
