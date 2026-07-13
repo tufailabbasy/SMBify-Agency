@@ -1678,18 +1678,28 @@ p {
 .hero__float-badge {
   position: absolute;
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1rem;
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  box-shadow: var(--shadow-lg);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  white-space: nowrap;
+  flex-direction: column;
+  align-items: stretch;
+  background: rgba(13, 18, 32, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.1rem;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(132, 204, 22, 0.05);
   z-index: 10;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--text-primary);
+}
+
+.hero__float-badge:hover {
+  transform: translateY(-4px) scale(1.03);
+  border-color: rgba(132, 204, 22, 0.3);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(132, 204, 22, 0.12);
 }
 
 .hero__float-badge svg {
@@ -1701,18 +1711,121 @@ p {
   top: 8%;
   right: -10%;
   animation: floatBadge1 4s ease-in-out infinite;
+  width: 200px;
 }
 
 .hero__float-badge--2 {
   bottom: 15%;
   left: -8%;
   animation: floatBadge2 5s ease-in-out infinite 0.5s;
+  width: 195px;
 }
 
 .hero__float-badge--3 {
   bottom: 5%;
   right: -5%;
   animation: floatBadge1 4.5s ease-in-out infinite 1s;
+  width: 175px;
+}
+
+/* Glass Card Content Elements */
+.glass-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.glass-card__title {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.glass-card__trend {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #84CC16;
+  background: rgba(132, 204, 22, 0.1);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.glass-card__progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.glass-card__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #84CC16, #A3E635);
+  border-radius: 3px;
+}
+
+.glass-card__footer {
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.glass-card__audit {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.audit-score {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2.5px solid #84CC16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #84CC16;
+  box-shadow: 0 0 10px rgba(132, 204, 22, 0.2);
+  flex-shrink: 0;
+}
+
+.audit-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.audit-label {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+}
+
+.audit-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.glass-card__stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #84CC16;
+  letter-spacing: -0.01em;
+}
+
+.stats-label {
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  margin-top: 0.1rem;
 }
 
 @keyframes floatBadge1 {
