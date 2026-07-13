@@ -2646,7 +2646,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(132, 204, 22, 0.08);
+  background: var(--bg-secondary);
   border: 2px solid var(--brand-primary);
   border-radius: 50%;
   font-size: 1.25rem;
