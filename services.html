@@ -14,27 +14,160 @@
         gtag('config', 'G-2ZEXKVH0S5');
     </script>
 
-    <meta name="description" content="Local SEO services and white-label fulfillment from $99/mo. Citations, backlinks, maps optimization, and done-for-you execution for agencies, resellers, and small businesses.">
+    <meta name="description" content="Explore our premium white-label local SEO campaigns and manual citation fulfillment services. Scale your agency and home service clients with SMBify.">
 
-    <meta property="og:title" content="Local SEO Services — White-Label & Done-for-You | SMBify">
-    <meta property="og:description" content="Dominate local search with white-label Local SEO services. Service tiers from $99/mo with citations, backlinks, maps, and more.">
+    <meta property="og:title" content="Our Services - White-Label Local SEO & Citations | SMBify">
+    <meta property="og:description" content="Explore white-label Local SEO campaigns and manual citation building. High-intent rankings and lead generation for local home services.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smbify.agency/services">
-    <meta property="og:image" content="https://smbify.agency/assets/og-image.jpg">
+    <meta property="og:url" content="https://www.smbify.net/services">
+    <meta property="og:image" content="https://www.smbify.net/assets/og-image.jpg">
 
-    <link rel="canonical" href="https://smbify.agency/services">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <title>Local SEO Services - White-Label & Done-for-You | SMBify</title>
+    <link rel="canonical" href="https://www.smbify.net/services">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <title>Our Services - White-Label Local SEO & Citations | SMBify</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/styles.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    
+    <style>
+        .services-hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(132, 204, 22, 0.05) 0%, transparent 100%);
+        }
+        .services-hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .services-hero h1 span {
+            color: var(--brand-primary);
+        }
+        .services-hero p {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .service-overview-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-overview-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            transition: background 0.3s;
+        }
+        .service-overview-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-primary);
+            box-shadow: 0 12px 30px rgba(132, 204, 22, 0.05);
+        }
+        .service-overview-card:hover::before {
+            background: var(--brand-primary);
+        }
+        .service-overview-card__icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            background: rgba(132, 204, 22, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-primary);
+            margin-bottom: 1.5rem;
+        }
+        .service-overview-card__title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .service-overview-card__desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .service-overview-card__features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .service-overview-card__features li {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .service-overview-card__features li svg {
+            flex-shrink: 0;
+            color: var(--brand-primary);
+        }
+        .service-overview-card__footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .service-overview-card__price {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        .service-overview-card__price span {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .service-overview-card {
+                padding: 2rem 1.5rem;
+            }
+            .services-hero h1 {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -69,7 +202,7 @@
                         </a>
                         <ul class="nav__dropdown-menu">
                             <li>
-                                <a href="/services" class="nav__dropdown-link">
+                                <a href="/local-seo" class="nav__dropdown-link">
                                     <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <circle cx="12" cy="12" r="10"/>
                                         <line x1="2" y1="12" x2="22" y2="12"/>
@@ -104,7 +237,7 @@
                     </svg>
                 </button>
 
-                <a href="/services" class="btn btn--primary hide-mobile">Local SEO Service</a>
+                <a href="/local-seo" class="btn btn--primary hide-mobile">Local SEO Service</a>
 
                 <button class="mobile-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -119,425 +252,211 @@
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
-    <section class="service-hero">
-        <div class="container">
-            <h1>Dominate <span>Local Search</span> & Get More Customers</h1>
-            <p>Stop losing customers to competitors. Our proven Local SEO strategies help small businesses rank higher on Google Maps, get more calls, and increase revenue.</p>
-            <div class="hero-trust">
-                <span>No Long-Term Contracts</span>
-                <span>Cancel Anytime</span>
-                <span>100% White-Label</span>
-                <span>30-Day Guarantee</span>
+    <main>
+        <!-- HERO -->
+        <section class="services-hero">
+            <div class="container">
+                <span class="subtitle">Our Services</span>
+                <h1>Scale Your Agency With <span>SMBify Growth</span></h1>
+                <p>We deliver elite local search engine authority. From completely managed local SEO campaigns to manual citation audits and fulfillment.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ═══ BENEFITS ════════════════════════════════════════════════ -->
-    <section style="padding:5rem 0;background:var(--bg-secondary);">
-        <div class="container">
-            <div style="text-align:center;margin-bottom:2.5rem;">
-                <span class="section-label">Why Choose SMBify</span>
-                <h2 style="font-family:'Outfit',sans-serif;font-size:2.25rem;font-weight:800;margin:0 0 .75rem;color:var(--text-primary);">Benefits That Move the Needle</h2>
-                <p style="color:var(--text-secondary);font-size:1rem;max-width:720px;margin:0 auto;">The goal is simple: help agencies, resellers, and business owners deliver better results with less overhead. Every service tier is built around outcomes, reporting, and white-label execution.</p>
-            </div>
-
-            <div class="plans-grid" style="margin-top:2.5rem;max-width:1100px;margin-left:auto;margin-right:auto;">
-                <div class="plan-card" style="border:1px solid var(--border-color);background:var(--bg-card);">
-                    <div style="width:56px;height:56px;border-radius:16px;background:rgba(132,204,22,.12);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--brand-primary);">
-                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.3">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
+        <!-- SERVICES OVERVIEW CARDS -->
+        <section style="padding: 2rem 0 6rem 0; background: var(--bg-primary);">
+            <div class="container">
+                <div class="services-grid">
+                    <!-- Service 1: Local SEO -->
+                    <div class="service-overview-card" style="background: var(--bg-card);">
+                        <div>
+                            <div class="service-overview-card__icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <h2 class="service-overview-card__title">White-Label Local SEO</h2>
+                            <p class="service-overview-card__desc">Complete monthly Local SEO campaigns designed to rank local home service businesses in the Google Map Pack and organic local search.</p>
+                            <ul class="service-overview-card__features">
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Full Google Business Profile Management
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Local Link Building & Map Embeds
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    On-Page SEO & Local Business Schema
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Monthly Transparent Keyword Reporting
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-overview-card__footer">
+                            <div class="service-overview-card__price">
+                                Starting at
+                                <span>$99/mo</span>
+                            </div>
+                            <a href="/local-seo" class="btn btn--primary">View Local SEO Campaigns</a>
+                        </div>
                     </div>
-                    <div class="plan-card__tier" style="font-size:1.1rem;margin-bottom:.5rem;">White-Label Delivery</div>
-                    <p style="color:var(--text-secondary);font-size:.95rem;margin:0;">Reports, communication, and client-facing deliverables are branded as your own. Your client sees your business, not ours.</p>
-                </div>
 
-                <div class="plan-card" style="border:1px solid var(--border-color);background:var(--bg-card);">
-                    <div style="width:56px;height:56px;border-radius:16px;background:rgba(132,204,22,.12);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--brand-primary);">
-                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.3">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    <div class="plan-card__tier" style="font-size:1.1rem;margin-bottom:.5rem;">Built-In Risk Protection</div>
-                    <p style="color:var(--text-secondary);font-size:.95rem;margin:0;">Every plan includes a free audit, onboarding help, and a 30-day results guarantee so the launch feels safe and easy.</p>
-                </div>
-
-                <div class="plan-card" style="border:1px solid var(--border-color);background:var(--bg-card);">
-                    <div style="width:56px;height:56px;border-radius:16px;background:rgba(132,204,22,.12);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--brand-primary);">
-                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.3">
-                            <path d="M3 12a9 9 0 1 1 18 0a9 9 0 0 1 -18 0"></path><path d="M9 10l1.5 2.5L15 8"></path>
-                        </svg>
-                    </div>
-                    <div class="plan-card__tier" style="font-size:1.1rem;margin-bottom:.5rem;">Simple Monthly Flow</div>
-                    <p style="color:var(--text-secondary);font-size:.95rem;margin:0;">No setup fees, no long-term contract pressure, and no confusing add-on ladder. Just clear service tiers you can resell or use directly.</p>
-                </div>
-
-                <div class="plan-card" style="border:1px solid var(--border-color);background:var(--bg-card);">
-                    <div style="width:56px;height:56px;border-radius:16px;background:rgba(132,204,22,.12);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--brand-primary);">
-                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.3">
-                            <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline><polyline points="12 12.5 20 7.5"></polyline><polyline points="12 12.5 12 21"></polyline><polyline points="12 12.5 4 7.5"></polyline>
-                        </svg>
-                    </div>
-                    <div class="plan-card__tier" style="font-size:1.1rem;margin-bottom:.5rem;">Everything in One System</div>
-                    <p style="color:var(--text-secondary);font-size:.95rem;margin:0;">Citations, backlinks, content, maps, and design live inside one delivery system, so your package feels complete and easier to explain to clients.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══ CORE DELIVERABLES ═══════════════════════════════════════ -->
-    <section style="padding: 5rem 0; background: var(--bg-primary);">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 3.5rem;">
-                <span class="section-label">Inside SMBify Growth</span>
-                <h2 style="font-family: 'Outfit', sans-serif; font-size: 2.25rem; font-weight: 600; margin: 0 0 .75rem; color: var(--text-primary);">Our Core Local SEO Deliverables</h2>
-                <p style="color: var(--text-secondary); font-size: 1rem; max-width: 720px; margin: 0 auto;">We don't just do checklist-based SEO. We deliver a complete authority-building system that Google trusts, making it easy for local clients to find you.</p>
-            </div>
-
-            <div class="services-deliverables-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-                <!-- Deliverable 1 -->
-                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.25rem; transition: all 0.3s; display: flex; flex-direction: column; gap: 1rem;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(132, 204, 22, 0.1); display: flex; align-items: center; justify-content: center; color: var(--brand-primary);">
-                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <circle cx="9" cy="9" r="2"></circle>
-                            <path d="M14 11h3m-3 3h3m-3 3h3"></path>
-                        </svg>
-                    </div>
-                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; margin: 0; color: var(--text-primary);">Google Business Profile (GBP) Optimization</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0;">We fully optimize your business listing. This includes category alignment, service menu setup, keyword-rich business description, high-quality geo-tagged photos, custom Q&As, and weekly Google posts to show active trust signals.</p>
-                </div>
-
-                <!-- Deliverable 2 -->
-                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.25rem; transition: all 0.3s; display: flex; flex-direction: column; gap: 1rem;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(132, 204, 22, 0.1); display: flex; align-items: center; justify-content: center; color: var(--brand-primary);">
-                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; margin: 0; color: var(--text-primary);">Manual Citation Building (NAP Consistency)</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0;">Consistent Name, Address, and Phone (NAP) across directories is crucial. We clean up incorrect listings, remove duplicates, and manually build local citation profiles on top directories (Yelp, YellowPages, Bing, Apple Maps, Foursquare, etc.) to establish local presence.</p>
-                    <a href="/local-citations" style="color: var(--brand-primary); font-size: 0.9rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: opacity .2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">Learn More &rarr;</a>
-                </div>
-
-                <!-- Deliverable 3 -->
-                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.25rem; transition: all 0.3s; display: flex; flex-direction: column; gap: 1rem;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(132, 204, 22, 0.1); display: flex; align-items: center; justify-content: center; color: var(--brand-primary);">
-                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                        </svg>
-                    </div>
-                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; margin: 0; color: var(--text-primary);">Local Link Building & Map Embeds</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0;">We build localized backlinks from geo-relevant blogs, community sites, and business directories. Additionally, we create customized local map embeds on Web 2.0 properties, sending coordinates and proximity signals back to Google Maps.</p>
-                </div>
-
-                <!-- Deliverable 4 -->
-                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.25rem; transition: all 0.3s; display: flex; flex-direction: column; gap: 1rem;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(132, 204, 22, 0.1); display: flex; align-items: center; justify-content: center; color: var(--brand-primary);">
-                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <line x1="10" y1="9" x2="8" y2="9"></line>
-                        </svg>
-                    </div>
-                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; margin: 0; color: var(--text-primary);">On-Page SEO & Schema Markup</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0;">We configure advanced LocalBusiness JSON-LD schema markup on your website. This tells search engines exactly where your business is, what areas you serve, and your business hours. We also optimize headings, title tags, and meta text for local keywords.</p>
-                </div>
-
-                <!-- Deliverable 5 -->
-                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.25rem; transition: all 0.3s; display: flex; flex-direction: column; gap: 1rem;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(132, 204, 22, 0.1); display: flex; align-items: center; justify-content: center; color: var(--brand-primary);">
-                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                        </svg>
-                    </div>
-                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; margin: 0; color: var(--text-primary);">Review Acquisition & Reputation Strategy</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0;">Reviews are a top-3 ranking factor on Google Maps. We provide a custom review acquisition strategy, QR code review cards, and templates to request and reply to reviews properly. We also set up automated review-checking alerts.</p>
-                </div>
-
-                <!-- Deliverable 6 -->
-                <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.25rem; transition: all 0.3s; display: flex; flex-direction: column; gap: 1rem;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(132, 204, 22, 0.1); display: flex; align-items: center; justify-content: center; color: var(--brand-primary);">
-                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; margin: 0; color: var(--text-primary);">Ranking & Keyword Position Reporting</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin: 0;">We track keyword performance transparently. You get a monthly rank tracking report showing keyword movements on Google Maps and Google Search, GBP search queries and insights (calls, direction requests), and citation indexing status.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══ SERVICE TIERS ════════════════════════════════════════════════ -->
-    <section style="padding:5rem 0;background:var(--bg-secondary);" id="service-tiers">
-        <div class="container">
-            <div style="text-align:center;margin-bottom:1.25rem;">
-                <span class="section-label">SMBify Growth</span>
-                <h2 style="font-family:'Outfit',sans-serif;font-size:2.25rem;font-weight:600;margin:0 0 .75rem;color:var(--text-primary);">The SMBify Growth Offer</h2>
-                <p style="color:var(--text-secondary);font-size:1rem;max-width:660px;margin:0 auto;">This is our signature branded offer for Local SEO growth. Each plan shows exactly what is included and what it is worth. <strong style="color:var(--text-primary);">Most agencies charge $1,500–$3,000/mo</strong> for a similar delivery stack.</p>
-            </div>
-
-            <div class="plans-grid" style="margin-top:2.5rem;">
-
-                <!-- Local Presence -->
-                <div class="plan-card">
-                    <div class="plan-card__tier">Local Presence</div>
-                    <div class="plan-card__value">$450/mo value</div>
-                    <div class="plan-card__price">$99</div>
-                    <div class="plan-card__period">/ month</div>
-                    <p class="plan-card__desc">For new businesses or low-competition markets. Build the foundation fast.</p>
-                    <hr>
-                    <ul class="plan-card__stack">
-                        <li><span>&#10003; GBP Setup &amp; Optimization</span><span>$150</span></li>
-                        <li><span>&#10003; 10 Local Citations/mo</span><span>$25</span></li>
-                        <li><span>&#10003; On-Page SEO (5 pages)</span><span>$150</span></li>
-                        <li><span>&#10003; Local Keyword Research</span><span>$75</span></li>
-                        <li><span>&#10003; Monthly Ranking Report</span><span>$30</span></li>
-                        <li><span>&#10003; Email Support</span><span>$20</span></li>
-                        <li class="divider"><span>Total Value</span><span>$450/mo</span></li>
-                    </ul>
-                    <div class="plan-card__you-pay"><span>You Pay</span><span>$99/mo</span></div>
-                    <a href="/contacts?plan=local-presence" class="btn btn--secondary" style="width:100%;text-align:center;display:block;">Get Started</a>
-                </div>
-
-                <!-- Map Pack Growth (Featured) -->
-                <div class="plan-card plan-card--featured">
-                    <div class="plan-card__badge">Most Popular</div>
-                    <div class="plan-card__tier">Map Pack Growth</div>
-                    <div class="plan-card__value">$900/mo value</div>
-                    <div class="plan-card__price">$199</div>
-                    <div class="plan-card__period">/ month</div>
-                    <p class="plan-card__desc">Full campaign for competitive markets. Own the local 3-pack.</p>
-                    <hr>
-                    <ul class="plan-card__stack">
-                        <li><span>&#10003; Full GBP Management</span><span>$200</span></li>
-                        <li><span>&#10003; 25 Local Citations/mo</span><span>$65</span></li>
-                        <li><span>&#10003; On-Page SEO (Unlimited)</span><span>$200</span></li>
-                        <li><span>&#10003; Local Link Building (3/mo)</span><span>$150</span></li>
-                        <li><span>&#10003; Review Generation Strategy</span><span>$75</span></li>
-                        <li><span>&#10003; Competitor Gap Analysis</span><span>$75</span></li>
-                        <li><span>&#10003; Monthly Report + Strategy Call</span><span>$85</span></li>
-                        <li><span>&#10003; Priority Chat &amp; Email Support</span><span>$50</span></li>
-                        <li class="divider"><span>Total Value</span><span>$900/mo</span></li>
-                    </ul>
-                    <div class="plan-card__you-pay"><span>You Pay</span><span>$199/mo</span></div>
-                    <a href="/contacts?plan=map-pack-growth" class="btn btn--primary" style="width:100%;text-align:center;display:block;">Get Started</a>
-                </div>
-
-                <!-- Local Authority -->
-                <div class="plan-card">
-                    <div class="plan-card__tier">Local Authority</div>
-                    <div class="plan-card__value">$1,500/mo value</div>
-                    <div class="plan-card__price">$299</div>
-                    <div class="plan-card__period">/ month</div>
-                    <p class="plan-card__desc">Aggressive domination for 1–2 locations. Heavy links + full management.</p>
-                    <hr>
-                    <ul class="plan-card__stack">
-                        <li><span>&#10003; Full GBP Mgmt + Weekly Posts</span><span>$250</span></li>
-                        <li><span>&#10003; 50 Local Citations/mo</span><span>$125</span></li>
-                        <li><span>&#10003; On-Page SEO + Schema Markup</span><span>$250</span></li>
-                        <li><span>&#10003; Local Link Building (8/mo)</span><span>$400</span></li>
-                        <li><span>&#10003; Review Mgmt &amp; Responses</span><span>$100</span></li>
-                        <li><span>&#10003; Full Competitor Analysis</span><span>$150</span></li>
-                        <li><span>&#10003; Monthly Strategy Call</span><span>$75</span></li>
-                        <li><span>&#10003; Dedicated Account Manager</span><span>$150</span></li>
-                        <li class="divider"><span>Total Value</span><span>$1,500/mo</span></li>
-                    </ul>
-                    <div class="plan-card__you-pay"><span>You Pay</span><span>$299/mo</span></div>
-                    <a href="/contacts?plan=local-authority" class="btn btn--secondary" style="width:100%;text-align:center;display:block;">Get Started</a>
-                </div>
-
-                <!-- Agency Partner -->
-                <div class="plan-card">
-                    <div class="plan-card__tier">Agency Partner</div>
-                    <div class="plan-card__value">$2,800/mo value</div>
-                    <div class="plan-card__price">$449</div>
-                    <div class="plan-card__period">/ month</div>
-                    <p class="plan-card__desc">Multi-location or agency resale. Fully managed white-label — your brand, our work.</p>
-                    <hr>
-                    <ul class="plan-card__stack">
-                        <li><span>&#10003; Everything in Local Authority</span><span>$1,500</span></li>
-                        <li><span>&#10003; Up to 5 Locations</span><span>$400</span></li>
-                        <li><span>&#10003; 100 Local Citations/mo</span><span>$250</span></li>
-                        <li><span>&#10003; Local Link Building (15/mo)</span><span>$350</span></li>
-                        <li><span>&#10003; 2 Blog Posts/mo</span><span>$100</span></li>
-                        <li><span>&#10003; 100% White-Label Reports</span><span>$75</span></li>
-                        <li><span>&#10003; Bi-Weekly Strategy Calls</span><span>$75</span></li>
-                        <li><span>&#10003; WhatsApp Direct Line</span><span>$50</span></li>
-                        <li class="divider"><span>Total Value</span><span>$2,800/mo</span></li>
-                    </ul>
-                    <div class="plan-card__you-pay"><span>You Pay</span><span>$449/mo</span></div>
-                    <a href="/contacts?plan=agency-partner" class="btn btn--secondary" style="width:100%;text-align:center;display:block;">Get Started</a>
-                </div>
-
-            </div>
-
-            <!-- Bonus bar -->
-            <div class="bonus-bar">
-                <div class="bonus-bar__label">Free With Every Service Tier</div>
-                <div class="bonus-bar__items">
-                    <span>Free Local SEO Audit before we start <span style="color:var(--text-tertiary);margin-left:.3rem;">($299 value)</span></span>
-                    <span>Onboarding call &amp; campaign strategy <span style="color:var(--text-tertiary);margin-left:.3rem;">($150 value)</span></span>
-                    <span>White-label client report template <span style="color:var(--text-tertiary);margin-left:.3rem;">($99 value)</span></span>
-                </div>
-            </div>
-
-            <!-- Guarantee bar -->
-            <div class="guarantee-bar">
-                <div class="guarantee-bar__left">
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#84CC16" stroke-width="2">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    </svg>
-                    <div>
-                        <div class="guarantee-bar__title">30-Day Results Guarantee</div>
-                        <div class="guarantee-bar__sub">No results in 30 days? We work the next month free — no questions asked.</div>
+                    <!-- Service 2: Local Citations -->
+                    <div class="service-overview-card" style="background: var(--bg-card);">
+                        <div>
+                            <div class="service-overview-card__icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <h2 class="service-overview-card__title">Local Citation Fulfillment</h2>
+                            <p class="service-overview-card__desc">Clean up outdated directory profiles and submit business credentials manually to highly trusted databases to signal local authority.</p>
+                            <ul class="service-overview-card__features">
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    100% Manual Directory Submissions
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Comprehensive Duplicate Detection
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Google Maps & Apple Maps Inclusions
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Complete Credentials Report (Excel/Sheets)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-overview-card__footer">
+                            <div class="service-overview-card__price">
+                                Starting at
+                                <span>$49 one-time</span>
+                            </div>
+                            <a href="/local-citations" class="btn btn--primary">View Citation Packages</a>
+                        </div>
                     </div>
                 </div>
-                <div class="guarantee-bar__pills">
-                    <span>No contracts</span>
-                    <span>Cancel anytime</span>
-                    <span>100% White-Label</span>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section style="padding: 5rem 0; background: var(--bg-secondary);">
+            <div class="container">
+                <div style="text-align:center; margin-bottom:3rem;">
+                    <span class="subtitle">FAQ</span>
+                    <h2 style="font-family:'Outfit',sans-serif;font-size:2.25rem;font-weight:800;margin:0.75rem 0;color:var(--text-primary);">Frequently Asked Questions</h2>
+                    <p style="color:var(--text-secondary);font-size:1rem;margin:0;">Learn how we deliver our premium white-label agency services.</p>
+                </div>
+
+                <div class="faq-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;">
+                    <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">What does white-label mean?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">White-label means we perform 100% of the fulfillment work (optimizations, link building, citation logging) in the background. Reports are delivered without our branding, allowing you to present them under your own agency logo.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">Are there setup fees or hidden contracts?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">No setup fees, ever. Our Local SEO monthly campaigns run flat-rate with no contract lock-ins, and our citation building services are strictly flat one-time payments.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">Do you build citations manually?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">Yes. We submit all directories manually, register profiles, and provide full credentials. We do not use API automation like Yext, which means you own the citations forever.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                        <!-- FAQ 4 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">How long do Local SEO campaigns take to rank?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">Most home service companies start observing local Map Pack indexation changes and call increases within 30 to 60 days. Dominant map pack visibility usually solidifies inside 3 to 6 months.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">What is the 30-Day Results Guarantee?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">If we do not achieve measurable progress on your local SEO campaign within 30 days of the start of the service, we will work the entire next month completely free of charge.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">Do you offer multiple client discounts?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">Yes. Agencies managing 3 or more local locations are eligible for custom wholesale tiers. Get in touch with us on our Contact page to set up wholesale details.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <p style="text-align:center;margin-top:1.5rem;font-size:.875rem;color:var(--text-secondary);">
-                <strong style="color:var(--text-primary);">Need help choosing?</strong> <a href="/contacts" style="color:#84CC16;font-weight:600;">Book a free consultation</a> — we'll help you choose the right service tier for your business or your clients.
-            </p>
-        </div>
-    </section>
-
-    <!-- ═══ FAQ ══════════════════════════════════════════════════════════ -->
-    <section class="service-faq">
-        <div class="container">
-            <div style="text-align:center;margin-bottom:2.5rem;">
-                <span class="section-label">FAQ</span>
-                <h2 style="font-family:'Outfit',sans-serif;font-size:2rem;font-weight:800;margin:.25rem 0 .5rem;color:var(--text-primary);">Questions About Our Services</h2>
-                <p style="color:var(--text-secondary);font-size:.95rem;max-width:500px;margin:0 auto;">Everything you need to know before getting started.</p>
+        <!-- CTA SECTION -->
+        <section class="section">
+            <div class="container">
+                <div class="cta" data-animate></div>
             </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-item__q">Is there a setup fee or onboarding cost?</div>
-                    <div class="faq-item__a">No setup fees, ever. Your first month starts with a free local SEO audit and onboarding call — included at no extra charge in all plans.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-item__q">Can I cancel my monthly plan at any time?</div>
-                    <div class="faq-item__a">Yes. No lock-in contracts. Cancel before your next billing date and you won't be charged again. We earn your business every month.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-item__q">How does white-label delivery work?</div>
-                    <div class="faq-item__a">All reports, deliverables, and communication are done under your brand. Your client never sees SMBify. You present it as your own service.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-item__q">Do you offer discounts for multiple clients?</div>
-                    <div class="faq-item__a">Yes — agencies running 3+ clients get preferential wholesale rates. Contact us to discuss a custom agency partnership agreement.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-item__q">What is the 30-Day Guarantee exactly?</div>
-                    <div class="faq-item__a">If we don't show measurable progress on your campaign within 30 days of starting, we work the following month completely free. We define "progress" together during onboarding.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-item__q">Are prices in USD? Do you charge VAT?</div>
-                    <div class="faq-item__a">All prices are in USD. No VAT is added — the price you see is what you pay. Invoices are available upon request for your accounting needs.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══ CTA ═══════════════════════════════════════════════════════════ -->
-    <section class="section">
-        <div class="container">
-            <div class="cta" data-animate></div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    
-
-    <script src="js/main.js"></script>
+        </section>
+    </main>
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+    <script src="/js/main.js"></script>
+    <script>
+        function toggleFaq(btn) {
+            const body = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+            const isOpen = body.style.display === 'block';
+            // Close all
+            document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
+            document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = '');
+            // Open clicked if it was closed
+            if (!isOpen) {
+                body.style.display = 'block';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
 
     
 
@@ -564,7 +483,7 @@
             <div>
                 <h6 class="footer__title">Quick Links</h6>
                 <div class="footer__links">
-                    <a href="/services" class="footer__link">Local SEO Service</a>
+                    <a href="/local-seo" class="footer__link">Local SEO Service</a>
                     <a href="/services" class="footer__link">Services</a>
                     <a href="/contacts" class="footer__link">Get Started</a>
                 </div>

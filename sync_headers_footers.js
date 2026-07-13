@@ -15,7 +15,11 @@ const footerTemplate = fs.readFileSync(footerFile, 'utf8');
 
 function getActiveLink(filename) {
     if (filename === 'index.html') return '/';
-    return '/' + filename.replace('.html', '');
+    const clean = '/' + filename.replace('.html', '');
+    if (clean === '/local-seo' || clean === '/local-citations') {
+        return '/services';
+    }
+    return clean;
 }
 
 const HEAD_REQUIREMENTS = [

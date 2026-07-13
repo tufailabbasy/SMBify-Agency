@@ -17,9 +17,11 @@ with open(footer_file, 'r', encoding='utf-8') as f:
     footer_template = f.read()
 
 def get_active_link(filename):
-    # Standardize links to .html for the active class logic
     if filename == 'index.html': return '/'
-    return '/' + filename
+    clean = '/' + filename.replace('.html', '')
+    if clean == '/local-seo' or clean == '/local-citations':
+        return '/services'
+    return clean
 
 # The standard head tags that should be in every file
 HEAD_REQUIREMENTS = [

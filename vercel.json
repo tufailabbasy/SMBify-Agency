@@ -9,7 +9,7 @@
     },
     {
       "source": "/services/local-seo-service",
-      "destination": "/services",
+      "destination": "/local-seo",
       "permanent": true
     },
     {

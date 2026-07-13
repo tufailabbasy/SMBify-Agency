@@ -206,7 +206,7 @@
                     <li><a href="/team" class="nav__link">Team</a></li>
                     <li><a href="/portfolio" class="nav__link">Portfolio</a></li>
                     <li class="nav__dropdown">
-                        <a href="/services" class="nav__link">
+                        <a href="/services" class="nav__link active">
                             Services
                             <span class="nav__caret">
                                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -216,7 +216,7 @@
                         </a>
                         <ul class="nav__dropdown-menu">
                             <li>
-                                <a href="/services" class="nav__dropdown-link">
+                                <a href="/local-seo" class="nav__dropdown-link">
                                     <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <circle cx="12" cy="12" r="10"/>
                                         <line x1="2" y1="12" x2="22" y2="12"/>
@@ -251,7 +251,7 @@
                     </svg>
                 </button>
 
-                <a href="/services" class="btn btn--primary hide-mobile">Local SEO Service</a>
+                <a href="/local-seo" class="btn btn--primary hide-mobile">Local SEO Service</a>
 
                 <button class="mobile-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -261,6 +261,10 @@
             </div>
         </div>
     </header>
+
+    
+
+    
 
     
 
@@ -633,49 +637,102 @@
 
         <!-- FAQ SECTION -->
         <section style="padding: 5rem 0; background: var(--bg-secondary);">
-            <div class="container" style="max-width:800px;">
+            <div class="container">
                 <div style="text-align:center; margin-bottom:3rem;">
-                    <span class="section-label" style="background:var(--primary-alpha);color:var(--brand-primary);padding:0.4rem 0.8rem;border-radius:100px;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">FAQ</span>
+                    <span class="subtitle">FAQ</span>
                     <h2 style="font-family:'Outfit',sans-serif;font-size:2.25rem;font-weight:800;margin:0.75rem 0;color:var(--text-primary);">Frequently Asked Questions</h2>
                     <p style="color:var(--text-secondary);font-size:1rem;margin:0;">Everything you need to know about our local citation fulfillment service.</p>
                 </div>
 
-                <details class="faq-details" open>
-                    <summary class="faq-summary">Do you build citations manually or use software APIs?</summary>
-                    <div class="faq-content">
-                        We build every single citation <strong>100% manually</strong>. We register accounts, configure profiles, insert business details, and verify listings one by one. We do not use Yext, Moz Local, or Advice Local APIs. This prevents automated bugs, guarantees data accuracy, and eliminates recurring fee locks.
-                    </div>
-                </details>
+                <div class="faq-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;">
+                    <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">Do you build citations manually or use software APIs?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">We build every single citation <strong>100% manually</strong>. We register accounts, configure profiles, insert business details, and verify listings one by one. We do not use automated APIs. This prevents automated bugs, guarantees data accuracy, and eliminates recurring fee locks.</p>
+                            </div>
+                        </div>
 
-                <details class="faq-details">
-                    <summary class="faq-summary">Do I own the listings forever?</summary>
-                    <div class="faq-content">
-                        Yes, absolutely. Because we submit listings manually, they belong to you (or your client) permanently. There are no recurring licenses or API fees. Once built, they remain active, and you have complete login credentials to modify or update them in the future.
-                    </div>
-                </details>
+                        <!-- FAQ 2 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">Do I own the listings forever?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">Yes, absolutely. Because we submit listings manually, they belong to you (or your client) permanently. There are no recurring licenses or API fees. Once built, they remain active, and you have complete login credentials to modify or update them in the future.</p>
+                            </div>
+                        </div>
 
-                <details class="faq-details">
-                    <summary class="faq-summary">What directories do you submit to?</summary>
-                    <div class="faq-content">
-                        We submit to top-tier horizontal platforms (Yelp, YellowPages, Bing Places, Apple Maps, Foursquare, Hotfrog, ShowMeLocal) as well as niche-specific directories relevant to your client's industry (e.g., legal directories, contractor sites, healthcare databases) and geo-specific databases.
+                        <!-- FAQ 3 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">What directories do you submit to?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">We submit to top-tier horizontal platforms (Yelp, YellowPages, Bing Places, Apple Maps, Foursquare, Hotfrog, ShowMeLocal) as well as niche-specific directories relevant to your client's industry (e.g., contractor sites, home services databases) and geo-specific databases.</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
 
-                <details class="faq-details">
-                    <summary class="faq-summary">Is this service white-label?</summary>
-                    <div class="faq-content">
-                        Yes. All reports are delivered in a clean, unbranded Google Sheet with zero mention of SMBify. You can add your agency logo, customize colors, and email the report directly to your clients. Our team works completely behind the scenes under your brand.
-                    </div>
-                </details>
+                    <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                        <!-- FAQ 4 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">Is this service white-label?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">Yes. All reports are delivered in a clean, unbranded Google Sheet with zero mention of SMBify. You can add your agency logo, customize colors, and email the report directly to your clients. Our team works completely behind the scenes under your brand.</p>
+                            </div>
+                        </div>
 
-                <details class="faq-details">
-                    <summary class="faq-summary">How long does indexation take?</summary>
-                    <div class="faq-content">
-                        Once citations are submitted, directory platforms index pages at varying speeds. Some are instant, while others can take 2 to 6 weeks. To speed this up, we optimize the indexing process by pinging pages and submitting new URLs to premium indexers at no extra cost to you.
+                        <!-- FAQ 5 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">How long does indexation take?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">Once citations are submitted, directory platforms index pages at varying speeds. Some are instant, while others can take 2 to 6 weeks. To speed this up, we optimize the indexing process by pinging pages and submitting new URLs to premium indexers at no extra cost to you.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="faq-item" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;padding:0;">
+                            <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.1rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                                <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">What is a local citation?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-body" style="display:none;padding:0 1.1rem 1.1rem;">
+                                <p style="margin:0;color:var(--text-secondary);font-size:.92rem;line-height:1.6;">A local citation is any online mention of a business's name, address, and phone number (NAP) on directories, websites, and social media platforms. Google uses citations to verify your business's physical existence and geographical authority.</p>
+                            </div>
+                        </div>
                     </div>
-                </details>
+                </div>
             </div>
         </section>
+
+        <script>
+            function toggleFaq(btn) {
+                const body = btn.nextElementSibling;
+                const icon = btn.querySelector('.faq-icon');
+                const isOpen = body.style.display === 'block';
+                // Close all
+                document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
+                document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = '');
+                // Open clicked if it was closed
+                if (!isOpen) {
+                    body.style.display = 'block';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            }
+        </script>
 
         <!-- CTA SECTION -->
         <section style="padding: 5rem 0; background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-primary) 100%); text-align: center; border-top: 1px solid var(--border-color);">
@@ -735,6 +792,10 @@
 
     
 
+    
+
+    
+
     <!-- STANDARD FOOTER TEMPLATE -->
 <footer class="footer">
     <div class="container">
@@ -758,7 +819,7 @@
             <div>
                 <h6 class="footer__title">Quick Links</h6>
                 <div class="footer__links">
-                    <a href="/services" class="footer__link">Local SEO Service</a>
+                    <a href="/local-seo" class="footer__link">Local SEO Service</a>
                     <a href="/services" class="footer__link">Services</a>
                     <a href="/contacts" class="footer__link">Get Started</a>
                 </div>

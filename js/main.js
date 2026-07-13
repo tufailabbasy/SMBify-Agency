@@ -45,7 +45,7 @@ const HeaderFooterManager = {
     console.log('Injecting header...');
 
     const p = window.location.pathname;
-    const isServicesActive = p.startsWith('/services') || p.startsWith('/local-citations');
+    const isServicesActive = p.startsWith('/services') || p.startsWith('/local-citations') || p.startsWith('/local-seo');
 
     const html = `
       <div class="container header__inner">
@@ -69,7 +69,7 @@ const HeaderFooterManager = {
               </a>
               <ul class="nav__dropdown-menu">
                 <li>
-                  <a href="/services" class="nav__dropdown-link">
+                  <a href="/local-seo" class="nav__dropdown-link">
                     <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <circle cx="12" cy="12" r="10"/>
                       <line x1="2" y1="12" x2="22" y2="12"/>
@@ -93,7 +93,7 @@ const HeaderFooterManager = {
           </ul>
         </nav>
         <div class="header__actions">
-          <a href="/services" class="btn btn--primary hide-mobile">Local SEO Service</a>
+          <a href="/local-seo" class="btn btn--primary hide-mobile">Local SEO Service</a>
           <a href="/booking" class="btn btn--outline hide-mobile" style="margin-left:0.5rem;">Book</a>
           <button class="mobile-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
         </div>
@@ -131,7 +131,7 @@ const HeaderFooterManager = {
           <div>
             <h6 class="footer__title">Quick Links</h6>
             <div class="footer__links">
-              <a href="/services" class="footer__link">Local SEO</a>
+              <a href="/local-seo" class="footer__link">Local SEO</a>
               <a href="/services" class="footer__link">Services</a>
               <a href="/contacts" class="footer__link">Contacts</a>
             </div>
