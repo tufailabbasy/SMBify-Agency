@@ -1236,18 +1236,18 @@ p {
 }
 
 .benefit-card {
-  background: var(--bg-card);
+  background: linear-gradient(135deg, rgba(13, 18, 32, 0.7) 0%, rgba(22, 30, 49, 0.4) 100%);
   padding: 40px;
   border-radius: 24px;
   border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
+  transition: all var(--transition-base);
   position: relative;
 }
 
 .benefit-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--brand-primary);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  border-color: rgba(132, 204, 22, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(132, 204, 22, 0.08);
 }
 
 .benefit-card__icon {
