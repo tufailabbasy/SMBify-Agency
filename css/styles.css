@@ -475,7 +475,7 @@ p {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 200px;
+  min-width: 250px;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
@@ -485,6 +485,7 @@ p {
   transform: translateY(10px);
   transition: all var(--transition-fast);
   padding: var(--spacing-sm) 0;
+  z-index: 1000;
 }
 
 .nav__dropdown:hover .nav__dropdown-menu {
