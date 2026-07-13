@@ -157,6 +157,8 @@
 
     
 
+    
+
 
 
 
@@ -198,8 +200,8 @@
             <div class="container">
                 <div style="max-width:800px;margin:0 auto;text-align:center;margin-bottom:3.5rem;">
                     <span class="subtitle" style="display:inline-block;margin-bottom:0.5rem;">Our Journey</span>
-                    <h2 style="font-family:'Outfit',sans-serif;font-size:2.25rem;font-weight:700;margin:0 0 1rem;color:var(--text-primary);">How We Scaled to Support 35+ Active Agencies</h2>
-                    <p style="color:var(--text-secondary);font-size:1.05rem;">From our roots as small campaign operators to managing hundreds of concurrent local search listings worldwide.</p>
+                    <h2 style="font-family:'Outfit',sans-serif;font-size:2.25rem;font-weight:700;margin:0 0 1rem;color:var(--text-primary);">How We Scaled to Support Our Partners</h2>
+                    <p style="color:var(--text-secondary);font-size:1.05rem;">From our roots as small campaign operators to managing local search listings for agencies and home service businesses worldwide.</p>
                 </div>
                 
                 <div style="display:flex;flex-direction:column;gap:2rem;max-width:900px;margin:0 auto;position:relative;padding-left:1.5rem;border-left:2px solid var(--border-color);">
@@ -224,8 +226,8 @@
                     <!-- Timeline Point 4 -->
                     <div style="position:relative;">
                         <div style="position:absolute;left:-29px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--brand-primary);border:4px solid var(--bg-secondary);"></div>
-                        <span style="font-family:'Outfit',sans-serif;font-weight:700;color:var(--brand-primary);font-size:1.1rem;display:block;margin-bottom:0.25rem;">2024 & Beyond — Global Expansion</span>
-                        <p style="color:var(--text-secondary);margin:0;font-size:0.95rem;">Now actively managing campaigns for over 35+ agency partners across the US, UK, Canada, and Australia. We continuously update our systems to reflect Google's Map Pack algorithm updates.</p>
+                        <span style="font-family:'Outfit',sans-serif;font-weight:700;color:var(--brand-primary);font-size:1.1rem;display:block;margin-bottom:0.25rem;">2024 & Beyond — Focus & Expansion</span>
+                        <p style="color:var(--text-secondary);margin:0;font-size:0.95rem;">Now actively managing campaigns for 5 agency partners and 50 local home service businesses across the US, UK, Canada, and Australia.</p>
                     </div>
                 </div>
             </div>
@@ -242,17 +244,17 @@
                 
                 <div class="grid grid--3">
                     <div class="metric-card" data-animate>
-                        <span class="metric-card__number">35+</span>
+                        <span class="metric-card__number">5</span>
                         <h3>Agency Partners</h3>
                         <p>Growing digital agencies trust us to fulfill their local SEO deliverables without missing a beat.</p>
                     </div>
                     <div class="metric-card" data-animate>
-                        <span class="metric-card__number">500+</span>
-                        <h3>Campaigns Run</h3>
-                        <p>Successful campaigns executed for home service companies, medical clinics, and retail brands.</p>
+                        <span class="metric-card__number">50+</span>
+                        <h3>Local Businesses</h3>
+                        <p>Successful campaigns executed exclusively for home service companies (roofing, plumbing, HVAC, and cleaning).</p>
                     </div>
                     <div class="metric-card" data-animate>
-                        <span class="metric-card__number">12,500+</span>
+                        <span class="metric-card__number">2,500+</span>
                         <h3>Manual Citations</h3>
                         <p>Citations manually submitted on premium directories with zero automated submission errors.</p>
                     </div>
@@ -486,6 +488,23 @@
 
     
 
+    
+    <script>
+        function toggleFaq(btn) {
+            const body = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+            const isOpen = body.style.display === 'block';
+            // Close all
+            document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
+            document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = '');
+            // Open clicked if it was closed
+            if (!isOpen) {
+                body.style.display = 'block';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+
     <!-- STANDARD FOOTER TEMPLATE -->
 <footer class="footer">
     <div class="container">
@@ -530,21 +549,6 @@
         </div>
     </div>
 </footer>
-    <script>
-        function toggleFaq(btn) {
-            const body = btn.nextElementSibling;
-            const icon = btn.querySelector('.faq-icon');
-            const isOpen = body.style.display === 'block';
-            // Close all
-            document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
-            document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = '');
-            // Open clicked if it was closed
-            if (!isOpen) {
-                body.style.display = 'block';
-                icon.style.transform = 'rotate(180deg)';
-            }
-        }
-    </script>
 </body>
 
 </html>
