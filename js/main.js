@@ -24,41 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // =========================================
 
 const HeaderFooterManager = {
-  NAV_LINKS: [
-    { label: 'Home',      href: '/' },
-    { label: 'About',     href: '/about' },
-    { label: 'Team',      href: '/team' },
-    { label: 'Portfolio', href: '/portfolio' },
-    { label: 'Services',  href: '/services' },
-    { label: 'Citations', href: '/local-citations' },
-    { label: 'Contacts',  href: '/contacts' }
-  ],
-
   init() {
     console.log('HeaderFooterManager initializing...');
     this.injectHeader();
     this.injectFooter();
   },
 
-  isActive(link) {
+  isActive(href) {
     const p = window.location.pathname;
-    const href = link.href;
-
     if (href === '/') return p === '/' || p === '/index.html' || p === '';
-    
-    // Highlight "Services" for any services path
-    if (link.label === 'Services') {
-      return p.startsWith('/services');
-    }
-
-    // Standard matching
     return p === href || p === href + '.html' || p.startsWith(href + '/') || p.startsWith(href + '-');
-  },
-
-  buildNav() {
-    return this.NAV_LINKS.map(n => {
-      return `<li><a href="${n.href}" class="nav__link${this.isActive(n) ? ' active' : ''}">${n.label}</a></li>`;
-    }).join('');
   },
 
   injectHeader() {
@@ -69,13 +44,59 @@ const HeaderFooterManager = {
     }
     console.log('Injecting header...');
 
+    const p = window.location.pathname;
+    const isServicesActive = p.startsWith('/services') || p.startsWith('/local-citations');
+
     const html = `
       <div class="container header__inner">
         <a href="/" class="header__logo">
-          <img src="/assets/logo-dark.png" alt="SMBify Logo">
+          <img src="/assets/logo-dark.png" alt="SMBify Logo" class="logo-light">
         </a>
         <nav class="nav">
-          <ul class="nav__list">${this.buildNav()}</ul>
+          <ul class="nav__list">
+            <li><a href="/" class="nav__link${this.isActive('/') ? ' active' : ''}">Home</a></li>
+            <li><a href="/about" class="nav__link${this.isActive('/about') ? ' active' : ''}">About</a></li>
+            <li><a href="/team" class="nav__link${this.isActive('/team') ? ' active' : ''}">Team</a></li>
+            <li><a href="/portfolio" class="nav__link${this.isActive('/portfolio') ? ' active' : ''}">Portfolio</a></li>
+            <li class="nav__dropdown">
+              <a href="/services" class="nav__link${isServicesActive ? ' active' : ''}">
+                Services
+                <span class="nav__caret">
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+              <ul class="nav__dropdown-menu">
+                <li>
+                  <a href="/services" class="nav__dropdown-link">
+                    <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <line x1="2" y1="12" x2="22" y2="12"/>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <div class="nav__dropdown-text">
+                      <span class="nav__dropdown-title">Local SEO</span>
+                      <span class="nav__dropdown-desc">On-page optimizations & strategy</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/local-citations" class="nav__dropdown-link">
+                    <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <div class="nav__dropdown-text">
+                      <span class="nav__dropdown-title">Local Citations</span>
+                      <span class="nav__dropdown-desc">Google Maps pack & citations builder</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/contacts" class="nav__link${this.isActive('/contacts') ? ' active' : ''}">Contact</a></li>
+          </ul>
         </nav>
         <div class="header__actions">
           <a href="/services" class="btn btn--primary hide-mobile">Local SEO Service</a>
