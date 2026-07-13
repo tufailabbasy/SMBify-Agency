@@ -748,63 +748,76 @@
                 <h2>Frequently Asked <span style="color:var(--brand-primary);">Questions</span></h2>
                 <p style="max-width:560px;margin:.5rem auto 0;color:var(--text-secondary);">Everything you need to know before getting started with SMBify.</p>
             </div>
-            <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:.75rem;" data-animate>
+            <div class="faq-grid" data-animate>
+                <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
+                        <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                            <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">What is White Label SEO?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                        </button>
+                        <div class="faq-body" style="display:none;padding:0 1.25rem 1rem;">
+                            <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">White Label SEO is a service where an SEO agency provides SEO services on behalf of another company, allowing that company to resell them under their own brand. SMBify works behind the scenes — you take the credit, we do the work. Perfect for agencies and freelancers who want to scale without hiring an in-house team.</p>
+                        </div>
+                    </div>
 
-                <!-- FAQ 1 -->
-                <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
-                    <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
-                        <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">What is White Label SEO?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div class="faq-body" style="display:none;padding:0 1.5rem 1.25rem;">
-                        <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">White Label SEO is a service where an SEO agency provides SEO services on behalf of another company, allowing that company to resell them under their own brand. SMBify works behind the scenes — you take the credit, we do the work. Perfect for agencies and freelancers who want to scale without hiring an in-house team.</p>
+                    <!-- FAQ 2 -->
+                    <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
+                        <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                            <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">How long does it take to see SEO results?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                        </button>
+                        <div class="faq-body" style="display:none;padding:0 1.25rem 1rem;">
+                            <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">Local SEO campaigns typically show early improvements within 30–60 days. Significant ranking improvements occur within 3–6 months depending on competition, website age, and the scope of work. We set realistic timelines and report progress monthly so there are no surprises.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
+                        <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                            <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">What services does SMBify offer?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                        </button>
+                        <div class="faq-body" style="display:none;padding:0 1.25rem 1rem;">
+                            <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">SMBify provides complete Local SEO fulfillment: Google Business Profile (GBP) Optimization, Local Citation Building, Geo-targeted Backlinks, Map Pack Ranking, and detailed white-label reporting. We specialize exclusively in local visibility to ensure the highest ROI for your clients.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
-                <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
-                    <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
-                        <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">How long does it take to see SEO results?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div class="faq-body" style="display:none;padding:0 1.5rem 1.25rem;">
-                        <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">Local SEO campaigns typically show early improvements within 30–60 days. Significant ranking improvements occur within 3–6 months depending on competition, website age, and the scope of work. We set realistic timelines and report progress monthly so there are no surprises.</p>
+                <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                    <!-- FAQ 4 -->
+                    <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
+                        <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                            <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">Do you offer monthly SEO packages?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                        </button>
+                        <div class="faq-body" style="display:none;padding:0 1.25rem 1rem;">
+                            <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">Yes — our Local SEO service runs on a monthly retainer starting at $299/month with no long-term contracts. You can cancel anytime. We also offer one-time foundational services (citations, backlinks, entity stacks) that can be ordered as needed without a subscription.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
+                        <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                            <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">How do I get started with SMBify?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                        </button>
+                        <div class="faq-body" style="display:none;padding:0 1.25rem 1rem;">
+                            <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">Simply visit our <a href="/contacts" style="color:var(--brand-primary);font-weight:600;">Contact page</a>, fill out the form with your project details, and our team will respond within 24 hours with a free analysis. You can also reach us instantly via <a href="https://wa.me/923437967815" target="_blank" rel="noopener noreferrer" style="color:var(--brand-primary);font-weight:600;">WhatsApp</a> to discuss your specific agency needs.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
+                        <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
+                            <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">Do you guarantee rankings?</span>
+                            <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
+                        </button>
+                        <div class="faq-body" style="display:none;padding:0 1.25rem 1rem;">
+                            <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">While no ethical SEO can guarantee specific positions due to search engine algorithm updates, we guarantee to follow official search guidelines and build authoritative citations that consistently improve local search visibility.</p>
+                        </div>
                     </div>
                 </div>
-
-                <!-- FAQ 3 -->
-                <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
-                    <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
-                        <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">What services does SMBify offer?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div class="faq-body" style="display:none;padding:0 1.5rem 1.25rem;">
-                        <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">SMBify provides complete Local SEO fulfillment: Google Business Profile (GBP) Optimization, Local Citation Building, Geo-targeted Backlinks, Map Pack Ranking, and detailed white-label reporting. We specialize exclusively in local visibility to ensure the highest ROI for your clients.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
-                    <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
-                        <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">Do you offer monthly SEO packages?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div class="faq-body" style="display:none;padding:0 1.5rem 1.25rem;">
-                        <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">Yes — our Local SEO service runs on a monthly retainer starting at $299/month with no long-term contracts. You can cancel anytime. We also offer one-time foundational services (citations, backlinks, entity stacks) that can be ordered as needed without a subscription.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 5 -->
-                <div class="faq-item" style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:14px;overflow:hidden;">
-                    <button class="faq-toggle" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;text-align:left;gap:1rem;">
-                        <span style="font-size:1rem;font-weight:600;color:var(--text-primary);">How do I get started with SMBify?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--brand-primary)" stroke-width="2.5" style="flex-shrink:0;transition:transform .3s;"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div class="faq-body" style="display:none;padding:0 1.5rem 1.25rem;">
-                        <p style="margin:0;color:var(--text-secondary);font-size:.95rem;line-height:1.7;">Simply visit our <a href="/contacts" style="color:var(--brand-primary);font-weight:600;">Contact page</a>, fill out the form with your project details, and our team will respond within 24 hours with a free analysis. You can also reach us instantly via <a href="https://wa.me/923437967815" target="_blank" rel="noopener noreferrer" style="color:var(--brand-primary);font-weight:600;">WhatsApp</a> to discuss your specific agency needs.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
