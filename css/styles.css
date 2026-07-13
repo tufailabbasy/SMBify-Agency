@@ -6700,3 +6700,92 @@ body.menu-open {
   margin-top: 1.25rem;
   margin-bottom: 0;
 }
+
+/* Metric Cards & Operational Scale (About Page) */
+.metric-card {
+  background: linear-gradient(135deg, rgba(13, 18, 32, 0.7) 0%, rgba(22, 30, 49, 0.4) 100%) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 24px !important;
+  padding: 2.5rem 1.75rem !important;
+  text-align: center !important;
+  transition: all var(--transition-base) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.metric-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(132, 204, 22, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(132, 204, 22, 0.08) !important;
+}
+
+.metric-card__number {
+  font-family: var(--font-heading) !important;
+  font-size: 2.25rem !important;
+  font-weight: 600 !important;
+  color: var(--brand-primary) !important;
+  margin-bottom: 0.5rem !important;
+  letter-spacing: -0.02em !important;
+  display: block !important;
+}
+
+.metric-card h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin: 0 0 0.5rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+.metric-card p {
+  font-size: 0.88rem !important;
+  color: var(--text-tertiary) !important;
+  margin: 0 !important;
+  line-height: 1.55 !important;
+}
+
+/* Roadmap Process Cards (About Page) */
+.roadmap-card {
+  background: linear-gradient(135deg, rgba(13, 18, 32, 0.7) 0%, rgba(22, 30, 49, 0.4) 100%) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 20px !important;
+  padding: 2.25rem 1.75rem !important;
+  position: relative !important;
+  transition: all var(--transition-base) !important;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(132, 204, 22, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(132, 204, 22, 0.08) !important;
+}
+
+.roadmap-card__num {
+  width: 36px !important;
+  height: 36px !important;
+  background: rgba(132, 204, 22, 0.1) !important;
+  border: 1px solid rgba(132, 204, 22, 0.2) !important;
+  border-radius: 50% !important;
+  color: var(--brand-primary) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.25rem !important;
+  box-shadow: 0 0 10px rgba(132, 204, 22, 0.1) !important;
+}
+
+.roadmap-card h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin: 0 0 0.75rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+.roadmap-card p {
+  font-size: 0.85rem !important;
+  color: var(--text-tertiary) !important;
+  margin: 0 !important;
+  line-height: 1.55 !important;
+}
