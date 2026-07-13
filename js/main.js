@@ -207,7 +207,17 @@ const MobileNav = {
     });
 
     this.nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => this.closeMenu());
+      link.addEventListener('click', (e) => {
+        if (link.parentElement.classList.contains('nav__dropdown')) {
+          if (window.innerWidth < 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            link.parentElement.classList.toggle('open');
+            return;
+          }
+        }
+        this.closeMenu();
+      });
     });
 
     document.addEventListener('click', (e) => {
