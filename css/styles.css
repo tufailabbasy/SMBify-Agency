@@ -5989,6 +5989,7 @@ p {
 
   .team-card__image {
     height: 180px;
+    flex-shrink: 0;
   }
 
   /* Footer Mobile */
@@ -6309,9 +6310,10 @@ body.menu-open {
 
 .team-card__image {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 250px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
   margin-bottom: 1.5rem;
 }
 
