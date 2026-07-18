@@ -90,7 +90,7 @@ const HeaderFooterManager = {
               </ul>
             </li>
             <li><a href="/contacts" class="nav__link${this.isActive('/contacts') ? ' active' : ''}">Contact</a></li>
-            <li><a href="https://app.smbify.net" class="nav__link" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
+            <li><a href="https://app.smbify.net" class="nav__link nav__link--highlighted" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
           </ul>
         </nav>
         <div class="header__actions">
