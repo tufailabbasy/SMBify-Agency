@@ -90,9 +90,14 @@ const HeaderFooterManager = {
               </ul>
             </li>
             <li><a href="/contacts" class="nav__link${this.isActive('/contacts') ? ' active' : ''}">Contact</a></li>
+            <li><a href="https://app.smbify.net" class="nav__link" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
           </ul>
         </nav>
         <div class="header__actions">
+          <a href="https://app.smbify.net" class="nav__link hide-mobile" style="margin-right: 1.25rem; font-weight: 500; display: inline-flex; align-items: center; gap: 0.35rem;" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.85;"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+            Portal Login
+          </a>
           <a href="/local-seo" class="btn btn--primary hide-mobile">Local SEO Service</a>
           <a href="/booking" class="btn btn--outline hide-mobile" style="margin-left:0.5rem;">Book</a>
           <button class="mobile-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
@@ -134,6 +139,7 @@ const HeaderFooterManager = {
               <a href="/local-seo" class="footer__link">Local SEO</a>
               <a href="/services" class="footer__link">Services</a>
               <a href="/contacts" class="footer__link">Contacts</a>
+              <a href="https://app.smbify.net" class="footer__link" target="_blank" rel="noopener noreferrer">Client Portal</a>
             </div>
           </div>
           <div>
