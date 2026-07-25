@@ -47,6 +47,7 @@ const HeaderFooterManager = {
     const p = window.location.pathname;
     const isServicesActive = p.startsWith('/services') || p.startsWith('/local-citations') || p.startsWith('/local-seo');
     const isAboutActive = p.startsWith('/about') || p.startsWith('/founder') || p.startsWith('/team');
+    const isResourcesActive = p.startsWith('/blog') || p.startsWith('/smbify-local-seo-glossary-resource-hub');
 
     const html = `
       <div class="container header__inner">
@@ -120,8 +121,39 @@ const HeaderFooterManager = {
                 </li>
               </ul>
             </li>
-            <li><a href="/blog" class="nav__link${this.isActive('/blog') ? ' active' : ''}">Blog</a></li>
-            <li><a href="/smbify-local-seo-glossary-resource-hub" class="nav__link${this.isActive('/smbify-local-seo-glossary-resource-hub') ? ' active' : ''}">Glossary</a></li>
+            <li class="nav__dropdown">
+              <a href="/blog" class="nav__link${isResourcesActive ? ' active' : ''}">
+                Resources
+                <span class="nav__caret">
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+              <ul class="nav__dropdown-menu">
+                <li>
+                  <a href="/blog" class="nav__dropdown-link">
+                    <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <span class="nav__dropdown-title">Blog</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/smbify-local-seo-glossary-resource-hub" class="nav__dropdown-link">
+                    <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    <span class="nav__dropdown-title">SEO Glossary</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li><a href="/contacts" class="nav__link${this.isActive('/contacts') ? ' active' : ''}">Contact</a></li>
             <li><a href="https://app.smbify.net" class="nav__link nav__link--highlighted" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
           </ul>
