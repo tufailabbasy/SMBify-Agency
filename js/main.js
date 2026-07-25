@@ -120,6 +120,7 @@ const HeaderFooterManager = {
                 </li>
               </ul>
             </li>
+            <li><a href="/blog" class="nav__link${this.isActive('/blog') ? ' active' : ''}">Blog</a></li>
             <li><a href="/smbify-local-seo-glossary-resource-hub" class="nav__link${this.isActive('/smbify-local-seo-glossary-resource-hub') ? ' active' : ''}">Glossary</a></li>
             <li><a href="/contacts" class="nav__link${this.isActive('/contacts') ? ' active' : ''}">Contact</a></li>
             <li><a href="https://app.smbify.net" class="nav__link nav__link--highlighted" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
