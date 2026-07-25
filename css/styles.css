@@ -6715,10 +6715,12 @@ body.menu-open {
   color: var(--brand-primary);
 }
 
-.who-tag img {
+.who-tag img,
+.flag-icon {
   border-radius: 2px;
   object-fit: cover;
   flex-shrink: 0;
+  display: inline-block;
 }
 
 .who-tag-icon {
