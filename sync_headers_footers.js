@@ -19,6 +19,9 @@ function getActiveLink(filename) {
     if (clean === '/local-seo' || clean === '/local-citations') {
         return '/services';
     }
+    if (clean === '/founder' || clean === '/team') {
+        return '/about';
+    }
     return clean;
 }
 

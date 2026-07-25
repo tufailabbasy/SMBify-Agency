@@ -46,6 +46,7 @@ const HeaderFooterManager = {
 
     const p = window.location.pathname;
     const isServicesActive = p.startsWith('/services') || p.startsWith('/local-citations') || p.startsWith('/local-seo');
+    const isAboutActive = p.startsWith('/about') || p.startsWith('/founder') || p.startsWith('/team');
 
     const html = `
       <div class="container header__inner">
@@ -55,8 +56,38 @@ const HeaderFooterManager = {
         <nav class="nav">
           <ul class="nav__list">
             <li><a href="/" class="nav__link${this.isActive('/') ? ' active' : ''}">Home</a></li>
-            <li><a href="/about" class="nav__link${this.isActive('/about') ? ' active' : ''}">About</a></li>
-            <li><a href="/team" class="nav__link${this.isActive('/team') ? ' active' : ''}">Team</a></li>
+            <li class="nav__dropdown">
+              <a href="/about" class="nav__link${isAboutActive ? ' active' : ''}">
+                About
+                <span class="nav__caret">
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+              <ul class="nav__dropdown-menu">
+                <li>
+                  <a href="/founder" class="nav__dropdown-link">
+                    <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span class="nav__dropdown-title">Founder</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/team" class="nav__dropdown-link">
+                    <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <span class="nav__dropdown-title">Team</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li><a href="/portfolio" class="nav__link${this.isActive('/portfolio') ? ' active' : ''}">Portfolio</a></li>
             <li class="nav__dropdown">
               <a href="/services" class="nav__link${isServicesActive ? ' active' : ''}">
