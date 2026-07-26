@@ -7118,6 +7118,17 @@ body.menu-open {
   text-align: center;
 }
 
+
+.author-widget__img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
+  margin: 0 auto 1rem;
+  display: block;
+}
+
 .author-widget__avatar {
   width: 64px;
   height: 64px;
