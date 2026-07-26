@@ -7240,3 +7240,111 @@ body.menu-open {
     padding: 2rem 1.5rem;
   }
 }
+
+/* ========================================= */
+/* Creative Table of Contents Styling */
+/* ========================================= */
+
+.creative-toc {
+  background: linear-gradient(135deg, rgba(22, 30, 49, 0.6) 0%, rgba(13, 18, 32, 0.8) 100%);
+  border: 1px solid rgba(132, 204, 22, 0.2);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  margin: 2.5rem 0;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.creative-toc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-color);
+  box-shadow: 0 0 12px var(--primary-color);
+}
+
+.creative-toc__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.creative-toc__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  background: rgba(132, 204, 22, 0.12);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+
+.creative-toc__title {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+.creative-toc__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.25rem;
+}
+
+.creative-toc__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.creative-toc__item:hover {
+  background: rgba(132, 204, 22, 0.08);
+  border-color: rgba(132, 204, 22, 0.4);
+  transform: translateX(4px);
+}
+
+.creative-toc__num {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  background: rgba(132, 204, 22, 0.15);
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creative-toc__text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.creative-toc__item:hover .creative-toc__text {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .creative-toc__grid {
+    grid-template-columns: 1fr;
+  }
+}
