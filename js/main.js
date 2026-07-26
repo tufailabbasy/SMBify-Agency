@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   TestimonialSlider.init();
   PortfolioFilter.init();
   BackToTop.init();
+  AutoTOCManager.init();
   // Render global CTAs (fills empty .cta containers)
   if (typeof GlobalCTAManager !== 'undefined' && GlobalCTAManager.init) GlobalCTAManager.init();
 });
@@ -509,5 +510,63 @@ const BackToTop = {
     });
 
     button.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+};
+
+
+// =========================================
+// Auto Table of Contents Generator for Blog Posts
+// =========================================
+
+const AutoTOCManager = {
+  init() {
+    const articleContent = document.querySelector('.blog-article__content');
+    if (!articleContent) return;
+
+    const headings = articleContent.querySelectorAll('h2');
+    if (headings.length < 2) return;
+
+    // Check if TOC already rendered by JS
+    if (document.querySelector('.creative-toc')) return;
+
+    console.log('Generating automatic Table of Contents...');
+
+    const tocContainer = document.createElement('div');
+    tocContainer.className = 'creative-toc';
+
+    let gridHTML = '';
+    headings.forEach((h2, index) => {
+      if (!h2.id) {
+        h2.id = 'toc-heading-' + (index + 1);
+      }
+      const numStr = (index + 1).toString().padStart(2, '0');
+      gridHTML += `
+        <a href="#${h2.id}" class="creative-toc__item">
+          <span class="creative-toc__num">${numStr}</span>
+          <span class="creative-toc__text">${h2.textContent.replace(/^[0-9.]+\s*/, '')}</span>
+        </a>
+      `;
+    });
+
+    tocContainer.innerHTML = `
+      <div class="creative-toc__header">
+        <div class="creative-toc__badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          <span>QUICK NAV</span>
+        </div>
+        <h4 class="creative-toc__title">Inside This Audit Breakdown</h4>
+      </div>
+      <div class="creative-toc__grid">
+        ${gridHTML}
+      </div>
+    `;
+
+    // Insert TOC after lead paragraph or before first H2
+    const leadP = articleContent.querySelector('.lead');
+    if (leadP && leadP.nextSibling) {
+      leadP.parentNode.insertBefore(tocContainer, leadP.nextSibling);
+    } else {
+      headings[0].parentNode.insertBefore(tocContainer, headings[0]);
+    }
   }
 };
