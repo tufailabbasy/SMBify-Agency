@@ -192,7 +192,7 @@ const HeaderFooterManager = {
           </div>
           <div>
             <h6 class="footer__title">Contact Us</h6>
-            <div class="footer__contact-item">contact@smbify.agency</div>
+            <div class="footer__contact-item">contact@smbify.net</div>
           </div>
           <div>
             <h6 class="footer__title">Quick Links</h6>
