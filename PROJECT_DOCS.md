@@ -36,10 +36,10 @@
 
 | Property | Value |
 |----------|-------|
-| Live URL | https://smbify.agency |
+| Live URL | https://www.smbify.net |
 | Repository | https://github.com/smbifyagency/SMBify-Agency |
 | Hosting | Vercel |
-| Contact | contact@smbify.agency |
+| Contact | contact@smbify.net |
 | WhatsApp | +92-343-7967815 |
 
 ### What the site does
@@ -210,7 +210,7 @@ SMBify Agency/
 ### `robots.txt`
 - `User-agent: *` — allows all crawlers
 - Disallow: `/admin-login.html`, `/admin-blog.html`, `/marketplace/admin/`
-- Sitemap: `https://smbify.agency/sitemap.xml`
+- Sitemap: `https://www.smbify.net/sitemap.xml`
 
 ### `.htaccess`
 Apache URL rewriting and redirect rules (legacy/Hostinger deployment support).
@@ -696,7 +696,7 @@ APP_NAME=SMBify Agency
 CURRENCY=usd
 
 # Domains
-PRODUCTION_DOMAIN=https://smbify.agency
+PRODUCTION_DOMAIN=https://www.smbify.net
 LOCAL_DOMAIN=http://localhost:3000
 ```
 
@@ -710,8 +710,8 @@ LOCAL_DOMAIN=http://localhost:3000
 | Address | Shop #1, Mohalla Faqeer Ahmad Gul, Paharpur, 29160, Pakistan |
 | Coordinates | 32.0996°N, 70.7929°E |
 | Phone / WhatsApp | +92-343-7967815 |
-| Email | contact@smbify.agency |
-| Website | https://smbify.agency |
+| Email | contact@smbify.net |
+| Website | https://www.smbify.net |
 | LinkedIn | smbifyagency |
 | Facebook | SMBifyAgency |
 | Twitter/X | @smbifyagency |
