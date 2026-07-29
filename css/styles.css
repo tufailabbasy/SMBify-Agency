@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@700&display=swap');
 /* =========================================
    SMBify Website - Core Styles
    Theme: Light & Dark Mode Support
@@ -7406,4 +7407,17 @@ body.menu-open {
   margin-bottom: 0;
   font-size: 0.975rem;
   line-height: 1.6;
+}
+
+/* Founder Signature Font Style */
+.founder-signature {
+    font-family: 'Caveat', 'Dancing Script', cursive !important;
+    font-size: 2.4rem !important;
+    font-weight: 700 !important;
+    color: var(--brand-primary) !important;
+    display: block !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 0.2rem !important;
+    transform: rotate(-2deg);
 }
