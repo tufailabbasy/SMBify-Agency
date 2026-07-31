@@ -186,16 +186,17 @@
         <div class="container">
                         
             <!-- CATEGORY FILTER BAR -->
-            <div class="blog-category-filter" style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
-                <button class="btn btn--outline blog-filter-btn active" data-filter="all" style="padding: 0.4rem 1.25rem; font-size: 0.88rem; border-radius: 999px;">All Posts</button>
-                <button class="btn btn--outline blog-filter-btn" data-filter="trade" style="padding: 0.4rem 1.25rem; font-size: 0.88rem; border-radius: 999px;">Trade SEO Guides</button>
-                <button class="btn btn--outline blog-filter-btn" data-filter="agency" style="padding: 0.4rem 1.25rem; font-size: 0.88rem; border-radius: 999px;">Agency &amp; White-Label</button>
-                <button class="btn btn--outline blog-filter-btn" data-filter="founder" style="padding: 0.4rem 1.25rem; font-size: 0.88rem; border-radius: 999px;">Founder Notes</button>
+            <!-- CATEGORY FILTER BAR -->
+            <div class="blog-category-filter" style="display: flex; gap: 0.85rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
+                <button class="blog-filter-btn active" data-filter="all" style="padding: 0.5rem 1.4rem; font-size: 0.9rem; font-weight: 700; border-radius: 999px; cursor: pointer; border: 1px solid #84CC16; background: #84CC16; color: #070A13; transition: all 0.25s ease;">All Posts</button>
+                <button class="blog-filter-btn" data-filter="trade" style="padding: 0.5rem 1.4rem; font-size: 0.9rem; font-weight: 600; border-radius: 999px; cursor: pointer; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: #9CA3AF; transition: all 0.25s ease;">Trade SEO Guides</button>
+                <button class="blog-filter-btn" data-filter="agency" style="padding: 0.5rem 1.4rem; font-size: 0.9rem; font-weight: 600; border-radius: 999px; cursor: pointer; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: #9CA3AF; transition: all 0.25s ease;">Agency &amp; White-Label</button>
+                <button class="blog-filter-btn" data-filter="founder" style="padding: 0.5rem 1.4rem; font-size: 0.9rem; font-weight: 600; border-radius: 999px; cursor: pointer; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: #9CA3AF; transition: all 0.25s ease;">Founder Notes</button>
             </div>
             <div class="blog-cards" id="blog-grid">
 
                 <!-- Blog Card 0: The Build Trap (Featured New Post) -->
-                <a href="/the-build-trap-why-i-kept-perfecting-a-product-nobody-was-buying" class="blog-card" data-category="trade" data-category="trade" data-category="trade" data-category="founder">
+                <a href="/the-build-trap-why-i-kept-perfecting-a-product-nobody-was-buying" class="blog-card" data-category="founder" data-category="trade" data-category="trade" data-category="trade" data-category="founder">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">Founder Stories</span>
                         <img src="/assets/blog-the-build-trap.jpg" alt="The Build Trap: Why I Kept Perfecting a Product Nobody Was Buying" class="blog-card__image" loading="lazy">
@@ -215,7 +216,7 @@
 
 
                 <!-- Blog Card 1 -->
-                <a href="/audit-finding-local-service-sites" class="blog-card">
+                <a href="/audit-finding-local-service-sites" class="blog-card" data-category="agency">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">Local SEO Audit</span>
                         <img src="/assets/blog-audit-finding.jpg" alt="Audit Finding: Most Local Service Sites Never Build the Pages That Matter" class="blog-card__image" loading="lazy">
@@ -233,7 +234,7 @@
                 </a>
   
                 <!-- Blog Card 2 -->
-                <a href="/what-is-local-seo-guide" class="blog-card">
+                <a href="/what-is-local-seo-guide" class="blog-card" data-category="trade">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">Local SEO Strategy</span>
                         <img src="/assets/blog-what-is-local-seo.jpg" alt="What is Local SEO? The Complete 2026 Strategy Guide for Home Services" class="blog-card__image" loading="lazy">
@@ -251,7 +252,7 @@
                 </a>
   
                 <!-- Blog Card 3 -->
-                <a href="/google-business-profile-optimization" class="blog-card">
+                <a href="/google-business-profile-optimization" class="blog-card" data-category="trade">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">GBP & Maps</span>
                         <img src="/assets/blog-gbp-optimization.jpg" alt="Google Business Profile (GBP) Optimization Playbook: Rank in the Top 3 Map Pack" class="blog-card__image" loading="lazy">
@@ -269,7 +270,7 @@
                 </a>
   
                 <!-- Blog Card 4 -->
-                <a href="/local-schema-markup-guide" class="blog-card">
+                <a href="/local-schema-markup-guide" class="blog-card" data-category="trade">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">Technical SEO</span>
                         <img src="/assets/blog-local-schema.jpg" alt="Local Schema Markup Masterclass for Contractors (JSON-LD Guide)" class="blog-card__image" loading="lazy">
@@ -287,7 +288,7 @@
                 </a>
   
                 <!-- Blog Card 5 -->
-                <a href="/local-citation-building-guide" class="blog-card">
+                <a href="/local-citation-building-guide" class="blog-card" data-category="trade">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">Citations & NAP</span>
                         <img src="/assets/blog-local-citations.jpg" alt="Local Citation Building & NAP Consistency: Stop Losing Map Rankings" class="blog-card__image" loading="lazy">
@@ -305,7 +306,7 @@
                 </a>
   
                 <!-- Blog Card 6 -->
-                <a href="/local-link-building-strategies" class="blog-card">
+                <a href="/local-link-building-strategies" class="blog-card" data-category="trade">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">Link Building</span>
                         <img src="/assets/blog-local-links.jpg" alt="Local Link Building Strategies: How Home Service Sites Get High-Authority Geo-Links" class="blog-card__image" loading="lazy">
@@ -323,7 +324,7 @@
                 </a>
   
                 <!-- Blog Card 7 -->
-                <a href="/hvac-local-seo-guide" class="blog-card">
+                <a href="/hvac-local-seo-guide" class="blog-card" data-category="trade">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">HVAC SEO</span>
                         <img src="/assets/blog-hvac-seo.jpg" alt="HVAC Local SEO Guide: How Heating & Air Contractors Get 50+ Calls/Month" class="blog-card__image" loading="lazy">
@@ -341,7 +342,7 @@
                 </a>
   
                 <!-- Blog Card 8 -->
-                <a href="/plumbing-local-seo-blueprint" class="blog-card">
+                <a href="/plumbing-local-seo-blueprint" class="blog-card" data-category="trade">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">Plumbing SEO</span>
                         <img src="/assets/blog-plumbing-seo.jpg" alt="Plumbing Local SEO Blueprint: Dominating Emergency Plumbing Searches" class="blog-card__image" loading="lazy">
@@ -359,7 +360,7 @@
                 </a>
   
                 <!-- Blog Card 9 -->
-                <a href="/roofing-local-seo-playbook" class="blog-card">
+                <a href="/roofing-local-seo-playbook" class="blog-card" data-category="trade">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">Roofing SEO</span>
                         <img src="/assets/blog-roofing-seo.jpg" alt="Roofing Local SEO Playbook: High-Ticket Lead Generation for Roofers" class="blog-card__image" loading="lazy">
@@ -377,7 +378,7 @@
                 </a>
   
                 <!-- Blog Card 10 -->
-                <a href="/electrician-seo-guide" class="blog-card">
+                <a href="/electrician-seo-guide" class="blog-card" data-category="trade">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">Electrician SEO</span>
                         <img src="/assets/blog-electrician-seo.jpg" alt="Electrician SEO Guide: How to Rank #1 for Local Electrical Contractors" class="blog-card__image" loading="lazy">
@@ -395,7 +396,7 @@
                 </a>
   
                 <!-- Blog Card 11 -->
-                <a href="/whitelabel-local-seo-for-agencies" class="blog-card">
+                <a href="/whitelabel-local-seo-for-agencies" class="blog-card" data-category="agency">
                     <div class="blog-card__image-wrapper">
                         <span class="blog-card__category">Agency Growth</span>
                         <img src="/assets/blog-whitelabel-seo.jpg" alt="White-Label Local SEO for Agencies: Scaling Client Results Without Extra Overhead" class="blog-card__image" loading="lazy">
@@ -470,5 +471,54 @@
     
 
     <script src="/js/main.js" defer></script>
+
+    <!-- REAL-TIME BLOG CATEGORY FILTER SCRIPT -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.blog-filter-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        if (filterBtns.length && blogCards.length) {
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.style.background = 'rgba(255,255,255,0.05)';
+                        b.style.color = '#9CA3AF';
+                        b.style.borderColor = 'rgba(255,255,255,0.15)';
+                        b.style.fontWeight = '600';
+                    });
+
+                    this.classList.add('active');
+                    this.style.background = '#84CC16';
+                    this.style.color = '#070A13';
+                    this.style.borderColor = '#84CC16';
+                    this.style.fontWeight = '700';
+
+                    const filter = this.getAttribute('data-filter');
+
+                    blogCards.forEach(card => {
+                        const cardCat = card.getAttribute('data-category');
+                        if (filter === 'all' || cardCat === filter) {
+                            card.style.display = 'flex';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(10px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 200);
+                        }
+                    });
+                });
+            });
+        }
+    });
+    </script>
 </body>
 </html>
