@@ -7451,3 +7451,159 @@ body.menu-open {
     stroke-width: 2 !important;
     display: block !important;
 }
+
+/* =========================================
+   LOCAL SEO BY INDUSTRIES GRID & CARDS
+   ========================================= */
+
+.industries-section {
+    padding: 5rem 0 4rem 0 !important;
+    background: linear-gradient(180deg, transparent 0%, rgba(13, 18, 32, 0.7) 100%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    margin-top: 3rem !important;
+}
+
+.industries-header {
+    text-align: center !important;
+    max-width: 760px !important;
+    margin: 0 auto 3.5rem auto !important;
+}
+
+.industries-badge {
+    display: inline-block !important;
+    padding: 0.35rem 1rem !important;
+    background: rgba(132, 204, 22, 0.15) !important;
+    color: #84CC16 !important;
+    font-size: 0.8rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
+    border-radius: 999px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 1rem !important;
+}
+
+.industries-title {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: clamp(2rem, 3.5vw, 2.75rem) !important;
+    font-weight: 800 !important;
+    color: #F9FAFB !important;
+    margin-bottom: 1rem !important;
+}
+
+.industries-lede {
+    font-size: 1.05rem !important;
+    color: #9CA3AF !important;
+    line-height: 1.65 !important;
+}
+
+.industries-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+}
+
+@media (max-width: 1200px) {
+    .industries-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .industries-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .industries-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.industry-card {
+    background: #0D1220 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 18px !important;
+    padding: 2rem 1.5rem !important;
+    text-decoration: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.industry-card:hover {
+    transform: translateY(-6px) !important;
+    border-color: #84CC16 !important;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(132, 204, 22, 0.18) !important;
+}
+
+.industry-card__icon {
+    width: 54px !important;
+    height: 54px !important;
+    min-width: 54px !important;
+    min-height: 54px !important;
+    max-width: 54px !important;
+    max-height: 54px !important;
+    border-radius: 14px !important;
+    background: rgba(132, 204, 22, 0.1) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 1.25rem !important;
+    color: #84CC16 !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+}
+
+.industry-card__icon svg {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+    max-width: 28px !important;
+    max-height: 28px !important;
+    stroke-width: 2 !important;
+    display: block !important;
+    stroke: currentColor !important;
+}
+
+.industry-card:hover .industry-card__icon {
+    background: #84CC16 !important;
+    color: #070A13 !important;
+}
+
+.industry-card__title {
+    font-family: 'Outfit', sans-serif !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    color: #F9FAFB !important;
+    margin-bottom: 0.6rem !important;
+    line-height: 1.3 !important;
+}
+
+.industry-card__desc {
+    font-size: 0.9rem !important;
+    color: #9CA3AF !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.5rem !important;
+    flex: 1 !important;
+}
+
+.industry-card__link {
+    color: #84CC16 !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    transition: gap 0.2s ease !important;
+}
+
+.industry-card:hover .industry-card__link {
+    gap: 0.75rem !important;
+    color: #BEF264 !important;
+}
