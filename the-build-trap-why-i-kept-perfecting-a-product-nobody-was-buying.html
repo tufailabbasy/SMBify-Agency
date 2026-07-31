@@ -107,210 +107,163 @@
     </header>
 
     <main>
-        <!-- ARTICLE HERO SECTION -->
-        <section class="blog-post-hero">
+        <!-- SIMPLE PAGE HEADER -->
+        <section class="page-header">
             <div class="container">
-                <nav class="breadcrumb">
-                    <a href="/">Home</a><span class="breadcrumb__separator">/</span>
-                    <a href="/blog">Blog</a><span class="breadcrumb__separator">/</span>
-                    <span>The Build Trap</span>
-                </nav>
-
-                <div class="blog-post-hero__content">
-                    <span class="blog-card__category">Founder Stories &amp; Lessons</span>
-                    <h1 class="blog-post-hero__title">The Build Trap: Why I Kept Perfecting a Product Nobody Was Buying</h1>
-                    
-                    <div class="blog-post-hero__meta">
-                        <div class="blog-post-hero__author">
-                            <img src="/assets/tufail-abbasy.png" alt="Muhammad Tufail Abbas" class="blog-post-hero__author-img" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-                            <div>
-                                <span class="blog-post-hero__author-name">Muhammad Tufail Abbas</span>
-                                <span class="blog-post-hero__author-role">Founder @ SMBify</span>
-                            </div>
-                        </div>
-                        <div class="blog-post-hero__details">
-                            <span>Jul 31, 2026</span>
-                            <span>•</span>
-                            <span>4 Min Read</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-post-hero__image-wrapper">
-                    <img src="/assets/blog-the-build-trap.jpg" alt="The Build Trap Founder Lesson" class="blog-post-hero__image">
-                </div>
+                <h1 class="page-header__title">The Build Trap: Why I Kept Perfecting a Product Nobody Was Buying</h1>
+                <nav class="breadcrumb"><a href="/">Home</a><span class="breadcrumb__separator">/</span><a href="/blog">Blog</a><span class="breadcrumb__separator">/</span><span>The Build Trap</span></nav>
             </div>
         </section>
 
-        <!-- MAIN CONTENT WITH 2-COLUMN LAYOUT -->
-        <div class="container">
-            <div class="blog-layout">
-                <!-- ARTICLE MAIN BODY -->
-                <article class="blog-article">
-                    <div class="blog-article__content">
-
-                        <div class="callout-pro-tip">
-                            <strong>Key Lesson:</strong> No amount of code polish fixes a validation problem. A product sitting quietly with an empty dashboard is not proof that the software is bad. It is proof that customer acquisition was never built.
+        <!-- MAIN ARTICLE & SIDEBAR SECTION -->
+        <section class="blog-article-wrap">
+            <div class="container">
+                <div class="blog-layout">
+                    <!-- ARTICLE MAIN BODY -->
+                    <article class="blog-article">
+                        <div class="blog-article__meta">
+                            <span class="author">
+                                <img src="/assets/tufail-author-avatar.jpg" alt="Muhammad Tufail Abbas" class="blog-card__author-img">
+                                <span>Muhammad Tufail Abbas</span>
+                            </span>
+                            <span class="date">
+                                <span>July 31, 2026</span>
+                            </span>
+                            <span class="read-time">
+                                <span>4 min read</span>
+                            </span>
                         </div>
 
-                        <p class="lead">A while back I built SiteGenie, an AI website builder, as a side project.</p>
+                        <div class="blog-article__content" id="post-content">
+                            <!-- NO EXTRA FEATURED IMAGE BANNER INSIDE BODY -->
 
-                        <p>I was proud of it. The interface was clean, the AI generation worked well, and every feature I added made it feel more polished. I kept telling myself the product just needed one more improvement and people would start signing up.</p>
+                            <div class="callout-pro-tip">
+                                <strong>Key Lesson:</strong> No amount of code polish fixes a validation problem. A product sitting quietly with an empty dashboard is not proof that the software is bad. It is proof that customer acquisition was never built.
+                            </div>
 
-                        <p>They never did.</p>
+                            <p class="lead" style="font-size:1.2rem; font-weight:500; color:var(--text-secondary); margin-bottom:1.5rem; line-height:1.7;">A while back I built SiteGenie, an AI website builder, as a side project.</p>
 
-                        <p>Not because the tool was bad. It genuinely worked. The problem was that I never left my desk long enough to find out who actually wanted it, what they would pay for, or where they were even looking for a solution like this. I was so deep in building that marketing felt like a distraction from the "real work."</p>
+                            <p>I was proud of it. The interface was clean, the AI generation worked well, and every feature I added made it feel more polished. I kept telling myself the product just needed one more improvement and people would start signing up.</p>
 
-                        <p>That was the build trap, and I did not see it while I was in it.</p>
+                            <p>They never did.</p>
 
-                        <div class="callout-warning">
-                            <strong>Why Builders Retreat Into Code:</strong> Writing code gives instant, controllable feedback. Sales and marketing do not. When potential customers ignore you, the instinct is to retreat back into building code.
-                        </div>
+                            <p>Not because the tool was bad. It genuinely worked. The problem was that I never left my desk long enough to find out who actually wanted it, what they would pay for, or where they were even looking for a solution like this. I was so deep in building that marketing felt like a distraction from the "real work."</p>
 
-                        <h2>Why Builders Fall Into This Trap</h2>
-                        <p>If you come from a technical background, you understand why this trap is so easy to walk into. Writing code gives you instant, honest feedback. It compiles or it does not. A test passes or it fails. A bug gets fixed and the error disappears. That feedback loop feels good because it is controllable.</p>
+                            <p>That was the build trap, and I did not see it while I was in it.</p>
 
-                        <p>Marketing and sales do not work that way. You reach out to a potential customer and they might ignore you. You post about your product and nobody responds. You ask for feedback and hear that the problem you solved was not painful enough for anyone to pay for. That kind of uncertainty is uncomfortable, especially compared to the clean logic of a codebase.</p>
+                            <div class="callout-warning">
+                                <strong>Why Builders Retreat Into Code:</strong> Writing code gives instant, controllable feedback. Sales and marketing do not. When potential customers ignore you, the instinct is to retreat back into building code.
+                            </div>
 
-                        <p>So the instinct is to retreat back into building. Add one more feature. Fix one more edge case. Convince yourself that the next update is the one that finally makes people care.</p>
+                            <h2>Why Builders Fall Into This Trap</h2>
+                            <p>If you come from a technical background, you understand why this trap is so easy to walk into. Writing code gives you instant, honest feedback. It compiles or it does not. A test passes or it fails. A bug gets fixed and the error disappears. That feedback loop feels good because it is controllable.</p>
 
-                        <p>With SiteGenie, I did this for months. I now know that no amount of polish fixes a validation problem.</p>
+                            <p>Marketing and sales do not work that way. You reach out to a potential customer and they might ignore you. You post about your product and nobody responds. You ask for feedback and hear that the problem you solved was not painful enough for anyone to pay for. That kind of uncertainty is uncomfortable, especially compared to the clean logic of a codebase.</p>
 
-                        <h2>Vibe Coding Made This Trap Even Easier to Fall Into</h2>
-                        <p>Tools like Claude, Gemini, and Cursor have made building faster than ever. What used to take weeks of writing boilerplate now takes an afternoon of prompting. That is genuinely useful, but it also removed one of the few natural brakes that used to slow builders down.</p>
+                            <p>So the instinct is to retreat back into building. Add one more feature. Fix one more edge case. Convince yourself that the next update is the one that finally makes people care.</p>
 
-                        <p>Before, if you wanted to add a feature, you had to sit down and actually write it, which took time and effort. That friction occasionally forced a pause to ask whether the feature was even worth building. Now with AI coding tools, that friction is mostly gone. You can describe an idea and have working code in minutes, so it becomes very easy to keep shipping features without ever stepping back to ask if anyone wants them.</p>
+                            <p>With SiteGenie, I did this for months. I now know that no amount of polish fixes a validation problem.</p>
 
-                        <p>With SiteGenie, this was part of the problem. Once AI coding assistants entered the picture, every improvement felt cheap to build, so I kept building. The dashboard, the AI generation flow, the templates, all of it kept getting refined because refining was fast and easy. Meanwhile the actual hard question, whether anyone outside my own head wanted this tool, kept getting pushed to "later."</p>
+                            <h2>Vibe Coding Made This Trap Even Easier to Fall Into</h2>
+                            <p>Tools like Claude, Gemini, and Cursor have made building faster than ever. What used to take weeks of writing boilerplate now takes an afternoon of prompting. That is genuinely useful, but it also removed one of the few natural brakes that used to slow builders down.</p>
 
-                        <p>Vibe coding did not cause the build trap. But it removed the friction that used to slow builders down enough to notice they were in one.</p>
+                            <p>Before, if you wanted to add a feature, you had to sit down and actually write it, which took time and effort. That friction occasionally forced a pause to ask whether the feature was even worth building. Now with AI coding tools, that friction is mostly gone. You can describe an idea and have working code in minutes, so it becomes very easy to keep shipping features without ever stepping back to ask if anyone wants them.</p>
 
-                        <h2>The Question I Had to Ask Myself</h2>
-                        <p>At some point I had to be honest about what I was actually doing. Was I building a product, or was I avoiding the harder, messier work of finding customers?</p>
+                            <p>With SiteGenie, this was part of the problem. Once AI coding assistants entered the picture, every improvement felt cheap to build, so I kept building. The dashboard, the AI generation flow, the templates, all of it kept getting refined because refining was fast and easy. Meanwhile the actual hard question, whether anyone outside my own head wanted this tool, kept getting pushed to "later."</p>
 
-                        <p>There is nothing wrong with building for the love of building. Plenty of good software exists purely as a craft or a hobby. But if the goal is a business, the product is only one part of the machine. The other part is a repeatable way of getting it in front of people who have the problem and are willing to pay to solve it.</p>
+                            <p>Vibe coding did not cause the build trap. But it removed the friction that used to slow builders down enough to notice they were in one.</p>
 
-                        <p>That is the part I had skipped entirely with SiteGenie.</p>
+                            <h2>The Question I Had to Ask Myself</h2>
+                            <p>At some point I had to be honest about what I was actually doing. Was I building a product, or was I avoiding the harder, messier work of finding customers?</p>
 
-                        <h2>What Changed When I Started SMBify</h2>
-                        <p>When I started SMBify, I approached it differently on purpose. Before writing a single word of copy or building any deliverable, I spent time understanding who the client actually was: home service contractors like plumbers, HVAC companies, roofers, and electricians who needed to show up in local search and Google Maps but had no time or expertise to manage that themselves.</p>
+                            <p>There is nothing wrong with building for the love of building. Plenty of good software exists purely as a craft or a hobby. But if the goal is a business, the product is only one part of the machine. The other part is a repeatable way of getting it in front of people who have the problem and are willing to pay to solve it.</p>
 
-                        <p>I treated customer acquisition the same way I used to treat a technical problem. Instead of guessing, I tested. Instead of building in isolation, I looked at what was already working for similar businesses and adjusted based on real signals, not assumptions.</p>
+                            <p>That is the part I had skipped entirely with SiteGenie.</p>
 
-                        <p>The shift was not "get better at sales." It was building an actual system around getting in front of the right people consistently, the same way I would build a system for anything else. A system has clear inputs, a repeatable process, and a measurable output. Once I started treating client acquisition that way, it stopped feeling like an unpredictable, emotional gamble and started feeling like something I could actually manage and improve.</p>
+                            <h2>What Changed When I Started SMBify</h2>
+                            <p>When I started SMBify, I approached it differently on purpose. Before writing a single word of copy or building any deliverable, I spent time understanding who the client actually was: home service contractors like plumbers, HVAC companies, roofers, and electricians who needed to show up in local search and Google Maps but had no time or expertise to manage that themselves.</p>
 
-                        <h2>The Lesson</h2>
-                        <p>A product that nobody buys is not proof that the product is bad. Often it is proof that the process around it was never built. SiteGenie taught me that lesson the hard way, and it is the reason SMBify exists with a clear, repeatable service model instead of another perfect tool sitting quietly with an empty dashboard.</p>
+                            <p>I treated customer acquisition the same way I used to treat a technical problem. Instead of guessing, I tested. Instead of building in isolation, I looked at what was already working for similar businesses and adjusted based on real signals, not assumptions.</p>
 
-                        <p>If you are a contractor or business owner and your website is in the same position, built well but invisible in search, that is exactly the gap SMBify was built to close.</p>
+                            <p>The shift was not "get better at sales." It was building an actual system around getting in front of the right people consistently, the same way I would build a system for anything else. A system has clear inputs, a repeatable process, and a measurable output. Once I started treating client acquisition that way, it stopped feeling like an unpredictable, emotional gamble and started feeling like something I could actually manage and improve.</p>
 
-                        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
-                            <span class="founder-signature">Tufail Abbas</span>
-                            <span style="font-size: 0.9rem; color: var(--text-tertiary); display: block;">Muhammad Tufail Abbas • Founder, SMBify</span>
-                        </div>
+                            <h2>The Lesson</h2>
+                            <p>A product that nobody buys is not proof that the product is bad. Often it is proof that the process around it was never built. SiteGenie taught me that lesson the hard way, and it is the reason SMBify exists with a clear, repeatable service model instead of another perfect tool sitting quietly with an empty dashboard.</p>
 
-                        <h2 style="margin-top: 2.5rem;">Frequently Asked Questions</h2>
-                        <div class="faq-accordion">
-                            <div class="faq-item">
-                                <button class="faq-question">What is the Build Trap? <span class="faq-icon">+</span></button>
-                                <div class="faq-answer">
-                                    <p>The build trap happens when founders continuously refine software features in isolation, confusing coding progress with building a real validated business.</p>
+                            <p>If you are a contractor or business owner and your website is in the same position, built well but invisible in search, that is exactly the gap SMBify was built to close.</p>
+
+                            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                                <span class="founder-signature">Tufail Abbas</span>
+                                <span style="font-size: 0.9rem; color: var(--text-tertiary); display: block;">Muhammad Tufail Abbas • Founder, SMBify</span>
+                            </div>
+
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-accordion">
+                                <div class="faq-item">
+                                    <button class="faq-question">What is the Build Trap? <span class="faq-icon">+</span></button>
+                                    <div class="faq-answer">
+                                        <p>The build trap happens when founders continuously refine software features in isolation, confusing coding progress with building a real validated business.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question">How does vibe coding accelerate this trap? <span class="faq-icon">+</span></button>
+                                    <div class="faq-answer">
+                                        <p>AI coding tools like Cursor, Claude, and Gemini remove the natural friction of manual coding. Because shipping features is fast and cheap, developers keep building features without asking if customers actually want them.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question">How does SMBify solve this for local businesses? <span class="faq-icon">+</span></button>
+                                    <div class="faq-answer">
+                                        <p>Having a well-built website means nothing if it is invisible in local search. SMBify provides a repeatable, done-for-you Local SEO system for contractors to rank in Google Maps and drive exclusive calls.</p>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </article>
 
-                            <div class="faq-item">
-                                <button class="faq-question">How does vibe coding accelerate this trap? <span class="faq-icon">+</span></button>
-                                <div class="faq-answer">
-                                    <p>AI coding tools like Cursor, Claude, and Gemini remove the natural friction of manual coding. Because shipping features is fast and cheap, developers keep building features without asking if customers actually want them.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <button class="faq-question">How does SMBify solve this for local businesses? <span class="faq-icon">+</span></button>
-                                <div class="faq-answer">
-                                    <p>Having a well-built website means nothing if it is invisible in local search. SMBify provides a repeatable, done-for-you Local SEO system for contractors to rank in Google Maps and drive exclusive calls.</p>
-                                </div>
-                            </div>
+                    <!-- STICKY SIDEBAR -->
+                    <aside class="blog-sidebar">
+                        <!-- 1ST: KEY TAKEAWAYS WIDGET -->
+                        <div class="sidebar-widget summary-widget">
+                            <h4 class="summary-widget__title">Key Article Takeaways</h4>
+                            <ul class="summary-widget__list">
+                                <li>Validation First: Software without customers is just a hobby.</li>
+                                <li>Vibe Coding Trap: Fast AI building removes friction, test demand first.</li>
+                                <li>Acquisition Systems: Treat getting clients as a technical system.</li>
+                                <li>Local SEO Gap: Fix invisible contractor sites with Google Maps rankings.</li>
+                            </ul>
                         </div>
 
-                    </div>
-                </article>
-
-                <!-- STICKY SIDEBAR -->
-                <aside class="blog-sidebar">
-                    <!-- 1ST: KEY TAKEAWAYS -->
-                    <div class="blog-sidebar__widget">
-                        <h3 class="blog-sidebar__title">Key Takeaways</h3>
-                        <ul class="blog-sidebar__list">
-                            <li><strong>Validation First:</strong> Software without customers is just a hobby.</li>
-                            <li><strong>Vibe Coding Brake:</strong> AI makes shipping cheap, test demand before building.</li>
-                            <li><strong>Acquisition Systems:</strong> Treat getting clients as a repeatable technical system.</li>
-                            <li><strong>Local SEO Gap:</strong> Fix invisible contractor sites with proven Google Maps rankings.</li>
-                        </ul>
-                    </div>
-
-                    <!-- 2ND: AUTHOR CARD WITH PHOTO -->
-                    <div class="blog-sidebar__widget author-widget">
-                        <div class="author-widget__header" style="display:flex;align-items:center;gap:1rem;">
-                            <img src="/assets/tufail-abbasy.png" alt="Muhammad Tufail Abbas" class="author-widget__img" style="width:48px!important;height:48px!important;border-radius:50%!important;object-fit:cover!important;">
-                            <div>
-                                <h4 class="author-widget__name" style="margin:0;">Muhammad Tufail Abbas</h4>
-                                <span class="author-widget__role" style="font-size:0.85rem;color:var(--text-tertiary);">Founder @ SMBify</span>
+                        <!-- 2ND: AUTHOR CARD WIDGET (PURANI TEAM PHOTO FOR BLOG) -->
+                        <div class="sidebar-widget author-widget">
+                            <div class="author-widget__header">
+                                <img src="/assets/tufail-author-avatar.jpg" alt="Muhammad Tufail Abbas" class="author-widget__img">
+                                <div>
+                                    <h4 class="author-widget__name">Muhammad Tufail Abbas</h4>
+                                    <span class="author-widget__role">Founder @ SMBify</span>
+                                </div>
                             </div>
+                            <p class="author-widget__bio">Specialized Local SEO strategist helping HVAC, Roofing, Plumbing &amp; Electrical contractors dominate Google Maps.</p>
+                            <a href="https://www.linkedin.com/in/smbpreneur/" target="_blank" rel="noopener noreferrer" class="author-widget__link">Connect on LinkedIn →</a>
                         </div>
-                        <p class="author-widget__bio" style="margin-top:0.75rem;">Local SEO Strategist specializing in Google Business Profile optimization, entity stacking, and repeatable local search systems for contractors.</p>
-                        <a href="https://www.linkedin.com/in/smbpreneur/" target="_blank" rel="noopener noreferrer" class="author-widget__link">Connect on LinkedIn →</a>
-                    </div>
 
-                    <!-- 3RD: FREE AUDIT CTA -->
-                    <div class="blog-sidebar__widget cta-widget">
-                        <h3 class="cta-widget__title">Free Local SEO Audit</h3>
-                        <p class="cta-widget__text">Is your contractor website invisible in local search? Get a free Map Pack audit today.</p>
-                        <a href="/booking" class="btn btn--primary btn--full">Book Strategy Audit</a>
-                    </div>
-                </aside>
+                        <!-- 3RD: FREE AUDIT CTA WIDGET -->
+                        <div class="sidebar-widget cta-widget">
+                            <span class="cta-widget__badge">FREE AUDIT</span>
+                            <h4 class="cta-widget__title">Struggling with Map Pack Rank?</h4>
+                            <p class="cta-widget__text">Let us audit your contractor site structure and uncover why you aren't getting local phone calls.</p>
+                            <a href="/booking" class="btn btn--primary btn--full">Book Free 15-Min Call</a>
+                        </div>
+                    </aside>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer__inner">
-            <div class="footer__brand">
-                <a href="/" class="footer__logo">
-                    <img src="/assets/logo-dark.png" alt="SMBify Logo">
-                </a>
-                <p class="footer__tagline">Specialized Local SEO &amp; Fulfillment for Home Services &amp; Agencies.</p>
-                <p style="font-size:0.875rem;color:var(--text-tertiary);margin-top:0.5rem;">Email: contact@smbify.net | WhatsApp: +92 343 7967815</p>
-            </div>
-            <div class="footer__links">
-                <div class="footer__col">
-                    <h4 class="footer__col-title">Navigation</h4>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/services">Services</a></li>
-                        <li><a href="/portfolio">Portfolio</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/contacts">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h4 class="footer__col-title">Legal</h4>
-                    <ul>
-                        <li><a href="/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <div class="container footer__bottom-inner">
-                <p>&copy; 2026 SMBify. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="/js/main.js"></script>
+    <footer class="footer"></footer>
+    <script src="/js/main.js" defer></script>
 </body>
 </html>
