@@ -630,3 +630,16 @@
     font-size: 0.9rem !important;
     text-decoration: none !important;
 }
+
+/* Vertical alignment tweak for Author Widget Info */
+.author-widget__info {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: left !important;
+    padding-top: 5px !important;
+}
+
+.author-widget__name {
+    margin-top: 2px !important;
+}
