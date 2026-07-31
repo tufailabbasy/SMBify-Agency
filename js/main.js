@@ -164,7 +164,8 @@ const HeaderFooterManager = {
     const p = window.location.pathname;
 
     const isAboutActive = p.startsWith('/about') || p.startsWith('/founder') || p.startsWith('/team');
-    const isServicesActive = p.startsWith('/services') || p.startsWith('/local-seo') || p.startsWith('/local-citations');
+    const isServicesActive = p.startsWith('/services') || p.startsWith('/local-seo') || p.startsWith('/local-citations') || p.includes('-seo') || p.includes('-blueprint') || p.includes('-guide') || p.includes('-playbook');
+    const isBlogActive = (p === '/blog' || p === '/blog.html' || p.startsWith('/blog/') || p.includes('the-build-trap') || p.includes('audit-finding')) && !isServicesActive;
 
     const html = `
       <div class="container header__inner">
@@ -235,7 +236,7 @@ const HeaderFooterManager = {
 
             <li><a href="/portfolio" class="nav__link${p.startsWith('/portfolio') ? ' active' : ''}">Portfolio</a></li>
             <li><a href="/resources" class="nav__link${p.startsWith('/resources') ? ' active' : ''}">Resources</a></li>
-            <li><a href="/blog" class="nav__link${p.startsWith('/blog') || p.includes('-guide') || p.includes('-blueprint') || p.includes('-playbook') || p.includes('-seo') || p.includes('-trap') ? ' active' : ''}">Blog</a></li>
+            <li><a href="/blog" class="nav__link${isBlogActive ? ' active' : ''}">Blog</a></li>
             <li><a href="/contacts" class="nav__link${p.startsWith('/contacts') ? ' active' : ''}">Contact</a></li>
           </ul>
         </nav>
