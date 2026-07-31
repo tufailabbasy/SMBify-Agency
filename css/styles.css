@@ -7613,3 +7613,97 @@ body.menu-open {
 main > section:first-of-type {
     padding-top: clamp(7.5rem, 10vw, 9rem) !important;
 }
+
+
+/* =========================================
+   Header Dropdown & Mega Menu Fixes (Gapless Hover & Smooth Transitions)
+   ========================================= */
+
+.nav__dropdown {
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: -12px;
+}
+
+.nav__dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  min-width: 220px;
+  background-color: #0D1220;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0.75rem;
+  z-index: 1050;
+  margin-top: 4px;
+}
+
+/* Invisible bridge element so moving cursor from trigger link to menu never breaks hover */
+.nav__dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: transparent;
+}
+
+.nav__dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: transparent;
+}
+
+.nav__dropdown:hover .nav__dropdown-menu,
+.nav__dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav__mega-menu {
+  position: absolute !important;
+  top: 100% !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(0) !important;
+  width: 840px !important;
+  max-width: 92vw !important;
+  margin-top: 4px !important;
+}
+
+.nav__dropdown:hover .nav__mega-menu,
+.nav__mega-menu:hover {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.nav__dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  color: #F9FAFB;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav__dropdown-link:hover {
+  background-color: rgba(132, 204, 22, 0.1);
+  color: #84CC16;
+}

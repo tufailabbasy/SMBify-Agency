@@ -156,19 +156,13 @@ const HeaderFooterManager = {
 
   injectHeader() {
     const header = document.querySelector('header.header');
-    if (!header) {
-      console.warn('Header element "header.header" not found!');
-      return;
-    }
-
+    if (!header) return;
     const p = window.location.pathname;
-
     const isAboutActive = p.startsWith('/about') || p.startsWith('/founder') || p.startsWith('/team');
-    const isServicesActive = p.startsWith('/services') || p.startsWith('/local-seo') || p.startsWith('/local-citations') || p.includes('-seo') || p.includes('-blueprint') || p.includes('-guide') || p.includes('-playbook');
-    const isBlogActive = (p === '/blog' || p === '/blog.html' || p.startsWith('/blog/') || p.includes('the-build-trap') || p.includes('audit-finding')) && !isServicesActive;
+    const isServicesActive = p.startsWith('/services') || p.startsWith('/local-seo') || p.startsWith('/local-citations') || p.includes('-seo');
+    const isBlogActive = (p === '/blog' || p === '/blog.html' || p.startsWith('/blog/')) && !isServicesActive;
 
-    const html = `
-      <div class="container header__inner">
+    const html = `<div class="container header__inner">
         <a href="/" class="header__logo">
           <img src="/assets/logo-dark.png" alt="SMBify Logo" class="logo-light">
         </a>
@@ -176,7 +170,7 @@ const HeaderFooterManager = {
           <ul class="nav__list">
             <li><a href="/" class="nav__link${p === '/' || p === '/index.html' || p === '' ? ' active' : ''}">Home</a></li>
             
-            <!-- ABOUT DROPDOWN -->
+            <!-- ABOUT MEGA DROPDOWN -->
             <li class="nav__dropdown">
               <a href="/about" class="nav__link${isAboutActive ? ' active' : ''}">
                 About
@@ -186,26 +180,39 @@ const HeaderFooterManager = {
                   </svg>
                 </span>
               </a>
-              <ul class="nav__dropdown-menu">
-                <li>
-                  <a href="/about" class="nav__dropdown-link">
-                    <span class="nav__dropdown-title">About Us</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="/founder" class="nav__dropdown-link">
-                    <span class="nav__dropdown-title">Founder</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="/team" class="nav__dropdown-link">
-                    <span class="nav__dropdown-title">Team</span>
-                  </a>
-                </li>
-              </ul>
+              <div class="nav__dropdown-menu" style="width: 320px; padding: 1rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <a href="/about" class="nav__dropdown-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <div>
+                    <div style="font-weight: 700; color: #F9FAFB; font-size: 0.92rem;">About SMBify</div>
+                    <div style="font-size: 0.78rem; color: #9CA3AF;">Our mission & agency architecture</div>
+                  </div>
+                </a>
+                <a href="/founder" class="nav__dropdown-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <div>
+                    <div style="font-weight: 700; color: #F9FAFB; font-size: 0.92rem;">Meet the Founder</div>
+                    <div style="font-size: 0.78rem; color: #9CA3AF;">Muhammad Tufail Abbas & 7+ Yr Story</div>
+                  </div>
+                </a>
+                <a href="/team" class="nav__dropdown-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <div>
+                    <div style="font-weight: 700; color: #F9FAFB; font-size: 0.92rem;">Meet Our Team</div>
+                    <div style="font-size: 0.78rem; color: #9CA3AF;">Specialized Local SEO Engineers</div>
+                  </div>
+                </a>
+                <a href="/smbify-vs-fiverr-local-seo" class="nav__dropdown-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <div>
+                    <div style="font-weight: 700; color: #F9FAFB; font-size: 0.92rem;">SMBify vs Fiverr</div>
+                    <div style="font-size: 0.78rem; color: #9CA3AF;">Why contractors pick us over freelancers</div>
+                  </div>
+                </a>
+              </div>
             </li>
 
-            <!-- SERVICES DROPDOWN MEGA MENU -->
+            <!-- SERVICES MEGA MENU -->
             <li class="nav__dropdown nav__dropdown--mega">
               <a href="/services" class="nav__link${isServicesActive ? ' active' : ''}">
                 Services
@@ -215,74 +222,111 @@ const HeaderFooterManager = {
                   </svg>
                 </span>
               </a>
-              <div class="nav__dropdown-menu nav__mega-menu" style="width: 820px; max-width: 90vw; padding: 1.5rem 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; background: #0D1220; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+              <div class="nav__dropdown-menu nav__mega-menu" style="padding: 1.5rem 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; background: #0D1220; border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.7);">
                 <div>
-                  <h4 style="font-family:'Outfit',sans-serif; font-size:0.9rem; font-weight:800; color:#84CC16; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.4rem;">Core Trades &amp; Emergency</h4>
-                  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
-                    <li><a href="/plumbing-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🔧 Plumbing</a></li>
-                    <li><a href="/hvac-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🌡️ HVAC</a></li>
-                    <li><a href="/electrical-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">⚡ Electrical</a></li>
-                    <li><a href="/roofing-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🏠 Roofing</a></li>
-                    <li><a href="/water-damage-restoration-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">💧 Water Damage &amp; Restoration</a></li>
-                    <li><a href="/garage-door-repair-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🚪 Garage Door Repair</a></li>
+                  <h4 style="font-family:'Outfit',sans-serif; font-size:0.85rem; font-weight:800; color:#84CC16; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.85rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.4rem;">Core Trades &amp; Emergency</h4>
+                  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.55rem; font-size:0.88rem;">
+                    <li><a href="/plumbing-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> Plumbing</a></li>
+                    <li><a href="/hvac-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/><path d="M12 9h4M12 6h2M12 12h2"/></svg> HVAC</a></li>
+                    <li><a href="/electrical-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Electrical</a></li>
+                    <li><a href="/roofing-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Roofing</a></li>
+                    <li><a href="/water-damage-restoration-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg> Water Damage &amp; Restoration</a></li>
+                    <li><a href="/garage-door-repair-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg> Garage Door Repair</a></li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 style="font-family:'Outfit',sans-serif; font-size:0.9rem; font-weight:800; color:#84CC16; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.4rem;">Maintenance &amp; Specialty</h4>
-                  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
-                    <li><a href="/pest-control-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🐜 Pest Control</a></li>
-                    <li><a href="/lawn-care-landscape-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🌿 Lawn Care &amp; Landscape</a></li>
-                    <li><a href="/pool-service-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🏊 Pool Service</a></li>
-                    <li><a href="/cleaning-services-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🧹 House &amp; Office Cleaning</a></li>
-                    <li><a href="/junk-removal-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🚛 Junk Removal</a></li>
-                    <li><a href="/tree-service-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🌳 Tree Service</a></li>
-                    <li><a href="/chimney-duct-cleaning-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🧹 Chimney &amp; Duct Sweep</a></li>
+                  <h4 style="font-family:'Outfit',sans-serif; font-size:0.85rem; font-weight:800; color:#84CC16; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.85rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.4rem;">Maintenance &amp; Specialty</h4>
+                  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.55rem; font-size:0.88rem;">
+                    <li><a href="/pest-control-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="5" r="2.5"/><path d="M8 8.5C8 6.5 16 6.5 16 8.5V17c0 2-8 2-8 0V8.5z"/><line x1="6" y1="10" x2="18" y2="10"/><line x1="6" y1="14" x2="18" y2="14"/></svg> Pest Control</a></li>
+                    <li><a href="/lawn-care-landscape-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 2A10 10 0 0 0 2 12c0 4.4 3.6 8 8 8h2a10 10 0 0 0 10-10V2H12zm0 18v-8"/></svg> Lawn Care &amp; Landscape</a></li>
+                    <li><a href="/pool-service-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M2 12h20M2 17h20M2 7h20"/></svg> Pool Service</a></li>
+                    <li><a href="/cleaning-services-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 3l1.5 6.5L20 11l-6.5 1.5L12 19l-1.5-6.5L4 11l6.5-1.5z"/></svg> House &amp; Office Cleaning</a></li>
+                    <li><a href="/junk-removal-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="6" width="18" height="15" rx="2"/><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Junk Removal</a></li>
+                    <li><a href="/tree-service-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polygon points="12 2 3 12 8 12 4 18 20 18 16 12 21 12 12 2"/><line x1="12" y1="18" x2="12" y2="22"/></svg> Tree Service</a></li>
+                    <li><a href="/chimney-duct-cleaning-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M4 12h16M8 6v12M12 6v12"/></svg> Chimney &amp; Duct Sweep</a></li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 style="font-family:'Outfit',sans-serif; font-size:0.9rem; font-weight:800; color:#84CC16; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.4rem;">Renovations &amp; Contracting</h4>
-                  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
-                    <li><a href="/remodeling-builders-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🔨 Remodeling &amp; Builders</a></li>
-                    <li><a href="/painting-contractor-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🎨 Painting</a></li>
-                    <li><a href="/flooring-contractor-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🪵 Flooring</a></li>
-                    <li><a href="/fencing-contractor-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🪵 Fencing</a></li>
-                    <li><a href="/windows-doors-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🪟 Windows &amp; Doors</a></li>
-                    <li><a href="/solar-installer-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">☀️ Solar</a></li>
-                    <li><a href="/concrete-paving-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🏗️ Concrete &amp; Paving</a></li>
-                    <li><a href="/deck-builder-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🛠️ Deck Builders</a></li>
+                  <h4 style="font-family:'Outfit',sans-serif; font-size:0.85rem; font-weight:800; color:#84CC16; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.85rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.4rem;">Renovations &amp; Contracting</h4>
+                  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.55rem; font-size:0.88rem;">
+                    <li><a href="/remodeling-builders-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M18 2l4 4-12 12-4-4L18 2zM15 5l2 2M9 11l-5 5v3h3l5-5-3-3z"/></svg> Remodeling &amp; Builders</a></li>
+                    <li><a href="/painting-contractor-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="6" y="3" width="12" height="6" rx="1.5"/><path d="M6 6H4v8c0 1.1.9 2 2 2h6v5m0-13h6"/></svg> Painting</a></li>
+                    <li><a href="/flooring-contractor-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg> Flooring</a></li>
+                    <li><a href="/fencing-contractor-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M2 12h20M6 12V4M10 12V4M14 12V4M18 12V4M6 20v-8M10 20v-8M14 20v-8M18 20v-8"/></svg> Fencing</a></li>
+                    <li><a href="/windows-doors-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h18"/></svg> Windows &amp; Doors</a></li>
+                    <li><a href="/solar-installer-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg> Solar</a></li>
+                    <li><a href="/concrete-paving-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v6M15 9v6M9 15v6"/></svg> Concrete &amp; Paving</a></li>
+                    <li><a href="/deck-builder-seo" class="nav__dropdown-link" style="padding:0.35rem 0.5rem;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18M12 3v18M17 3v18M3 8h18M3 14h18"/></svg> Deck Builders</a></li>
                   </ul>
+                </div>
+
+                <!-- BOTTOM CORE SOLUTIONS BAR -->
+                <div style="grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; margin-top: 0.5rem; display: flex; align-items: center; justify-content: space-between;">
+                  <a href="/local-seo" style="color: #F9FAFB; text-decoration: none; font-weight: 700; font-size: 0.88rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="background: rgba(132, 204, 22, 0.15); color: #84CC16; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem;">CORE</span> Local SEO Engine &rarr;
+                  </a>
+                  <a href="/local-citations" style="color: #F9FAFB; text-decoration: none; font-weight: 700; font-size: 0.88rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="background: rgba(132, 204, 22, 0.15); color: #84CC16; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem;">MAPS</span> Local Citations &amp; GBP &rarr;
+                  </a>
+                  <a href="/services" style="color: #84CC16; text-decoration: none; font-weight: 800; font-size: 0.88rem;">View All 21 Services &rarr;</a>
                 </div>
               </div>
             </li>
-                <li>
-                  <a href="/local-seo" class="nav__dropdown-link">
-                    <span class="nav__dropdown-title">Local SEO</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="/local-citations" class="nav__dropdown-link">
-                    <span class="nav__dropdown-title">Local Citations</span>
-                  </a>
-                </li>
-              </ul>
+
+            <li><a href="/portfolio" class="nav__link${p === '/portfolio' || p === '/portfolio.html' ? ' active' : ''}">Portfolio</a></li>
+
+            <!-- RESOURCES MEGA DROPDOWN -->
+            <li class="nav__dropdown">
+              <a href="/resources" class="nav__link${p === '/resources' || p === '/resources.html' ? ' active' : ''}">
+                Resources
+                <span class="nav__caret">
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+              <div class="nav__dropdown-menu" style="width: 320px; padding: 1rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                <a href="/resources" class="nav__dropdown-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  <div>
+                    <div style="font-weight: 700; color: #F9FAFB; font-size: 0.92rem;">Resource Hub</div>
+                    <div style="font-size: 0.78rem; color: #9CA3AF;">21 Trade Blueprints & Audit Checklists</div>
+                  </div>
+                </a>
+                <a href="/blog" class="nav__dropdown-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <div>
+                    <div style="font-weight: 700; color: #F9FAFB; font-size: 0.92rem;">Blog &amp; Insights</div>
+                    <div style="font-size: 0.78rem; color: #9CA3AF;">Local SEO Playbooks & Founder Notes</div>
+                  </div>
+                </a>
+                <a href="/audit-finding-local-service-sites" class="nav__dropdown-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  <div>
+                    <div style="font-weight: 700; color: #F9FAFB; font-size: 0.92rem;">35k Impression Case Study</div>
+                    <div style="font-size: 0.78rem; color: #9CA3AF;">See real local SEO ranking audit data</div>
+                  </div>
+                </a>
+              </div>
             </li>
 
-            <li><a href="/portfolio" class="nav__link${p.startsWith('/portfolio') ? ' active' : ''}">Portfolio</a></li>
-            <li><a href="/resources" class="nav__link${p.startsWith('/resources') ? ' active' : ''}">Resources</a></li>
             <li><a href="/blog" class="nav__link${isBlogActive ? ' active' : ''}">Blog</a></li>
-            <li><a href="/contacts" class="nav__link${p.startsWith('/contacts') ? ' active' : ''}">Contact</a></li>
+            <li><a href="/contacts" class="nav__link${p === '/contacts' || p === '/contacts.html' ? ' active' : ''}">Contact</a></li>
           </ul>
         </nav>
 
-        <div class="header__actions" style="display:flex; align-items:center; gap:0.6rem;">
-          <a href="/booking" class="btn btn--primary hide-mobile">Book</a>
-          <a href="https://app.smbify.net" target="_blank" rel="noopener noreferrer" class="btn btn--outline hide-mobile">Portal</a>
-          <button class="mobile-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <div class="header__actions">
+          <a href="/booking" class="btn btn--primary hide-mobile">Book Audit</a>
+          <a href="https://app.smbify.net" class="nav__link nav__link--highlighted" target="_blank" rel="noopener noreferrer">Client Portal</a>
+          <button class="mobile-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-      </div>
-    `;
+      </div>`;
     header.innerHTML = html;
     header.classList.add('header--ready');
   },
