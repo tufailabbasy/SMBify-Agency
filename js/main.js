@@ -44,6 +44,85 @@ const FAQAccordion = {
 };
 
 
+
+// =========================================
+// Blog Archive Pagination Manager (12 posts per page)
+// =========================================
+const BlogPaginationManager = {
+  init() {
+    const grid = document.getElementById('blog-grid');
+    if (!grid) return;
+
+    const cards = grid.querySelectorAll('.blog-card');
+    if (!cards.length) return;
+
+    const POSTS_PER_PAGE = 12;
+    const totalPages = Math.ceil(cards.length / POSTS_PER_PAGE);
+    let currentPage = 1;
+
+    let pagContainer = document.getElementById('blog-pagination');
+    if (!pagContainer) {
+      pagContainer = document.createElement('div');
+      pagContainer.id = 'blog-pagination';
+      pagContainer.className = 'blog-pagination';
+      grid.parentNode.appendChild(pagContainer);
+    }
+
+    function renderPage(page) {
+      currentPage = page;
+      const start = (page - 1) * POSTS_PER_PAGE;
+      const end = start + POSTS_PER_PAGE;
+
+      cards.forEach((card, index) => {
+        if (index >= start && index < end) {
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      renderControls();
+    }
+
+    function renderControls() {
+      if (totalPages <= 1) {
+        pagContainer.style.display = 'none';
+        return;
+      }
+
+      pagContainer.style.display = 'flex';
+      let html = '';
+
+      const prevDisabled = currentPage === 1 ? 'disabled' : '';
+      html += `<button class="blog-pagination__btn blog-pagination__nav-btn ${prevDisabled}" data-page="${currentPage - 1}" ${prevDisabled ? 'disabled' : ''}>← Prev</button>`;
+
+      for (let i = 1; i <= totalPages; i++) {
+        const activeClass = i === currentPage ? 'active' : '';
+        html += `<button class="blog-pagination__btn ${activeClass}" data-page="${i}">${i}</button>`;
+      }
+
+      const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+      html += `<button class="blog-pagination__btn blog-pagination__nav-btn ${nextDisabled}" data-page="${currentPage + 1}" ${nextDisabled ? 'disabled' : ''}>Next →</button>`;
+
+      pagContainer.innerHTML = html;
+
+      pagContainer.querySelectorAll('.blog-pagination__btn:not(.disabled)').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetPage = parseInt(btn.dataset.page, 10);
+          if (targetPage && targetPage !== currentPage) {
+            renderPage(targetPage);
+            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    }
+
+    renderPage(1);
+  }
+};
+
+
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize core modules
   HeaderFooterManager.init();
@@ -59,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
   BackToTop.init();
   AutoTOCManager.init();
     FAQAccordion.init();
+    BlogPaginationManager.init();
   // Render global CTAs (fills empty .cta containers)
   if (typeof GlobalCTAManager !== 'undefined' && GlobalCTAManager.init) GlobalCTAManager.init();
 });

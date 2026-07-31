@@ -643,3 +643,62 @@
 .author-widget__name {
     margin-top: 2px !important;
 }
+
+
+/* =========================================
+   STYLISH MODERN BLOG PAGINATION
+   ========================================= */
+
+.blog-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.blog-pagination__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+    padding: 0 1.1rem;
+    border-radius: 12px;
+    background: #0D1220;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+.blog-pagination__btn:hover:not(.disabled):not(.active) {
+    border-color: #84CC16;
+    color: #84CC16;
+    background: rgba(132, 204, 22, 0.08);
+    transform: translateY(-2px);
+}
+
+.blog-pagination__btn.active {
+    background: #84CC16 !important;
+    color: #070A13 !important;
+    border-color: #84CC16 !important;
+    font-weight: 800 !important;
+    box-shadow: 0 4px 15px rgba(132, 204, 22, 0.35) !important;
+}
+
+.blog-pagination__btn.disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    border-color: transparent;
+}
+
+.blog-pagination__nav-btn {
+    gap: 0.4rem;
+}
