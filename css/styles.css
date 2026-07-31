@@ -7421,3 +7421,33 @@ body.menu-open {
     margin-bottom: 0.2rem !important;
     transform: rotate(-2deg);
 }
+
+/* Strict Industry Card Icon Constraints */
+.industry-card__icon {
+    width: 54px !important;
+    height: 54px !important;
+    min-width: 54px !important;
+    min-height: 54px !important;
+    max-width: 54px !important;
+    max-height: 54px !important;
+    border-radius: 14px !important;
+    background: rgba(132, 204, 22, 0.1) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 1.25rem !important;
+    color: #84CC16 !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+}
+
+.industry-card__icon svg {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+    max-width: 28px !important;
+    max-height: 28px !important;
+    stroke-width: 2 !important;
+    display: block !important;
+}
