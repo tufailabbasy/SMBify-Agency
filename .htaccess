@@ -4,6 +4,30 @@
 # Enable rewrite engine
 RewriteEngine On
 
+# Commercial Trade Slugs 301 Redirects
+RewriteRule ^plumbing-local-seo-blueprint(?:\.html)?$ /plumbing-seo [R=301,L,NC]
+RewriteRule ^hvac-local-seo-guide(?:\.html)?$ /hvac-seo [R=301,L,NC]
+RewriteRule ^electrician-seo-guide(?:\.html)?$ /electrical-seo [R=301,L,NC]
+RewriteRule ^roofing-local-seo-playbook(?:\.html)?$ /roofing-seo [R=301,L,NC]
+RewriteRule ^water-damage-restoration-seo-guide(?:\.html)?$ /water-damage-restoration-seo [R=301,L,NC]
+RewriteRule ^garage-door-repair-seo-guide(?:\.html)?$ /garage-door-repair-seo [R=301,L,NC]
+RewriteRule ^pest-control-local-seo-guide(?:\.html)?$ /pest-control-seo [R=301,L,NC]
+RewriteRule ^lawn-care-landscaping-seo-guide(?:\.html)?$ /lawn-care-landscape-seo [R=301,L,NC]
+RewriteRule ^pool-service-local-seo-guide(?:\.html)?$ /pool-service-seo [R=301,L,NC]
+RewriteRule ^cleaning-service-local-seo-guide(?:\.html)?$ /cleaning-services-seo [R=301,L,NC]
+RewriteRule ^junk-removal-local-seo-guide(?:\.html)?$ /junk-removal-seo [R=301,L,NC]
+RewriteRule ^tree-service-local-seo-guide(?:\.html)?$ /tree-service-seo [R=301,L,NC]
+RewriteRule ^chimney-duct-cleaning-seo-guide(?:\.html)?$ /chimney-duct-cleaning-seo [R=301,L,NC]
+RewriteRule ^remodeling-contractor-seo-guide(?:\.html)?$ /remodeling-builders-seo [R=301,L,NC]
+RewriteRule ^painting-contractor-local-seo-guide(?:\.html)?$ /painting-contractor-seo [R=301,L,NC]
+RewriteRule ^flooring-contractor-seo-guide(?:\.html)?$ /flooring-contractor-seo [R=301,L,NC]
+RewriteRule ^fencing-contractor-seo-guide(?:\.html)?$ /fencing-contractor-seo [R=301,L,NC]
+RewriteRule ^window-door-contractor-seo-guide(?:\.html)?$ /windows-doors-seo [R=301,L,NC]
+RewriteRule ^solar-installer-local-seo-guide(?:\.html)?$ /solar-installer-seo [R=301,L,NC]
+RewriteRule ^concrete-paving-seo-guide(?:\.html)?$ /concrete-paving-seo [R=301,L,NC]
+RewriteRule ^deck-builder-local-seo-guide(?:\.html)?$ /deck-builder-seo [R=301,L,NC]
+
+
 # Force HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
