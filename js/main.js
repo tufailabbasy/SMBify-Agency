@@ -163,6 +163,9 @@ const HeaderFooterManager = {
 
     const p = window.location.pathname;
 
+    const isAboutActive = p.startsWith('/about') || p.startsWith('/founder') || p.startsWith('/team');
+    const isServicesActive = p.startsWith('/services') || p.startsWith('/local-seo') || p.startsWith('/local-citations');
+
     const html = `
       <div class="container header__inner">
         <a href="/" class="header__logo">
@@ -171,16 +174,75 @@ const HeaderFooterManager = {
         <nav class="nav">
           <ul class="nav__list">
             <li><a href="/" class="nav__link${p === '/' || p === '/index.html' || p === '' ? ' active' : ''}">Home</a></li>
-            <li><a href="/about" class="nav__link${p.startsWith('/about') || p.startsWith('/founder') || p.startsWith('/team') ? ' active' : ''}">About</a></li>
-            <li><a href="/services" class="nav__link${p.startsWith('/services') || p.startsWith('/local-seo') || p.startsWith('/local-citations') ? ' active' : ''}">Services</a></li>
+            
+            <!-- ABOUT DROPDOWN -->
+            <li class="nav__dropdown">
+              <a href="/about" class="nav__link${isAboutActive ? ' active' : ''}">
+                About
+                <span class="nav__caret">
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+              <ul class="nav__dropdown-menu">
+                <li>
+                  <a href="/about" class="nav__dropdown-link">
+                    <span class="nav__dropdown-title">About Us</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/founder" class="nav__dropdown-link">
+                    <span class="nav__dropdown-title">Founder</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/team" class="nav__dropdown-link">
+                    <span class="nav__dropdown-title">Team</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- SERVICES DROPDOWN -->
+            <li class="nav__dropdown">
+              <a href="/services" class="nav__link${isServicesActive ? ' active' : ''}">
+                Services
+                <span class="nav__caret">
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </a>
+              <ul class="nav__dropdown-menu">
+                <li>
+                  <a href="/services" class="nav__dropdown-link">
+                    <span class="nav__dropdown-title">All Services</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/local-seo" class="nav__dropdown-link">
+                    <span class="nav__dropdown-title">Local SEO</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/local-citations" class="nav__dropdown-link">
+                    <span class="nav__dropdown-title">Local Citations</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
             <li><a href="/portfolio" class="nav__link${p.startsWith('/portfolio') ? ' active' : ''}">Portfolio</a></li>
             <li><a href="/resources" class="nav__link${p.startsWith('/resources') ? ' active' : ''}">Resources</a></li>
             <li><a href="/blog" class="nav__link${p.startsWith('/blog') || p.includes('-guide') || p.includes('-blueprint') || p.includes('-playbook') || p.includes('-seo') || p.includes('-trap') ? ' active' : ''}">Blog</a></li>
             <li><a href="/contacts" class="nav__link${p.startsWith('/contacts') ? ' active' : ''}">Contact</a></li>
           </ul>
         </nav>
-        <div class="header__actions">
-          <a href="/booking" class="btn btn--primary hide-mobile">Book Audit</a>
+
+        <div class="header__actions" style="display:flex; align-items:center; gap:0.6rem;">
+          <a href="/booking" class="btn btn--primary hide-mobile">Book</a>
+          <a href="https://app.smbify.net" target="_blank" rel="noopener noreferrer" class="btn btn--outline hide-mobile">Portal</a>
           <button class="mobile-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
         </div>
       </div>
