@@ -1,2 +1,22 @@
-https://smbify.netlify.app/* https://smbify.agency/:splat 301!
-http://smbify.netlify.app/* https://smbify.agency/:splat 301!
+# 301 Permanent Redirects for Commercial Slugs
+/plumbing-local-seo-blueprint /plumbing-seo 301
+/hvac-local-seo-guide /hvac-seo 301
+/electrician-seo-guide /electrical-seo 301
+/roofing-local-seo-playbook /roofing-seo 301
+/water-damage-restoration-seo-guide /water-damage-restoration-seo 301
+/garage-door-repair-seo-guide /garage-door-repair-seo 301
+/pest-control-local-seo-guide /pest-control-seo 301
+/lawn-care-landscaping-seo-guide /lawn-care-landscape-seo 301
+/pool-service-local-seo-guide /pool-service-seo 301
+/cleaning-service-local-seo-guide /cleaning-services-seo 301
+/junk-removal-local-seo-guide /junk-removal-seo 301
+/tree-service-local-seo-guide /tree-service-seo 301
+/chimney-duct-cleaning-seo-guide /chimney-duct-cleaning-seo 301
+/remodeling-contractor-seo-guide /remodeling-builders-seo 301
+/painting-contractor-local-seo-guide /painting-contractor-seo 301
+/flooring-contractor-seo-guide /flooring-contractor-seo 301
+/fencing-contractor-seo-guide /fencing-contractor-seo 301
+/window-door-contractor-seo-guide /windows-doors-seo 301
+/solar-installer-local-seo-guide /solar-installer-seo 301
+/concrete-paving-seo-guide /concrete-paving-seo 301
+/deck-builder-local-seo-guide /deck-builder-seo 301

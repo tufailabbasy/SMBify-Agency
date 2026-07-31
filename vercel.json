@@ -3,58 +3,108 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/pricing",
-      "destination": "/services",
+      "source": "/plumbing-local-seo-blueprint",
+      "destination": "/plumbing-seo",
       "permanent": true
     },
     {
-      "source": "/services/local-seo-service",
-      "destination": "/local-seo",
+      "source": "/hvac-local-seo-guide",
+      "destination": "/hvac-seo",
       "permanent": true
     },
     {
-      "source": "/services/local-seo-intake",
-      "destination": "/contacts?plan=map-pack-growth",
+      "source": "/electrician-seo-guide",
+      "destination": "/electrical-seo",
       "permanent": true
     },
     {
-      "source": "/services/cloud-stack-backlinks",
-      "destination": "/services",
+      "source": "/roofing-local-seo-playbook",
+      "destination": "/roofing-seo",
       "permanent": true
     },
     {
-      "source": "/services/social-signals",
-      "destination": "/services",
+      "source": "/water-damage-restoration-seo-guide",
+      "destination": "/water-damage-restoration-seo",
       "permanent": true
     },
     {
-      "source": "/:country-local-citations",
-      "destination": "/services",
+      "source": "/garage-door-repair-seo-guide",
+      "destination": "/garage-door-repair-seo",
       "permanent": true
     },
     {
-      "source": "/:category-category-citations",
-      "destination": "/services",
+      "source": "/pest-control-local-seo-guide",
+      "destination": "/pest-control-seo",
       "permanent": true
     },
     {
-      "source": "/:path*.html",
-      "destination": "/:path*",
+      "source": "/lawn-care-landscaping-seo-guide",
+      "destination": "/lawn-care-landscape-seo",
       "permanent": true
     },
     {
-      "source": "/:path*/index",
-      "destination": "/:path*",
+      "source": "/pool-service-local-seo-guide",
+      "destination": "/pool-service-seo",
       "permanent": true
     },
     {
-      "source": "/index",
-      "destination": "/",
+      "source": "/cleaning-service-local-seo-guide",
+      "destination": "/cleaning-services-seo",
       "permanent": true
     },
     {
-      "source": "/:path+/",
-      "destination": "/:path+",
+      "source": "/junk-removal-local-seo-guide",
+      "destination": "/junk-removal-seo",
+      "permanent": true
+    },
+    {
+      "source": "/tree-service-local-seo-guide",
+      "destination": "/tree-service-seo",
+      "permanent": true
+    },
+    {
+      "source": "/chimney-duct-cleaning-seo-guide",
+      "destination": "/chimney-duct-cleaning-seo",
+      "permanent": true
+    },
+    {
+      "source": "/remodeling-contractor-seo-guide",
+      "destination": "/remodeling-builders-seo",
+      "permanent": true
+    },
+    {
+      "source": "/painting-contractor-local-seo-guide",
+      "destination": "/painting-contractor-seo",
+      "permanent": true
+    },
+    {
+      "source": "/flooring-contractor-seo-guide",
+      "destination": "/flooring-contractor-seo",
+      "permanent": true
+    },
+    {
+      "source": "/fencing-contractor-seo-guide",
+      "destination": "/fencing-contractor-seo",
+      "permanent": true
+    },
+    {
+      "source": "/window-door-contractor-seo-guide",
+      "destination": "/windows-doors-seo",
+      "permanent": true
+    },
+    {
+      "source": "/solar-installer-local-seo-guide",
+      "destination": "/solar-installer-seo",
+      "permanent": true
+    },
+    {
+      "source": "/concrete-paving-seo-guide",
+      "destination": "/concrete-paving-seo",
+      "permanent": true
+    },
+    {
+      "source": "/deck-builder-local-seo-guide",
+      "destination": "/deck-builder-seo",
       "permanent": true
     }
   ],
