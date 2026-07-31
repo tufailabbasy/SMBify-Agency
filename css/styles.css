@@ -7607,3 +7607,9 @@ body.menu-open {
     gap: 0.75rem !important;
     color: #BEF264 !important;
 }
+
+/* Hero Navbar Overlap Safety Fix */
+.landing-hero-section,
+main > section:first-of-type {
+    padding-top: clamp(7.5rem, 10vw, 9rem) !important;
+}
