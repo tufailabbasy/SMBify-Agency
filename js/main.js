@@ -160,12 +160,8 @@ const HeaderFooterManager = {
       console.warn('Header element "header.header" not found!');
       return;
     }
-    console.log('Injecting header...');
 
     const p = window.location.pathname;
-    const isServicesActive = p.startsWith('/services') || p.startsWith('/local-citations') || p.startsWith('/local-seo');
-    const isAboutActive = p.startsWith('/about') || p.startsWith('/founder') || p.startsWith('/team');
-    const isResourcesActive = p.startsWith('/blog') || p.startsWith('/smbify-local-seo-glossary-resource-hub');
 
     const html = `
       <div class="container header__inner">
@@ -174,78 +170,17 @@ const HeaderFooterManager = {
         </a>
         <nav class="nav">
           <ul class="nav__list">
-                    <li><a href="/" class="nav__link">Home</a></li>
-                    <li><a href="/about" class="nav__link">About</a></li>
-                    <li><a href="/services" class="nav__link">Services</a></li>
-                    <li><a href="/portfolio" class="nav__link">Portfolio</a></li>
-                    <li><a href="/resources" class="nav__link">Resources</a></li>
-                    <li><a href="/blog" class="nav__link">Blog</a></li>
-                    <li><a href="/contacts" class="nav__link">Contact</a></li>
-                </ul>
-            </li>
-            <li><a href="/portfolio" class="nav__link${this.isActive('/portfolio') ? ' active' : ''}">Portfolio</a></li>
-            <li class="nav__dropdown">
-              <a href="/services" class="nav__link${isServicesActive ? ' active' : ''}">
-                Services
-                <span class="nav__caret">
-                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </a>
-              <ul class="nav__dropdown-menu">
-                <li>
-                  <a href="/local-seo" class="nav__dropdown-link">
-                    <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="12" cy="12" r="10"/>
-                      <line x1="2" y1="12" x2="22" y2="12"/>
-                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                    <span class="nav__dropdown-title">Local SEO</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="/local-citations" class="nav__dropdown-link">
-                    <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                      <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                    <span class="nav__dropdown-title">Local Citations</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav__dropdown">
-              <a href="/blog" class="nav__link${isResourcesActive ? ' active' : ''}">
-                Resources
-                <span class="nav__caret">
-                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </a>
-              <ul class="nav__dropdown-menu">
-                <li>
-                  <a href="/blog" class="nav__dropdown-link">
-                    <svg class="nav__dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                      <polyline points="14 2 14 8 20 8"></polyline>
-                      <line x1="16" y1="13" x2="8" y2="13"></line>
-                      <line x1="16" y1="17" x2="8" y2="17"></line>
-                      <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                    <span class="nav__dropdown-title">Blog</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="/contacts" class="nav__link${this.isActive('/contacts') ? ' active' : ''}">Contact</a></li>
-            <li><a href="https://app.smbify.net" class="nav__link nav__link--highlighted" target="_blank" rel="noopener noreferrer">Client Portal</a></li>
+            <li><a href="/" class="nav__link${p === '/' || p === '/index.html' || p === '' ? ' active' : ''}">Home</a></li>
+            <li><a href="/about" class="nav__link${p.startsWith('/about') || p.startsWith('/founder') || p.startsWith('/team') ? ' active' : ''}">About</a></li>
+            <li><a href="/services" class="nav__link${p.startsWith('/services') || p.startsWith('/local-seo') || p.startsWith('/local-citations') ? ' active' : ''}">Services</a></li>
+            <li><a href="/portfolio" class="nav__link${p.startsWith('/portfolio') ? ' active' : ''}">Portfolio</a></li>
+            <li><a href="/resources" class="nav__link${p.startsWith('/resources') ? ' active' : ''}">Resources</a></li>
+            <li><a href="/blog" class="nav__link${p.startsWith('/blog') || p.includes('-guide') || p.includes('-blueprint') || p.includes('-playbook') || p.includes('-seo') || p.includes('-trap') ? ' active' : ''}">Blog</a></li>
+            <li><a href="/contacts" class="nav__link${p.startsWith('/contacts') ? ' active' : ''}">Contact</a></li>
           </ul>
         </nav>
         <div class="header__actions">
-          <a href="/local-seo" class="btn btn--primary hide-mobile">Local SEO Service</a>
-          <a href="/booking" class="btn btn--outline hide-mobile" style="margin-left:0.5rem;">Book</a>
+          <a href="/booking" class="btn btn--primary hide-mobile">Book Audit</a>
           <button class="mobile-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
         </div>
       </div>
