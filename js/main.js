@@ -6,42 +6,36 @@
 // =========================================
 // FAQ Accordion Manager
 // =========================================
+
+// =========================================
+// Compact FAQ Accordion Manager
+// =========================================
 const FAQAccordion = {
   init() {
     const questions = document.querySelectorAll('.faq-question');
     if (!questions.length) return;
 
-    console.log('Initializing FAQ Accordions...');
-
     questions.forEach(q => {
+      // Remove old listeners by replacing node or adding clean listener
       q.addEventListener('click', (e) => {
         e.preventDefault();
         const item = q.closest('.faq-item');
         if (!item) return;
 
         const isOpen = item.classList.contains('active');
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.faq-icon');
 
-        // Close all items
-        document.querySelectorAll('.faq-item').forEach(otherItem => {
-          otherItem.classList.remove('active');
-          const otherAnswer = otherItem.querySelector('.faq-answer');
-          const otherIcon = otherItem.querySelector('.faq-icon');
-          if (otherAnswer) otherAnswer.style.display = 'none';
-          if (otherIcon) otherIcon.textContent = '+';
+        // Close other items
+        document.querySelectorAll('.faq-item').forEach(other => {
+          if (other !== item) other.classList.remove('active');
         });
 
-        // Open clicked item if it was closed
-        if (!isOpen) {
-          item.classList.add('active');
-          if (answer) answer.style.display = 'block';
-          if (icon) icon.textContent = '−';
-        }
+        // Toggle active
+        item.classList.toggle('active');
       });
     });
   }
 };
+
 
 
 
