@@ -779,3 +779,140 @@
     padding: 0 0 1rem 0 !important;
     display: block !important;
 }
+
+
+/* =========================================
+   LOCAL SEO BY INDUSTRIES SECTION STYLING
+   ========================================= */
+
+.industries-section {
+    padding: 5rem 0 3rem 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(13, 18, 32, 0.6) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 4rem;
+}
+
+.industries-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.industries-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background: rgba(132, 204, 22, 0.12);
+    color: #84CC16;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.industries-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    color: #F9FAFB;
+    margin-bottom: 1rem;
+}
+
+.industries-lede {
+    font-size: 1.05rem;
+    color: #9CA3AF;
+    line-height: 1.65;
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .industries-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.industry-card {
+    background: #0D1220;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-card:hover {
+    transform: translateY(-6px);
+    border-color: #84CC16;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(132, 204, 22, 0.15);
+}
+
+.industry-card__icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    background: rgba(132, 204, 22, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    color: #84CC16;
+    transition: all 0.3s ease;
+}
+
+.industry-card:hover .industry-card__icon {
+    background: #84CC16;
+    color: #070A13;
+}
+
+.industry-card__icon svg {
+    width: 28px;
+    height: 28px;
+    stroke-width: 2;
+}
+
+.industry-card__title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #F9FAFB;
+    margin-bottom: 0.6rem;
+}
+
+.industry-card__desc {
+    font-size: 0.9rem;
+    color: #9CA3AF;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.industry-card__link {
+    color: #84CC16;
+    font-size: 0.88rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap 0.2s ease;
+}
+
+.industry-card:hover .industry-card__link {
+    gap: 0.75rem;
+    color: #BEF264;
+}
