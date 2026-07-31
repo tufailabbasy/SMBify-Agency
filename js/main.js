@@ -205,8 +205,8 @@ const HeaderFooterManager = {
               </ul>
             </li>
 
-            <!-- SERVICES DROPDOWN -->
-            <li class="nav__dropdown">
+            <!-- SERVICES DROPDOWN MEGA MENU -->
+            <li class="nav__dropdown nav__dropdown--mega">
               <a href="/services" class="nav__link${isServicesActive ? ' active' : ''}">
                 Services
                 <span class="nav__caret">
@@ -215,12 +215,47 @@ const HeaderFooterManager = {
                   </svg>
                 </span>
               </a>
-              <ul class="nav__dropdown-menu">
-                <li>
-                  <a href="/services" class="nav__dropdown-link">
-                    <span class="nav__dropdown-title">All Services</span>
-                  </a>
-                </li>
+              <div class="nav__dropdown-menu nav__mega-menu" style="width: 820px; max-width: 90vw; padding: 1.5rem 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; background: #0D1220; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+                <div>
+                  <h4 style="font-family:'Outfit',sans-serif; font-size:0.9rem; font-weight:800; color:#84CC16; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.4rem;">Core Trades &amp; Emergency</h4>
+                  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+                    <li><a href="/plumbing-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🔧 Plumbing</a></li>
+                    <li><a href="/hvac-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🌡️ HVAC</a></li>
+                    <li><a href="/electrical-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">⚡ Electrical</a></li>
+                    <li><a href="/roofing-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🏠 Roofing</a></li>
+                    <li><a href="/water-damage-restoration-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">💧 Water Damage &amp; Restoration</a></li>
+                    <li><a href="/garage-door-repair-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🚪 Garage Door Repair</a></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 style="font-family:'Outfit',sans-serif; font-size:0.9rem; font-weight:800; color:#84CC16; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.4rem;">Maintenance &amp; Specialty</h4>
+                  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+                    <li><a href="/pest-control-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🐜 Pest Control</a></li>
+                    <li><a href="/lawn-care-landscape-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🌿 Lawn Care &amp; Landscape</a></li>
+                    <li><a href="/pool-service-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🏊 Pool Service</a></li>
+                    <li><a href="/cleaning-services-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🧹 House &amp; Office Cleaning</a></li>
+                    <li><a href="/junk-removal-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🚛 Junk Removal</a></li>
+                    <li><a href="/tree-service-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🌳 Tree Service</a></li>
+                    <li><a href="/chimney-duct-cleaning-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🧹 Chimney &amp; Duct Sweep</a></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 style="font-family:'Outfit',sans-serif; font-size:0.9rem; font-weight:800; color:#84CC16; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:0.4rem;">Renovations &amp; Contracting</h4>
+                  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+                    <li><a href="/remodeling-builders-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🔨 Remodeling &amp; Builders</a></li>
+                    <li><a href="/painting-contractor-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🎨 Painting</a></li>
+                    <li><a href="/flooring-contractor-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🪵 Flooring</a></li>
+                    <li><a href="/fencing-contractor-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🪵 Fencing</a></li>
+                    <li><a href="/windows-doors-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🪟 Windows &amp; Doors</a></li>
+                    <li><a href="/solar-installer-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">☀️ Solar</a></li>
+                    <li><a href="/concrete-paving-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🏗️ Concrete &amp; Paving</a></li>
+                    <li><a href="/deck-builder-seo" style="color:#F9FAFB; text-decoration:none; display:flex; align-items:center; gap:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='#84CC16'" onmouseout="this.style.color='#F9FAFB'">🛠️ Deck Builders</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
                 <li>
                   <a href="/local-seo" class="nav__dropdown-link">
                     <span class="nav__dropdown-title">Local SEO</span>
