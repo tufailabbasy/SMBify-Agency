@@ -2,6 +2,48 @@
 // Initialize All Modules
 // =========================================
 
+
+// =========================================
+// FAQ Accordion Manager
+// =========================================
+const FAQAccordion = {
+  init() {
+    const questions = document.querySelectorAll('.faq-question');
+    if (!questions.length) return;
+
+    console.log('Initializing FAQ Accordions...');
+
+    questions.forEach(q => {
+      q.addEventListener('click', (e) => {
+        e.preventDefault();
+        const item = q.closest('.faq-item');
+        if (!item) return;
+
+        const isOpen = item.classList.contains('active');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+
+        // Close all items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          otherItem.classList.remove('active');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          const otherIcon = otherItem.querySelector('.faq-icon');
+          if (otherAnswer) otherAnswer.style.display = 'none';
+          if (otherIcon) otherIcon.textContent = '+';
+        });
+
+        // Open clicked item if it was closed
+        if (!isOpen) {
+          item.classList.add('active');
+          if (answer) answer.style.display = 'block';
+          if (icon) icon.textContent = '−';
+        }
+      });
+    });
+  }
+};
+
+
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize core modules
   HeaderFooterManager.init();
@@ -16,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   PortfolioFilter.init();
   BackToTop.init();
   AutoTOCManager.init();
+    FAQAccordion.init();
   // Render global CTAs (fills empty .cta containers)
   if (typeof GlobalCTAManager !== 'undefined' && GlobalCTAManager.init) GlobalCTAManager.init();
 });
