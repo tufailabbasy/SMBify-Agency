@@ -117,30 +117,6 @@ const BlogPaginationManager = {
 };
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize core modules
-  HeaderFooterManager.init();
-  ThemeManager.init();
-  MobileNav.init();
-  HeaderScroll.init();
-  SmoothScroll.init();
-  ScrollAnimations.init();
-  LogoTicker.init();
-  ContactForm.init();
-  TestimonialSlider.init();
-  PortfolioFilter.init();
-  BackToTop.init();
-  AutoTOCManager.init();
-    FAQAccordion.init();
-    BlogPaginationManager.init();
-  // Render global CTAs (fills empty .cta containers)
-  if (typeof GlobalCTAManager !== 'undefined' && GlobalCTAManager.init) GlobalCTAManager.init();
-});
-    BlogPaginationManager.init();
-  // Render global CTAs (fills empty .cta containers)
-  if (typeof GlobalCTAManager !== 'undefined' && GlobalCTAManager.init) GlobalCTAManager.init();
-});
-
 // =========================================
 // Header & Footer Manager
 // =========================================
@@ -425,11 +401,11 @@ const HeaderFooterManager = {
     });
     document.head.appendChild(script);
   }
+};
 
 // =========================================
-
-
-
+// Global CTA Manager
+// =========================================
 
 const GlobalCTAManager = {
   init() {
@@ -781,3 +757,33 @@ const AutoTOCManager = {
     }
   }
 };
+
+
+// =========================================
+// Master App Initialization
+// =========================================
+
+function initApp() {
+  if (typeof HeaderFooterManager !== 'undefined' && HeaderFooterManager.init) HeaderFooterManager.init();
+  if (typeof ThemeManager !== 'undefined' && ThemeManager.init) ThemeManager.init();
+  if (typeof MobileNav !== 'undefined' && MobileNav.init) MobileNav.init();
+  if (typeof HeaderScroll !== 'undefined' && HeaderScroll.init) HeaderScroll.init();
+  if (typeof SmoothScroll !== 'undefined' && SmoothScroll.init) SmoothScroll.init();
+  if (typeof ScrollAnimations !== 'undefined' && ScrollAnimations.init) ScrollAnimations.init();
+  if (typeof LogoTicker !== 'undefined' && LogoTicker.init) LogoTicker.init();
+  if (typeof ContactForm !== 'undefined' && ContactForm.init) ContactForm.init();
+  if (typeof TestimonialSlider !== 'undefined' && TestimonialSlider.init) TestimonialSlider.init();
+  if (typeof PortfolioFilter !== 'undefined' && PortfolioFilter.init) PortfolioFilter.init();
+  if (typeof BackToTop !== 'undefined' && BackToTop.init) BackToTop.init();
+  if (typeof AutoTOCManager !== 'undefined' && AutoTOCManager.init) AutoTOCManager.init();
+  if (typeof FAQAccordion !== 'undefined' && FAQAccordion.init) FAQAccordion.init();
+  if (typeof BlogPaginationManager !== 'undefined' && BlogPaginationManager.init) BlogPaginationManager.init();
+  if (typeof GlobalCTAManager !== 'undefined' && GlobalCTAManager.init) GlobalCTAManager.init();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
+
