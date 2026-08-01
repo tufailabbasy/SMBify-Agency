@@ -226,6 +226,11 @@
       "source": "/guides/:slug",
       "destination": "/resources",
       "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-and-conditions",
+      "permanent": true
     }
   ],
   "rewrites": [
