@@ -347,7 +347,7 @@ const HeaderFooterManager = {
             <h6 class="footer__title">Contact Us</h6>
             <div class="footer__contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><a href="https://www.smbify.net" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">smbify.net</a></div>
             <div class="footer__contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:contact@smbify.net" style="color:inherit;text-decoration:none;">contact@smbify.net</a></div>
-            <div class="footer__contact-item" style="margin-top:0.5rem;font-size:0.8rem;color:var(--text-tertiary);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>100 N Howard St Ste R, Spokane, WA 99201, USA</span></div>
+            <div class="footer__contact-item" style="margin-top:0.5rem;font-size:0.8rem;color:var(--text-tertiary);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>SMBify Ltd. — Spokane, WA 99201, USA</span></div>
           </div>
           <div>
             <h6 class="footer__title">Quick Links</h6>
@@ -369,7 +369,7 @@ const HeaderFooterManager = {
             <a href="/terms-and-conditions">Terms of Service</a>
             <a href="/privacy-policy">Privacy Policy</a>
             <a href="/sitemap-html">Sitemap</a>
-            <a href="https://www.dmca.com/Protection/Status.aspx?ID=smbify.net" title="DMCA.com Protection Status" class="dmca-badge" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;"><img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=smbify.net" alt="DMCA.com Protection Status" width="120" height="28" style="height:22px;width:auto;vertical-align:middle;display:inline-block;" /></a>
+            <a href="https://www.dmca.com/Protection/Status.aspx?ID=smbify.net" title="DMCA Protection Status" class="dmca-badge" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.3rem 0.65rem;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.35);border-radius:6px;color:#f87171;font-size:0.75rem;font-weight:700;text-decoration:none;letter-spacing:0.5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg><span>DMCA PROTECTED</span></a>
           </div>
         </div>
       </div>
