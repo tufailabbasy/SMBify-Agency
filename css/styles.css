@@ -4534,8 +4534,10 @@ p {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-xl);
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .service-item {

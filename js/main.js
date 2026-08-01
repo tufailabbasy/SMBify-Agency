@@ -240,10 +240,10 @@ const HeaderFooterManager = {
                 <!-- BOTTOM CORE SOLUTIONS BAR -->
                 <div style="grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; margin-top: 0.5rem; display: flex; align-items: center; justify-content: space-between;">
                   <a href="/local-seo" style="color: #F9FAFB; text-decoration: none; font-weight: 700; font-size: 0.88rem; display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="background: rgba(132, 204, 22, 0.15); color: #84CC16; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem;">CORE</span> Local SEO Engine &rarr;
+                    <span style="background: rgba(132, 204, 22, 0.15); color: #84CC16; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem;">CORE</span> Local SEO Service &rarr;
                   </a>
                   <a href="/local-citations" style="color: #F9FAFB; text-decoration: none; font-weight: 700; font-size: 0.88rem; display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="background: rgba(132, 204, 22, 0.15); color: #84CC16; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem;">MAPS</span> Local Citations &amp; GBP &rarr;
+                    <span style="background: rgba(132, 204, 22, 0.15); color: #84CC16; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem;">MAPS</span> Local Citation Campaign &rarr;
                   </a>
                   <a href="/services" style="color: #84CC16; text-decoration: none; font-weight: 800; font-size: 0.88rem;">View All 21 Services &rarr;</a>
                 </div>
