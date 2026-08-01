@@ -1,17 +1,23 @@
 # SMBify Agency Robots.txt
-# https://www.smbify.agency/
+# https://www.smbify.net/
+
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: AhrefsSiteAudit
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.smbify.agency/sitemap.xml
-
-# Disallow Cloudflare obfuscation path and admin areas
-Disallow: /cdn-cgi/
-Disallow: /admin-login
-Disallow: /admin-blog
-Disallow: /marketplace/admin/
+Sitemap: https://www.smbify.net/sitemap.xml
 
 # Allow crawling of clean URL pages
 Allow: /services
@@ -20,7 +26,7 @@ Allow: /about
 Allow: /team
 Allow: /portfolio
 Allow: /contacts
-
-# Block unnecessary files
-Disallow: /*.json$
-Disallow: /marketplace/js/config.js
+Allow: /plumbing-seo
+Allow: /hvac-seo
+Allow: /roofing-seo
+Allow: /electrical-seo
