@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2000/svg">
+<channel>
+  <title>SMBify Local SEO &amp; Growth Blog</title>
+  <link>https://www.smbify.net/blog</link>
+  <description>Actionable Local SEO playbooks, Google Map Pack strategies, citation building guides, and agency growth insights from SMBify.</description>
+  <language>en-us</language>
+  <copyright>Copyright 2026 SMBify Agency</copyright>
+  <atom:link href="https://www.smbify.net/feed.xml" rel="self" type="application/rss+xml" />
+  
+  <item>
+    <title>The Build Trap: Why I Kept Perfecting a Product Nobody Was Buying</title>
+    <link>https://www.smbify.net/the-build-trap-why-i-kept-perfecting-a-product-nobody-was-buying</link>
+    <description>A raw founder story about escaping feature bloat and building a specialized Local SEO engine home service contractors actually buy.</description>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+    <guid>https://www.smbify.net/the-build-trap-why-i-kept-perfecting-a-product-nobody-was-buying</guid>
+  </item>
+
+  <item>
+    <title>What is Local SEO? The Complete 2026 Strategy Guide</title>
+    <link>https://www.smbify.net/what-is-local-seo-guide</link>
+    <description>Master local search rankings, Google Business Profile optimization, and local map pack domination for your business.</description>
+    <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+    <guid>https://www.smbify.net/what-is-local-seo-guide</guid>
+  </item>
+
+  <item>
+    <title>Google Business Profile Optimization Playbook</title>
+    <link>https://www.smbify.net/google-business-profile-optimization</link>
+    <description>Step-by-step GBP ranking strategy for home service contractors to lock in top 3 Google Maps positions.</description>
+    <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+    <guid>https://www.smbify.net/google-business-profile-optimization</guid>
+  </item>
+
+  <item>
+    <title>Local Citation Building &amp; NAP Consistency Guide</title>
+    <link>https://www.smbify.net/local-citation-building-guide</link>
+    <description>How to build clean, consistent Name-Address-Phone citations across top directories without automated errors.</description>
+    <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+    <guid>https://www.smbify.net/local-citation-building-guide</guid>
+  </item>
+
+  <item>
+    <title>Local Link Building Strategies for Home Service Businesses</title>
+    <link>https://www.smbify.net/local-link-building-strategies</link>
+    <description>High-authority local link building tactics to build geo-relevance and beat competitors in organic search.</description>
+    <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+    <guid>https://www.smbify.net/local-link-building-strategies</guid>
+  </item>
+</channel>
+</rss>

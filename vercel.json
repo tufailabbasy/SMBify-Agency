@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/index.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/plumbing-local-seo-blueprint",
       "destination": "/plumbing-seo",
       "permanent": true

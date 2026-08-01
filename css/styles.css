@@ -7707,3 +7707,41 @@ main > section:first-of-type {
   background-color: rgba(132, 204, 22, 0.1);
   color: #84CC16;
 }
+
+/* =========================================
+   Back To Top Floating Button
+   ========================================= */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--brand-primary);
+  color: #070a13;
+  box-shadow: 0 0 20px rgba(132, 204, 22, 0.5);
+  transform: translateY(-3px);
+}
+
