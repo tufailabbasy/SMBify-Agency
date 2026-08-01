@@ -211,6 +211,21 @@
       "source": "/deck-builder-local-seo-guide.html",
       "destination": "/deck-builder-seo",
       "permanent": true
+    },
+    {
+      "source": "/pricing",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/smbify-vs-fiverr-local-seo",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/:slug",
+      "destination": "/resources",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -238,15 +253,7 @@
         }
       ]
     },
-    {
-      "source": "/pricing",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-store, max-age=0"
-        }
-      ]
-    },
+
     {
       "source": "/(.*)",
       "headers": [
