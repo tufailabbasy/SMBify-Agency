@@ -502,6 +502,8 @@
 
     
 
+    
+
     <section class="case-hero">
         <div class="container">
             <a href="/portfolio" class="case-hero__back">
@@ -516,9 +518,52 @@
         </div>
     </section>
 
-    <div class="container">
-        <div class="case-image">
-            <img src="../assets/portfolio/gorgeous_map.png" alt="Hello Gorgeous Local SEO Map Pack Grid Scan Screenshot">
+    
+    <!-- Interactive Scrollable Browser Mockup -->
+    <div class="container browser-mockup-wrapper">
+        <div class="browser-mockup">
+            <!-- Browser Header Bar -->
+            <div class="browser-mockup__bar">
+                <div class="browser-mockup__dots">
+                    <span class="browser-mockup__dot browser-mockup__dot--red"></span>
+                    <span class="browser-mockup__dot browser-mockup__dot--yellow"></span>
+                    <span class="browser-mockup__dot browser-mockup__dot--green"></span>
+                </div>
+                
+                <div class="browser-mockup__address-bar">
+                    <span style="display:flex;align-items:center;gap:0.4rem;">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        <span class="browser-mockup__address-url">https://hellogorgeousnaples.com/</span>
+                    </span>
+                    <span style="font-size:0.72rem;background:rgba(132,204,22,0.15);color:#84CC16;padding:2px 6px;border-radius:4px;font-weight:700;">LIVE PREVIEW</span>
+                </div>
+
+                <div class="browser-mockup__actions">
+                    <button class="browser-mockup__tab-btn active" onclick="toggleBrowserPreview(this, 'desktop')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        Desktop
+                    </button>
+                    <button class="browser-mockup__tab-btn" onclick="toggleBrowserPreview(this, 'mobile')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        Mobile
+                    </button>
+                    <button class="browser-mockup__tab-btn" onclick="toggleBrowserPreview(this, 'rankings')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        Geo-Grid Map
+                    </button>
+                    <a href="https://hellogorgeousnaples.com/" target="_blank" rel="noopener" class="browser-mockup__external-btn">
+                        Open Site ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- Screen Window Area -->
+            <div class="browser-mockup__screen-wrapper">
+                <div class="browser-mockup__screen">
+                    <iframe class="browser-mockup__iframe" src="https://hellogorgeousnaples.com/" title="Hello Gorgeous Med Spa Live Website Preview" loading="lazy"></iframe>
+                    <img class="browser-mockup__screen-img" src="../assets/portfolio/gorgeous_map.png" alt="Hello Gorgeous Med Spa Rankings Scan Screenshot">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -714,6 +759,11 @@
     
 
     
+
+    
+<button id="back-to-top" class="back-to-top" aria-label="Scroll to top" title="Back to Top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
 
     
 <button id="back-to-top" class="back-to-top" aria-label="Scroll to top" title="Back to Top">

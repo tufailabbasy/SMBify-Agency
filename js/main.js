@@ -787,3 +787,31 @@ if (document.readyState === 'loading') {
   initApp();
 }
 
+
+
+// Interactive Portfolio Browser Tab Switcher
+window.toggleBrowserPreview = function(btn, mode) {
+  const mockup = btn.closest('.browser-mockup');
+  if (!mockup) return;
+  const btns = mockup.querySelectorAll('.browser-mockup__tab-btn');
+  btns.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const iframe = mockup.querySelector('.browser-mockup__iframe');
+  const img = mockup.querySelector('.browser-mockup__screen-img');
+  const screen = mockup.querySelector('.browser-mockup__screen');
+
+  if (mode === 'desktop') {
+    iframe.style.display = 'block';
+    img.style.display = 'none';
+    screen.classList.remove('is-mobile-view');
+  } else if (mode === 'mobile') {
+    iframe.style.display = 'block';
+    img.style.display = 'none';
+    screen.classList.add('is-mobile-view');
+  } else if (mode === 'rankings') {
+    iframe.style.display = 'none';
+    img.style.display = 'block';
+    screen.classList.remove('is-mobile-view');
+  }
+};
