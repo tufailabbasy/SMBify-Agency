@@ -705,58 +705,82 @@ const BackToTop = {
 // Auto Table of Contents Generator for Blog Posts
 // =========================================
 
+
+// =========================================
+// Advanced Auto Table of Contents & ScrollSpy
+// =========================================
 const AutoTOCManager = {
   init() {
-    const articleContent = document.querySelector('.blog-article__content');
-    if (!articleContent) return;
+    const article = document.querySelector('article') || document.querySelector('.blog-article__content') || document.querySelector('.blog-main');
+    if (!article) return;
 
-    const headings = articleContent.querySelectorAll('h2');
+    const headings = article.querySelectorAll('h2');
     if (headings.length < 2) return;
 
-    // Check if TOC already rendered by JS
-    if (document.querySelector('.creative-toc')) return;
+    // Check if sidebar exists
+    let sidebar = document.querySelector('.blog-sidebar');
+    if (!sidebar) return;
 
-    console.log('Generating automatic Table of Contents...');
+    // Remove existing TOC if any
+    const oldToc = document.querySelector('.sidebar-toc-widget');
+    if (oldToc) oldToc.remove();
 
-    const tocContainer = document.createElement('div');
-    tocContainer.className = 'creative-toc';
+    const tocWidget = document.createElement('div');
+    tocWidget.className = 'sidebar-toc-widget';
+    tocWidget.style.cssText = 'background:var(--bg-card);border:1px solid var(--border-color);border-radius:16px;padding:1.25rem;margin-bottom:1.5rem;position:sticky;top:100px;';
 
-    let gridHTML = '';
+    let listHTML = '';
     headings.forEach((h2, index) => {
       if (!h2.id) {
-        h2.id = 'toc-heading-' + (index + 1);
+        h2.id = 'heading-' + (index + 1);
       }
       const numStr = (index + 1).toString().padStart(2, '0');
-      gridHTML += `
-        <a href="#${h2.id}" class="creative-toc__item">
-          <span class="creative-toc__num">${numStr}</span>
-          <span class="creative-toc__text">${h2.textContent.replace(/^[0-9.]+\s*/, '')}</span>
+      const cleanText = h2.textContent.replace(/^[0-9.]+s*/, '').trim();
+      listHTML += `
+        <a href="#${h2.id}" class="toc-link" data-target="${h2.id}" style="display:flex;align-items:center;gap:0.6rem;padding:0.45rem 0.6rem;color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:600;border-radius:8px;transition:all 0.2s ease;">
+          <span style="font-family:'Outfit',sans-serif;color:var(--brand-primary);font-size:0.78rem;font-weight:800;">${numStr}</span>
+          <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${cleanText}</span>
         </a>
       `;
     });
 
-    tocContainer.innerHTML = `
-      <div class="creative-toc__header">
-        <div class="creative-toc__badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-          <span>QUICK NAV</span>
-        </div>
-        <h4 class="creative-toc__title">Inside This Audit Breakdown</h4>
+    tocWidget.innerHTML = `
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.08);">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2.5"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        <span style="font-family:'Outfit',sans-serif;font-size:0.85rem;font-weight:800;color:var(--text-primary);text-transform:uppercase;letter-spacing:0.5px;">Table of Contents</span>
       </div>
-      <div class="creative-toc__grid">
-        ${gridHTML}
+      <div class="toc-links-container" style="display:flex;flex-direction:column;gap:0.2rem;max-height:320px;overflow-y:auto;">
+        ${listHTML}
       </div>
     `;
 
-    // Insert TOC after lead paragraph or before first H2
-    const leadP = articleContent.querySelector('.lead');
-    if (leadP && leadP.nextSibling) {
-      leadP.parentNode.insertBefore(tocContainer, leadP.nextSibling);
-    } else {
-      headings[0].parentNode.insertBefore(tocContainer, headings[0]);
-    }
+    // Insert TOC at top of sidebar
+    sidebar.insertBefore(tocWidget, sidebar.firstChild);
+
+    // ScrollSpy Active Link Tracker
+    window.addEventListener('scroll', () => {
+      let current = '';
+      headings.forEach(h2 => {
+        const top = h2.getBoundingClientRect().top;
+        if (top <= 150) {
+          current = h2.id;
+        }
+      });
+
+      const links = tocWidget.querySelectorAll('.toc-link');
+      links.forEach(l => {
+        if (l.getAttribute('data-target') === current) {
+          l.style.background = 'rgba(132, 204, 22, 0.12)';
+          l.style.color = '#84CC16';
+        } else {
+          l.style.background = 'transparent';
+          l.style.color = 'var(--text-secondary)';
+        }
+      });
+    });
   }
 };
+
 
 
 // =========================================
