@@ -1225,3 +1225,65 @@ body {
   border-radius: var(--radius-circle);
   object-fit: cover;
 }
+
+/* Blog Listing Article Section Padding & Spacing Scale */
+.blog-article-section {
+  padding-bottom: var(--space-64);
+}
+
+/* Master Blog Index CTA Banner */
+.blog-cta-banner {
+  padding: 80px 0;
+  background: linear-gradient(180deg, var(--color-bg-deep-space) 0%, var(--color-card-midnight) 100%);
+  border-top: 1px solid var(--color-border-navy);
+  border-bottom: 1px solid var(--color-border-navy);
+  text-align: center;
+  margin-top: 64px;
+}
+
+.blog-cta-title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text-white);
+  margin: 0 0 16px 0;
+}
+
+@media (max-width: 768px) {
+  .blog-cta-title {
+    font-size: 26px;
+  }
+}
+
+.blog-cta-subtitle {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text-muted-slate);
+  max-width: 640px;
+  margin: 0 auto 32px auto;
+}
+
+.blog-cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary-outline {
+  padding: 12px 24px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-button);
+  border: 1px solid var(--color-border-navy);
+  color: var(--color-text-white);
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary-outline:hover {
+  border-color: var(--color-lime-primary);
+  color: var(--color-lime-primary);
+}
