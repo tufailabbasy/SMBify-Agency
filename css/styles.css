@@ -7915,3 +7915,206 @@ main > section:first-of-type {
     height: 460px;
   }
 }
+
+
+/* =========================================
+   SaaS Reference Blog Layout (Left Sidebar + Rich Content)
+   ========================================= */
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  max-width: 1280px;
+  margin: 2rem auto 0;
+  align-items: start;
+}
+
+.blog-sidebar {
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 20;
+}
+
+.blog-article {
+  max-width: 100% !important;
+  margin: 0 !important;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Comparison Cards Component (Old Way vs New Way) */
+.comparison-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.comparison-card {
+  border-radius: 16px;
+  padding: 1.75rem;
+  border: 1px solid var(--border-color);
+  background: #0D1220;
+}
+
+.comparison-card--old {
+  border-color: rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.03);
+}
+
+.comparison-card--new {
+  border-color: var(--brand-primary);
+  background: rgba(132, 204, 22, 0.04);
+}
+
+.comparison-card__badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.comparison-card--old .comparison-card__badge {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.comparison-card--new .comparison-card__badge {
+  background: rgba(132, 204, 22, 0.15);
+  color: var(--brand-primary);
+}
+
+.comparison-card__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.comparison-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.comparison-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  line-height: 1.5;
+}
+
+/* Numbered Step Cards Component (01, 02, 03) */
+.numbered-step-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.numbered-step-card {
+  background: #0D1220;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: border-color 0.3s ease;
+}
+
+.numbered-step-card:hover {
+  border-color: var(--brand-primary);
+}
+
+.numbered-step-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(132, 204, 22, 0.15);
+  border: 1px solid var(--brand-primary);
+  color: var(--brand-primary);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.numbered-step-content {
+  flex: 1;
+}
+
+.numbered-step-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem;
+}
+
+.numbered-step-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Full Width Highlight Callout Container */
+.blog-callout-box {
+  background: linear-gradient(135deg, rgba(132, 204, 22, 0.1) 0%, rgba(13, 18, 32, 0.95) 100%);
+  border: 1px solid var(--brand-primary);
+  border-radius: 18px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+}
+
+.blog-callout-box__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--brand-primary);
+  margin: 0 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog-callout-box__desc {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+  .blog-sidebar {
+    position: static;
+    order: 2;
+  }
+  .comparison-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
