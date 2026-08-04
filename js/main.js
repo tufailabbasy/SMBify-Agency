@@ -713,7 +713,8 @@ const BackToTop = {
 
 // =========================================
 // Advanced Auto Table of Contents & ScrollSpy
-// ==================================const AutoTOCManager = {
+// =========================================
+const AutoTOCManager = {
   init() {
     const article = document.querySelector('.blog-content');
     if (!article) return;
