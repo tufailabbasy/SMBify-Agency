@@ -16,21 +16,29 @@ const FAQAccordion = {
     if (!questions.length) return;
 
     questions.forEach(q => {
-      // Remove old listeners by replacing node or adding clean listener
       q.addEventListener('click', (e) => {
         e.preventDefault();
         const item = q.closest('.faq-item');
         if (!item) return;
 
-        const isOpen = item.classList.contains('active');
+        const isOpen = item.classList.contains('is-open') || item.classList.contains('active');
 
         // Close other items
         document.querySelectorAll('.faq-item').forEach(other => {
-          if (other !== item) other.classList.remove('active');
+          if (other !== item) {
+            other.classList.remove('active');
+            other.classList.remove('is-open');
+          }
         });
 
-        // Toggle active
-        item.classList.toggle('active');
+        // Toggle active & is-open
+        if (isOpen) {
+          item.classList.remove('active');
+          item.classList.remove('is-open');
+        } else {
+          item.classList.add('active');
+          item.classList.add('is-open');
+        }
       });
     });
   }
@@ -716,7 +724,7 @@ const BackToTop = {
 // =========================================
 const AutoTOCManager = {
   init() {
-    const article = document.querySelector('.blog-content');
+    const article = document.querySelector('.blog-content') || document.querySelector('article');
     if (!article) return;
 
     const headings = article.querySelectorAll('h2');
@@ -725,7 +733,7 @@ const AutoTOCManager = {
     let tocContainer = document.querySelector('#toc-container');
     if (!tocContainer) return;
 
-    tocContainer.innerHTML = ''; // clear any existing
+    tocContainer.innerHTML = '';
 
     let listHTML = '';
     headings.forEach((h2, index) => {
@@ -735,12 +743,10 @@ const AutoTOCManager = {
       const numStr = (index + 1).toString().padStart(2, '0');
       const cleanText = h2.textContent.replace(/^[0-9.]+\s*/, '').trim();
       listHTML += `
-        <div class="fs-toc_link-wrapper is-h2">
-          <a href="#${h2.id}" class="fs-toc_link pink-on-hover w-inline-block toc-link" data-target="${h2.id}" style="display:flex;align-items:center;gap:0.6rem;padding:0.5rem 0;text-decoration:none;">
-            <div fs-toc-element="link" style="color:var(--text-secondary);font-size:0.85rem;font-weight:600;transition:all 0.2s ease;">
-              <span style="font-family:'Outfit',sans-serif;color:#ff007f;font-size:0.8rem;font-weight:800;margin-right:8px;">${numStr}</span>
-              <span class="toc-text">${cleanText}</span>
-            </div>
+        <div class="fs-toc_link-wrapper">
+          <a href="#${h2.id}" class="fs-toc_link toc-link" data-target="${h2.id}">
+            <span class="toc-dot"></span>
+            <span class="toc-text"><strong style="color:var(--color-lime-primary,#84CC16);margin-right:6px;">${numStr}</strong>${cleanText}</span>
           </a>
         </div>
       `;
@@ -748,28 +754,29 @@ const AutoTOCManager = {
 
     tocContainer.innerHTML = listHTML;
 
-    // ScrollSpy Active Link Tracker
+    // IntersectionObserver & ScrollSpy Active Link Tracker
     window.addEventListener('scroll', () => {
       let current = '';
       headings.forEach(h2 => {
         const top = h2.getBoundingClientRect().top;
-        if (top <= 160) {
+        if (top <= 180) {
           current = h2.id;
         }
       });
 
       const links = tocContainer.querySelectorAll('.toc-link');
       links.forEach(l => {
-        const textSpan = l.querySelector('.toc-text');
         if (l.getAttribute('data-target') === current) {
-          if (textSpan) textSpan.style.color = '#ff007f';
+          l.classList.add('is-active');
         } else {
-          if (textSpan) textSpan.style.color = 'var(--text-secondary)';
+          l.classList.remove('is-active');
         }
       });
     });
   }
 };
+
+
 
 
 // =========================================
