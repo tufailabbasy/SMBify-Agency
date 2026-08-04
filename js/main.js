@@ -779,6 +779,37 @@ const AutoTOCManager = {
 
 
 
+const SocialShareManager = {
+  init() {
+    const shareBtns = document.querySelectorAll('.blog-social-icons .in-nav-social-icons, .blog-share a, .share-btn');
+    if (!shareBtns.length) return;
+
+    shareBtns.forEach((btn, index) => {
+      btn.addEventListener('click', (e) => {
+        const currentUrl = encodeURIComponent(window.location.href);
+        const currentTitle = encodeURIComponent(document.title);
+        let shareUrl = '';
+        const href = btn.getAttribute('href');
+
+        if (btn.classList.contains('share-linkedin') || index === 0) {
+          shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`;
+        } else if (btn.classList.contains('share-twitter') || index === 1) {
+          shareUrl = `https://twitter.com/intent/tweet?url=${currentUrl}&text=${currentTitle}`;
+        } else if (btn.classList.contains('share-facebook') || index === 2) {
+          shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+        } else if (href && href.startsWith('http')) {
+          shareUrl = href;
+        }
+
+        if (shareUrl) {
+          e.preventDefault();
+          window.open(shareUrl, 'share-dialog', 'width=600,height=500,location=yes,resizable=yes,status=yes');
+        }
+      });
+    });
+  }
+};
+
 // =========================================
 // Master App Initialization
 // =========================================
@@ -797,6 +828,7 @@ function initApp() {
   if (typeof BackToTop !== 'undefined' && BackToTop.init) BackToTop.init();
   if (typeof AutoTOCManager !== 'undefined' && AutoTOCManager.init) AutoTOCManager.init();
   if (typeof FAQAccordion !== 'undefined' && FAQAccordion.init) FAQAccordion.init();
+  if (typeof SocialShareManager !== 'undefined' && SocialShareManager.init) SocialShareManager.init();
   if (typeof BlogPaginationManager !== 'undefined' && BlogPaginationManager.init) BlogPaginationManager.init();
   if (typeof GlobalCTAManager !== 'undefined' && GlobalCTAManager.init) GlobalCTAManager.init();
 }
