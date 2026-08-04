@@ -725,14 +725,20 @@ const BackToTop = {
 const AutoTOCManager = {
   init() {
     const article = document.querySelector('.blog-content') || document.querySelector('article');
-    if (!article) return;
+    const tocSidebar = document.querySelector('.fs-toc_sidebar');
+    const tocContainer = document.querySelector('#toc-container');
 
-    const headings = article.querySelectorAll('h2');
-    if (headings.length < 2) return;
+    if (!article || !tocContainer) return;
 
-    let tocContainer = document.querySelector('#toc-container');
-    if (!tocContainer) return;
+    // Filter section headings inside article (exclude sidebar share/toc titles)
+    const headings = Array.from(article.querySelectorAll('h2')).filter(h2 => !h2.classList.contains('style-paragraph') && !h2.classList.contains('fake-heading-5') && !h2.closest('.blog-sidebar'));
 
+    if (headings.length < 2) {
+      if (tocSidebar) tocSidebar.style.display = 'none';
+      return;
+    }
+
+    if (tocSidebar) tocSidebar.style.display = 'block';
     tocContainer.innerHTML = '';
 
     let listHTML = '';
@@ -754,7 +760,7 @@ const AutoTOCManager = {
 
     tocContainer.innerHTML = listHTML;
 
-    // IntersectionObserver & ScrollSpy Active Link Tracker
+    // ScrollSpy Active Link Tracker
     window.addEventListener('scroll', () => {
       let current = '';
       headings.forEach(h2 => {
