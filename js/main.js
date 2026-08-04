@@ -713,24 +713,18 @@ const BackToTop = {
 
 // =========================================
 // Advanced Auto Table of Contents & ScrollSpy
-// =========================================
-const AutoTOCManager = {
+// ==================================const AutoTOCManager = {
   init() {
-    const article = document.querySelector('article') || document.querySelector('.blog-article') || document.querySelector('.blog-article__content');
+    const article = document.querySelector('.blog-content');
     if (!article) return;
 
     const headings = article.querySelectorAll('h2');
     if (headings.length < 2) return;
 
-    let sidebar = document.querySelector('.blog-sidebar');
-    if (!sidebar) return;
+    let tocContainer = document.querySelector('#toc-container');
+    if (!tocContainer) return;
 
-    const oldToc = document.querySelector('.sidebar-toc-widget');
-    if (oldToc) oldToc.remove();
-
-    const tocWidget = document.createElement('div');
-    tocWidget.className = 'sidebar-toc-widget';
-    tocWidget.style.cssText = 'background:#0D1220;border:1px solid var(--border-color);border-radius:16px;padding:1.25rem;margin-bottom:1.5rem;position:sticky;top:90px;z-index:20;';
+    tocContainer.innerHTML = ''; // clear any existing
 
     let listHTML = '';
     headings.forEach((h2, index) => {
@@ -738,26 +732,20 @@ const AutoTOCManager = {
         h2.id = 'heading-' + (index + 1);
       }
       const numStr = (index + 1).toString().padStart(2, '0');
-      const cleanText = h2.textContent.replace(/^[0-9.]+s*/, '').trim();
+      const cleanText = h2.textContent.replace(/^[0-9.]+\s*/, '').trim();
       listHTML += `
-        <a href="#${h2.id}" class="toc-link" data-target="${h2.id}" style="display:flex;align-items:center;gap:0.6rem;padding:0.5rem 0.6rem;color:var(--text-secondary);text-decoration:none;font-size:0.85rem;font-weight:600;border-radius:8px;transition:all 0.2s ease;">
-          <span style="font-family:'Outfit',sans-serif;color:var(--brand-primary);font-size:0.8rem;font-weight:800;">${numStr}</span>
-          <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${cleanText}</span>
-        </a>
+        <div class="fs-toc_link-wrapper is-h2">
+          <a href="#${h2.id}" class="fs-toc_link pink-on-hover w-inline-block toc-link" data-target="${h2.id}" style="display:flex;align-items:center;gap:0.6rem;padding:0.5rem 0;text-decoration:none;">
+            <div fs-toc-element="link" style="color:var(--text-secondary);font-size:0.85rem;font-weight:600;transition:all 0.2s ease;">
+              <span style="font-family:'Outfit',sans-serif;color:#ff007f;font-size:0.8rem;font-weight:800;margin-right:8px;">${numStr}</span>
+              <span class="toc-text">${cleanText}</span>
+            </div>
+          </a>
+        </div>
       `;
     });
 
-    tocWidget.innerHTML = `
-      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.08);">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#84CC16" stroke-width="2.5"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-        <span style="font-family:'Outfit',sans-serif;font-size:0.85rem;font-weight:800;color:var(--text-primary);text-transform:uppercase;letter-spacing:0.5px;">Table of Contents</span>
-      </div>
-      <div class="toc-links-container" style="display:flex;flex-direction:column;gap:0.25rem;max-height:300px;overflow-y:auto;">
-        ${listHTML}
-      </div>
-    `;
-
-    sidebar.insertBefore(tocWidget, sidebar.firstChild);
+    tocContainer.innerHTML = listHTML;
 
     // ScrollSpy Active Link Tracker
     window.addEventListener('scroll', () => {
@@ -769,21 +757,18 @@ const AutoTOCManager = {
         }
       });
 
-      const links = tocWidget.querySelectorAll('.toc-link');
+      const links = tocContainer.querySelectorAll('.toc-link');
       links.forEach(l => {
+        const textSpan = l.querySelector('.toc-text');
         if (l.getAttribute('data-target') === current) {
-          l.style.background = 'rgba(132, 204, 22, 0.15)';
-          l.style.color = '#84CC16';
+          if (textSpan) textSpan.style.color = '#ff007f';
         } else {
-          l.style.background = 'transparent';
-          l.style.color = 'var(--text-secondary)';
+          if (textSpan) textSpan.style.color = 'var(--text-secondary)';
         }
       });
     });
   }
 };
-
-
 
 
 // =========================================
