@@ -62,6 +62,9 @@ for root, dirs, files in os.walk(base_dir):
             footer_pattern = re.compile(r'(?s)<!--.*?STANDARD FOOTER TEMPLATE.*?-->\s*<footer.*?</footer>', re.DOTALL)
             content = footer_pattern.sub('', content)
             content = re.sub(r'(?s)<footer class="footer".*?</footer>', '', content)
+            
+            # Remove existing back-to-top buttons to avoid duplication
+            content = re.sub(r'(?s)<button id="back-to-top".*?</button>', '', content)
 
             # 2. FIX STRUCTURAL TAGS (Repair mode)
             # Ensure </head> and <body> exist. If they were accidentally deleted or never there.

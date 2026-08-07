@@ -66,6 +66,9 @@ walk(baseDir, (filePath, file) => {
     content = content.replace(/<!--\s*STANDARD FOOTER TEMPLATE[\s\S]*?-->\s*<footer[\s\S]*?<\/footer>/g, '');
     content = content.replace(/<footer class="footer"[\s\S]*?<\/footer>/g, '');
 
+    // Remove existing back-to-top buttons to avoid duplication
+    content = content.replace(/<button id="back-to-top"[\s\S]*?<\/button>/gi, '');
+
     // 2. FIX STRUCTURAL TAGS (Ensure </head> and <body> exist)
     if (!content.includes('</head>') || !content.includes('<body>')) {
         let lastHeadIdx = -1;
