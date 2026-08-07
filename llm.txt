@@ -1,0 +1,22 @@
+# SMBify
+
+> Premium Local SEO Agency for Home-Service Businesses. We help home-service business owners dominate local search, rank at the top of the Google Map Pack, and secure a steady stream of phone calls for their trades.
+
+## Key Resources
+- [PROJECT_DOCS](PROJECT_DOCS.md): Comprehensive developer and AI agent documentation detailing the project's technical architecture, file structure, API endpoints, and deployment setup.
+- [Brand DNA](SMBify_Brand_DNA.md): Core brand guidelines detailing tone, voice, color palette (deep space, midnight blue, slate navy, brand lime), typography (Inter, Outfit), and visual aesthetics.
+- [Master Brand DNA](SMBify_Master_Brand_DNA.md): Expanded brand identity guidelines and content design specifications.
+
+## Main Pages
+- [Home Page](index.html): Introduction to SMBify, custom features, SEO pricing packages, customer testimonials, and interactive case studies.
+- [About Us](about.html): SMBify's philosophy, team overview, and mission statement.
+- [Services](services.html): Complete breakdown of SEO offerings, including Local SEO audit, Maps SEO, backlink campaigns, citation building, and custom outreach.
+- [Portfolio](portfolio.html): Before/after case studies showcasing ranking improvements and phone call conversions for plumbing, HVAC, and contractor clients.
+- [Free Resources](resources.html): SEO tool hub including calculators, schema generators, and checklist guides.
+- [Blog](blog.html): Articles on Local SEO strategies, Google Business Profile optimization, and growth tactics.
+- [Contact Info](contacts.html): Contact channels, including Web3Forms integration, office locations, and direct WhatsApp links.
+
+## Contact Information
+- Website: https://www.smbify.net
+- Email: contact@smbify.net
+- WhatsApp: +92-343-7967815
