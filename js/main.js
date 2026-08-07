@@ -686,27 +686,7 @@ const PortfolioFilter = {
   }
 };
 
-// =========================================
-// Back To Top Button
-// =========================================
 
-const BackToTop = {
-  init() {
-    const button = document.createElement('button');
-    button.id = 'back-to-top';
-    button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>';
-    button.style.cssText = 'position: fixed; bottom: 2rem; right: 2rem; width: 48px; height: 48px; border-radius: 50%; background: #84CC16; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; z-index: 999; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.3s;';
-    document.body.appendChild(button);
-
-    window.addEventListener('scroll', () => {
-      const show = window.scrollY > 500;
-      button.style.opacity = show ? '1' : '0';
-      button.style.visibility = show ? 'visible' : 'hidden';
-    });
-
-    button.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  }
-};
 
 
 // =========================================
@@ -830,7 +810,6 @@ function initApp() {
   if (typeof ContactForm !== 'undefined' && ContactForm.init) ContactForm.init();
   if (typeof TestimonialSlider !== 'undefined' && TestimonialSlider.init) TestimonialSlider.init();
   if (typeof PortfolioFilter !== 'undefined' && PortfolioFilter.init) PortfolioFilter.init();
-  if (typeof BackToTop !== 'undefined' && BackToTop.init) BackToTop.init();
   if (typeof AutoTOCManager !== 'undefined' && AutoTOCManager.init) AutoTOCManager.init();
   if (typeof FAQAccordion !== 'undefined' && FAQAccordion.init) FAQAccordion.init();
   if (typeof SocialShareManager !== 'undefined' && SocialShareManager.init) SocialShareManager.init();
