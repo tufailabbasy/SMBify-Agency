@@ -69,6 +69,9 @@ walk(baseDir, (filePath, file) => {
     // Remove existing back-to-top buttons to avoid duplication
     content = content.replace(/<button id="back-to-top"[\s\S]*?<\/button>/gi, '');
 
+    // Remove existing WhatsApp floating buttons to avoid duplication
+    content = content.replace(/<a[^>]*class="whatsapp-btn"[\s\S]*?<\/a>/gi, '');
+
     // 2. FIX STRUCTURAL TAGS (Ensure </head> and <body> exist)
     if (!content.includes('</head>') || !content.includes('<body>')) {
         let lastHeadIdx = -1;

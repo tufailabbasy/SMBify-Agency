@@ -40,7 +40,7 @@
 | Repository | https://github.com/smbifyagency/SMBify-Agency |
 | Hosting | Vercel |
 | Contact | contact@smbify.net |
-| WhatsApp | +92-343-7967815 |
+| WhatsApp | +92-306-6050256 |
 
 ### What the site does
 
@@ -709,7 +709,7 @@ LOCAL_DOMAIN=http://localhost:3000
 | Company | SMBify Agency |
 | Address | Shop #1, Mohalla Faqeer Ahmad Gul, Paharpur, 29160, Pakistan |
 | Coordinates | 32.0996°N, 70.7929°E |
-| Phone / WhatsApp | +92-343-7967815 |
+| Phone / WhatsApp | +92-306-6050256 |
 | Email | contact@smbify.net |
 | Website | https://www.smbify.net |
 | LinkedIn | smbifyagency |

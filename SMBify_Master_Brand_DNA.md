@@ -10,7 +10,7 @@
 * **Primary Domain:** [smbify.net](https://smbify.net)
 * **Founder & Lead Strategist:** Muhammad Tufail Abbas ([LinkedIn Profile](https://www.linkedin.com/in/smbpreneur/))
 * **Support / Business Email:** contact@smbify.net
-* **WhatsApp / Direct Line:** +92 343 7967815
+* **WhatsApp / Direct Line:** +92 306 6050256
 * **Target Audience:** Home Service Businesses (Contractors) & Digital Marketing Agencies (White-Label Partners)
 * **Target Markets:** United States, United Kingdom, Canada, Australia
 

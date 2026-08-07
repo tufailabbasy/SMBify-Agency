@@ -65,6 +65,9 @@ for root, dirs, files in os.walk(base_dir):
             
             # Remove existing back-to-top buttons to avoid duplication
             content = re.sub(r'(?s)<button id="back-to-top".*?</button>', '', content)
+            
+            # Remove existing WhatsApp floating buttons to avoid duplication
+            content = re.sub(r'(?s)<a[^>]*class="whatsapp-btn".*?</a>', '', content)
 
             # 2. FIX STRUCTURAL TAGS (Repair mode)
             # Ensure </head> and <body> exist. If they were accidentally deleted or never there.

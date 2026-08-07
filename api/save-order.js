@@ -4,7 +4,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const GOOGLE_SHEETS_WEBHOOK = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
 
 // WhatsApp notification via CallMeBot (free)
-const CALLMEBOT_PHONE = process.env.CALLMEBOT_PHONE;   // Your WhatsApp number with country code, e.g. 923437967815
+const CALLMEBOT_PHONE = process.env.CALLMEBOT_PHONE;   // Your WhatsApp number with country code, e.g. 923066050256
 const CALLMEBOT_APIKEY = process.env.CALLMEBOT_APIKEY;  // API key from CallMeBot
 
 module.exports = async (req, res) => {
