@@ -54,13 +54,11 @@ for root, dirs, files in os.walk(base_dir):
                 
             original_content = content
             
-            # 1. REMOVE EXISTING HEADER AND FOOTER (Clean slate)
-            header_pattern = re.compile(r'(?s)<!--.*?STANDARD HEADER TEMPLATE.*?-->\s*<header.*?</header>', re.DOTALL)
-            content = header_pattern.sub('', content)
+            # 1. REMOVE EXISTING HEADER AND FOOTER (Clean slate - safe separate replacement)
+            content = re.sub(r'(?s)<!--.*?STANDARD HEADER TEMPLATE.*?-->', '', content)
             content = re.sub(r'(?s)<header class="header" id="header".*?</header>', '', content)
             
-            footer_pattern = re.compile(r'(?s)<!--.*?STANDARD FOOTER TEMPLATE.*?-->\s*<footer.*?</footer>', re.DOTALL)
-            content = footer_pattern.sub('', content)
+            content = re.sub(r'(?s)<!--.*?STANDARD FOOTER TEMPLATE.*?-->', '', content)
             content = re.sub(r'(?s)<footer class="footer".*?</footer>', '', content)
             
             # Remove existing back-to-top buttons to avoid duplication

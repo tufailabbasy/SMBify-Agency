@@ -59,11 +59,11 @@ walk(baseDir, (filePath, file) => {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
 
-    // 1. REMOVE EXISTING HEADER AND FOOTER (Clean slate)
-    content = content.replace(/<!--\s*STANDARD HEADER TEMPLATE[\s\S]*?-->\s*<header[\s\S]*?<\/header>/g, '');
+    // 1. REMOVE EXISTING HEADER AND FOOTER (Clean slate - safe separate replacement)
+    content = content.replace(/<!--\s*STANDARD HEADER TEMPLATE\s*-->/g, '');
     content = content.replace(/<header class="header" id="header"[\s\S]*?<\/header>/g, '');
 
-    content = content.replace(/<!--\s*STANDARD FOOTER TEMPLATE[\s\S]*?-->\s*<footer[\s\S]*?<\/footer>/g, '');
+    content = content.replace(/<!--\s*STANDARD FOOTER TEMPLATE\s*-->/g, '');
     content = content.replace(/<footer class="footer"[\s\S]*?<\/footer>/g, '');
 
     // Remove existing back-to-top buttons to avoid duplication
