@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="/css/tia-blog-clone.css">
     <!-- BlogPosting Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -21,12 +23,12 @@
       },
       "headline": "Audit Finding: Most Local Service Sites Never Build the Pages That Matter",
       "description": "We audited a local home service site pulling 35k impressions with 0 clicks. Learn why broad service pages fail and how to build high-converting location silos.",
-      "image": "https://www.smbify.net/assets/blog-audit-finding.jpg",  
+      "image": "https://www.smbify.net/assets/blog-audit-finding.jpg",
       "author": {
         "@type": "Person",
         "name": "Muhammad Tufail Abbas",
         "url": "https://www.linkedin.com/in/smbpreneur/"
-      },  
+      },
       "publisher": {
         "@type": "Organization",
         "name": "SMBify",
@@ -37,7 +39,98 @@
       },
       "datePublished": "2026-07-27",
       "dateModified": "2026-07-27"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Will creating separate city pages create duplicate content penalties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, provided each page includes unique local reviews, specific service details, localized images, and geo-targeted schema markup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many location pages should a local business start with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with 5 to 10 high-priority pages targeting your primary revenue services in your top 3 nearby cities before expanding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does site architecture impact Google Maps rankings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Strong localized site hierarchy reinforces your Google Business Profile relevance, signaling to Google that you are a verified service provider in that zone."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#home",
+      "name": "Home",
+      "url": "https://www.smbify.net/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#about",
+      "name": "About",
+      "url": "https://www.smbify.net/about"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#founder",
+      "name": "Founder",
+      "url": "https://www.smbify.net/founder"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#team",
+      "name": "Team",
+      "url": "https://www.smbify.net/team"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#portfolio",
+      "name": "Portfolio",
+      "url": "https://www.smbify.net/portfolio"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#services",
+      "name": "Services",
+      "url": "https://www.smbify.net/services"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#localseo",
+      "name": "Local SEO Service",
+      "url": "https://www.smbify.net/local-seo"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#localcitations",
+      "name": "Local Citation Campaign",
+      "url": "https://www.smbify.net/local-citations"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#blog",
+      "name": "Blog & Resources",
+      "url": "https://www.smbify.net/blog"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#contacts",
+      "name": "Contact Us",
+      "url": "https://www.smbify.net/contacts"
     }
+  ]
+}
     </script>
 
     <!-- FAQPage Schema -->

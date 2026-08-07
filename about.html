@@ -18,45 +18,142 @@
     <link rel="canonical" href="https://www.smbify.net/about">
     <!-- Global Local SEO Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Organization",
+      "@id": "https://www.smbify.net/#organization",
+      "name": "SMBify",
+      "url": "https://www.smbify.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.smbify.net/assets/logo-dark.png"
+      },
+      "sameAs": [
+        "https://web.facebook.com/SMBifyAgency",
+        "https://x.com/smbifyagency",
+        "https://www.instagram.com/smbifyagency/",
+        "https://www.linkedin.com/company/smbifyagency"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+923066050256",
+        "contactType": "customer service",
+        "email": "contact@smbify.net",
+        "availableLanguage": "en"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.smbify.net/#service",
+      "name": "SMBify Local SEO Services",
+      "description": "We help home-service business owners dominate local search, rank at the top of the Google Map Pack, and secure a steady stream of phone calls for their trades.",
+      "provider": {
+        "@id": "https://www.smbify.net/#organization"
+      },
+      "areaServed": "US",
+      "hasMap": "https://maps.app.goo.gl/SMUXX6GbWoL4vhcy6"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "Organization",
-          "@id": "https://www.smbify.net/#organization",
-          "name": "SMBify",
-          "url": "https://www.smbify.net/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.smbify.net/assets/logo-dark.png"
-          },
-          "sameAs": [
-            "https://web.facebook.com/SMBifyAgency",
-            "https://x.com/smbifyagency",
-            "https://www.instagram.com/smbifyagency/",
-            "https://www.linkedin.com/company/smbifyagency"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+923066050256",
-            "contactType": "customer service",
-            "email": "contact@smbify.net",
-            "availableLanguage": "en"
+          "@type": "Question",
+          "name": "Do you ever contact our agency's clients directly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, absolutely not. All processes are 100% white-label. We operate strictly as your back-office team. We provide the client login credentials and report sheets to you, allowing your agency to handle all direct communication."
           }
         },
         {
-          "@type": "ProfessionalService",
-          "@id": "https://www.smbify.net/#service",
-          "name": "SMBify Local SEO Services",
-          "description": "We help home-service business owners dominate local search, rank at the top of the Google Map Pack, and secure a steady stream of phone calls for their trades.",
-          "provider": {
-            "@id": "https://www.smbify.net/#organization"
-          },
-          "areaServed": "US",
-          "hasMap": "https://maps.app.goo.gl/SMUXX6GbWoL4vhcy6"
+          "@type": "Question",
+          "name": "How long does campaign fulfillment take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard local citation and optimization campaign is fully completed and submitted within 14 days of validating your intake details. You can track submissions and status updates live inside your portal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with non-agency businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. While we build extensive reseller features for digital agencies, direct home service business owners (like plumbers, electricians, and roofers) are welcome to use our flat-rate services to build their local presence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a contract or setup fee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "None at all. All services are pay-as-you-go, running on a flat rate of $299/month per location. You can cancel, downgrade, or upgrade your service tier for any of your target locations at any time without penalty."
+          }
         }
       ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#home",
+      "name": "Home",
+      "url": "https://www.smbify.net/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#about",
+      "name": "About",
+      "url": "https://www.smbify.net/about"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#founder",
+      "name": "Founder",
+      "url": "https://www.smbify.net/founder"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#team",
+      "name": "Team",
+      "url": "https://www.smbify.net/team"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#portfolio",
+      "name": "Portfolio",
+      "url": "https://www.smbify.net/portfolio"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#services",
+      "name": "Services",
+      "url": "https://www.smbify.net/services"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#localseo",
+      "name": "Local SEO Service",
+      "url": "https://www.smbify.net/local-seo"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#localcitations",
+      "name": "Local Citation Campaign",
+      "url": "https://www.smbify.net/local-citations"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#blog",
+      "name": "Blog & Resources",
+      "url": "https://www.smbify.net/blog"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#contacts",
+      "name": "Contact Us",
+      "url": "https://www.smbify.net/contacts"
     }
+  ]
+}
     </script>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Dancing+Script:wght@700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@700&display=swap"></noscript>
 

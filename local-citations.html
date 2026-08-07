@@ -179,45 +179,158 @@
     <link rel="stylesheet" href="/css/styles.min.css">
     <!-- Global Local SEO Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Organization",
+      "@id": "https://www.smbify.net/#organization",
+      "name": "SMBify",
+      "url": "https://www.smbify.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.smbify.net/assets/logo-dark.png"
+      },
+      "sameAs": [
+        "https://web.facebook.com/SMBifyAgency",
+        "https://x.com/smbifyagency",
+        "https://www.instagram.com/smbifyagency/",
+        "https://www.linkedin.com/company/smbifyagency"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+923066050256",
+        "contactType": "customer service",
+        "email": "contact@smbify.net",
+        "availableLanguage": "en"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.smbify.net/#service",
+      "name": "SMBify Local SEO Services",
+      "description": "We help home-service business owners dominate local search, rank at the top of the Google Map Pack, and secure a steady stream of phone calls for their trades.",
+      "provider": {
+        "@id": "https://www.smbify.net/#organization"
+      },
+      "areaServed": "US",
+      "hasMap": "https://maps.app.goo.gl/SMUXX6GbWoL4vhcy6"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "Organization",
-          "@id": "https://www.smbify.net/#organization",
-          "name": "SMBify",
-          "url": "https://www.smbify.net/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.smbify.net/assets/logo-dark.png"
-          },
-          "sameAs": [
-            "https://web.facebook.com/SMBifyAgency",
-            "https://x.com/smbifyagency",
-            "https://www.instagram.com/smbifyagency/",
-            "https://www.linkedin.com/company/smbifyagency"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+923066050256",
-            "contactType": "customer service",
-            "email": "contact@smbify.net",
-            "availableLanguage": "en"
+          "@type": "Question",
+          "name": "Do you build citations manually or use software APIs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build every single citation 100% manually. We register accounts, configure profiles, insert business details, and verify listings one by one. We do not use automated APIs. This prevents automated bugs, guarantees data accuracy, and eliminates recurring fee locks."
           }
         },
         {
-          "@type": "ProfessionalService",
-          "@id": "https://www.smbify.net/#service",
-          "name": "SMBify Local SEO Services",
-          "description": "We help home-service business owners dominate local search, rank at the top of the Google Map Pack, and secure a steady stream of phone calls for their trades.",
-          "provider": {
-            "@id": "https://www.smbify.net/#organization"
-          },
-          "areaServed": "US",
-          "hasMap": "https://maps.app.goo.gl/SMUXX6GbWoL4vhcy6"
+          "@type": "Question",
+          "name": "Do I own the listings forever?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely. Because we submit listings manually, they belong to you (or your client) permanently. There are no recurring licenses or API fees. Once built, they remain active, and you have complete login credentials to modify or update them in the future."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What directories do you submit to?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We submit to top-tier horizontal platforms (Yelp, YellowPages, Bing Places, Apple Maps, Foursquare, Hotfrog, ShowMeLocal) as well as niche-specific directories relevant to your client's industry (e.g., contractor sites, home services databases) and geo-specific databases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this service white-label?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All reports are delivered in a clean, unbranded Google Sheet with zero mention of SMBify. You can add your agency logo, customize colors, and email the report directly to your clients. Our team works completely behind the scenes under your brand."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does indexation take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once citations are submitted, directory platforms index pages at varying speeds. Some are instant, while others can take 2 to 6 weeks. To speed this up, we optimize the indexing process by pinging pages and submitting new URLs to premium indexers at no extra cost to you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a local citation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A local citation is any online mention of a business's name, address, and phone number (NAP) on directories, websites, and social media platforms. Google uses citations to verify your business's physical existence and geographical authority."
+          }
         }
       ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#home",
+      "name": "Home",
+      "url": "https://www.smbify.net/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#about",
+      "name": "About",
+      "url": "https://www.smbify.net/about"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#founder",
+      "name": "Founder",
+      "url": "https://www.smbify.net/founder"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#team",
+      "name": "Team",
+      "url": "https://www.smbify.net/team"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#portfolio",
+      "name": "Portfolio",
+      "url": "https://www.smbify.net/portfolio"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#services",
+      "name": "Services",
+      "url": "https://www.smbify.net/services"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#localseo",
+      "name": "Local SEO Service",
+      "url": "https://www.smbify.net/local-seo"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#localcitations",
+      "name": "Local Citation Campaign",
+      "url": "https://www.smbify.net/local-citations"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#blog",
+      "name": "Blog & Resources",
+      "url": "https://www.smbify.net/blog"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#contacts",
+      "name": "Contact Us",
+      "url": "https://www.smbify.net/contacts"
     }
+  ]
+}
     </script>
 
     <!-- Open Graph & Twitter Social Cards -->

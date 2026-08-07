@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="/css/tia-blog-clone.css">
     <!-- BlogPosting Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -21,12 +23,12 @@
       },
       "headline": "Local Schema Markup Masterclass for Contractors (JSON-LD Guide)",
       "description": "Technical guide on implementing LocalBusiness, Service, GeoCoordinates, and FAQ JSON-LD schema markup to boost search engine understanding and rich snippets.",
-      "image": "https://www.smbify.net/assets/blog-local-schema.jpg",  
+      "image": "https://www.smbify.net/assets/blog-local-schema.jpg",
       "author": {
         "@type": "Person",
         "name": "Muhammad Tufail Abbas",
         "url": "https://www.linkedin.com/in/smbpreneur/"
-      },  
+      },
       "publisher": {
         "@type": "Organization",
         "name": "SMBify",
@@ -37,7 +39,98 @@
       },
       "datePublished": "2026-07-27",
       "dateModified": "2026-07-27"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What format does Google recommend for schema markup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google explicitly recommends JSON-LD (JavaScript Object Notation for Linked Data) placed inside a script tag in the page head."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does schema markup directly increase Google rankings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Schema is an indirect ranking factor. It clarifies entity relevance and increases CTR in search results, which sends positive user engagement signals to Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add schema markup using Google Tag Manager or JS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Google's crawlers execute JavaScript and can parse JSON-LD injected dynamically via JavaScript file or tag managers."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#home",
+      "name": "Home",
+      "url": "https://www.smbify.net/"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#about",
+      "name": "About",
+      "url": "https://www.smbify.net/about"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#founder",
+      "name": "Founder",
+      "url": "https://www.smbify.net/founder"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#team",
+      "name": "Team",
+      "url": "https://www.smbify.net/team"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#portfolio",
+      "name": "Portfolio",
+      "url": "https://www.smbify.net/portfolio"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#services",
+      "name": "Services",
+      "url": "https://www.smbify.net/services"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#localseo",
+      "name": "Local SEO Service",
+      "url": "https://www.smbify.net/local-seo"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#localcitations",
+      "name": "Local Citation Campaign",
+      "url": "https://www.smbify.net/local-citations"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#blog",
+      "name": "Blog & Resources",
+      "url": "https://www.smbify.net/blog"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://www.smbify.net/#contacts",
+      "name": "Contact Us",
+      "url": "https://www.smbify.net/contacts"
     }
+  ]
+}
     </script>
 
     <!-- FAQPage Schema -->
