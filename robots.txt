@@ -18,15 +18,3 @@ Allow: /
 
 # Sitemap
 Sitemap: https://www.smbify.net/sitemap.xml
-
-# Allow crawling of clean URL pages
-Allow: /services
-Allow: /blog
-Allow: /about
-Allow: /team
-Allow: /portfolio
-Allow: /contacts
-Allow: /plumbing-seo
-Allow: /hvac-seo
-Allow: /roofing-seo
-Allow: /electrical-seo

@@ -237,13 +237,7 @@
       "destination": "/terms-and-conditions",
       "permanent": true
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/blog/:slug",
-      "destination": "/blog-post.html"
-    }
-  ],
+
   "headers": [
     {
       "source": "/",
